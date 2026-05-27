@@ -16,6 +16,16 @@ export function TypewriterRoles({ roles }: Props) {
   const [text, setText] = useState(first);
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<"hold" | "typing" | "pausing" | "deleting">("hold");
+  // Locale switch swaps the roles array. useState's initial value already ran,
+  // so text/index are stuck on the previous language. Detect identity change
+  // and reset to the new first role (React's derived-state-during-render pattern).
+  const [prevRoles, setPrevRoles] = useState(roles);
+  if (prevRoles !== roles) {
+    setPrevRoles(roles);
+    setText(roles[0] ?? "");
+    setIndex(0);
+    setPhase("hold");
+  }
 
   useEffect(() => {
     if (roles.length <= 1) return;

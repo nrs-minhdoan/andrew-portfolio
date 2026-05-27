@@ -93,6 +93,18 @@ export function NavController() {
     };
     contactLinks.forEach((el) => el.addEventListener("click", onContactClick));
 
+    // Mobile menu uses <details>. Close it after a link click so the dropdown
+    // collapses on navigation. Scoped to links inside <details> only — desktop
+    // nav lives outside any <details>, so its listeners are untouched.
+    const mobileLinks = Array.from(
+      header.querySelectorAll<HTMLElement>("details [data-nav-link]"),
+    );
+    const onMobileLinkClick = (e: Event) => {
+      const details = (e.currentTarget as HTMLElement).closest("details");
+      if (details?.open) details.removeAttribute("open");
+    };
+    mobileLinks.forEach((el) => el.addEventListener("click", onMobileLinkClick));
+
     compute();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
@@ -101,6 +113,7 @@ export function NavController() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
       contactLinks.forEach((el) => el.removeEventListener("click", onContactClick));
+      mobileLinks.forEach((el) => el.removeEventListener("click", onMobileLinkClick));
     };
   }, []);
 

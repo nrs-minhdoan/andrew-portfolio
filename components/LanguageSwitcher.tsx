@@ -31,7 +31,9 @@ export function LanguageSwitcher() {
     detailsRef.current?.removeAttribute("open");
     setOpen(false);
     startTransition(() => {
-      router.replace(pathname, { locale: next });
+      // scroll: false → preserve viewport position across locale swap.
+      // Without it next.js resets to top, masking the SPA transition as a jump.
+      router.replace(pathname, { locale: next, scroll: false });
     });
   };
 
