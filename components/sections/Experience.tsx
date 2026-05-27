@@ -79,33 +79,46 @@ export function Experience() {
                         {t("offshoreLabel")}
                       </span>
                       <ul className="flex flex-wrap gap-1.5">
-                        {OFFSHORE_ENGAGEMENTS[slug]?.map((e) => (
-                          <li key={e.name}>
-                            {e.url ? (
-                              <a
-                                href={e.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`${e.name} — visit site`}
-                                className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-(--border) px-2.5 py-0.5 text-xs text-(--muted) transition-colors hover:border-(--accent)/60 hover:text-(--fg)"
-                              >
-                                <Image
-                                  src={getFaviconUrl(e.url)}
-                                  alt=""
-                                  width={12}
-                                  height={12}
-                                  className="h-3 w-3 shrink-0 rounded-sm"
-                                  unoptimized
-                                />
-                                {e.name}
-                              </a>
-                            ) : (
-                              <span className="rounded-full border border-(--border) px-2.5 py-0.5 text-xs text-(--muted)">
-                                {e.name}
-                              </span>
-                            )}
-                          </li>
-                        ))}
+                        {OFFSHORE_ENGAGEMENTS[slug]?.map((e) => {
+                          // Prefer the supplied logo over a remote favicon, mirroring
+                          // the project cards so each mark reads clearly.
+                          const logo = e.image ?? (e.url ? getFaviconUrl(e.url) : null);
+                          const mark = logo ? (
+                            <span
+                              className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded p-0.5 ${e.logoLightBg ? "bg-white" : ""}`}
+                            >
+                              <Image
+                                src={logo}
+                                alt=""
+                                width={20}
+                                height={20}
+                                className="h-full w-full object-contain"
+                                unoptimized
+                              />
+                            </span>
+                          ) : null;
+                          return (
+                            <li key={e.name}>
+                              {e.url ? (
+                                <a
+                                  href={e.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${e.name} — visit site`}
+                                  className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-(--border) py-0.5 pr-2.5 pl-1 text-xs text-(--muted) transition-colors hover:border-(--accent)/60 hover:text-(--fg)"
+                                >
+                                  {mark}
+                                  {e.name}
+                                </a>
+                              ) : (
+                                <span className="inline-flex items-center gap-1.5 rounded-full border border-(--border) py-0.5 pr-2.5 pl-1 text-xs text-(--muted)">
+                                  {mark}
+                                  {e.name}
+                                </span>
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   </div>
