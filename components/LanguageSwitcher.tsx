@@ -43,21 +43,19 @@ export function LanguageSwitcher() {
     >
       <summary
         aria-label={t("label")}
-        className="inline-flex h-9 w-9 cursor-pointer items-center justify-center gap-0 rounded-md border border-(--border) px-0 text-(--fg) outline-none transition-colors hover:border-(--border-strong) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2 sm:w-[120px] sm:gap-2.5 sm:rounded-lg sm:px-3.5 [&::-webkit-details-marker]:hidden"
+        className="inline-flex h-9 w-9 cursor-pointer items-center justify-center gap-0 rounded-md border border-(--border) px-0 text-(--fg) transition-colors outline-none hover:border-(--border-strong) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent) sm:w-[120px] sm:gap-2.5 sm:rounded-lg sm:px-3.5 [&::-webkit-details-marker]:hidden"
       >
         <Languages size={16} aria-hidden />
-        <span className="hidden font-semibold text-[13px] sm:inline">
-          {locale.toUpperCase()}
-        </span>
+        <span className="hidden text-[13px] font-semibold sm:inline">{locale.toUpperCase()}</span>
         <ChevronDown
           size={14}
           aria-hidden
-          className="hidden transition-transform group-open/lang:rotate-180 sm:block sm:ml-auto"
+          className="hidden transition-transform group-open/lang:rotate-180 sm:ml-auto sm:block"
         />
       </summary>
 
       <div className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-(--border) bg-(--bg) p-1 shadow-2xl">
-        <div className="px-2 py-1.5 font-semibold text-(--muted) text-[11px] uppercase tracking-widest">
+        <div className="px-2 py-1.5 text-[11px] font-semibold tracking-widest text-(--muted) uppercase">
           {t("label")}
         </div>
         <ul className="flex flex-col gap-0.5">
@@ -67,7 +65,7 @@ export function LanguageSwitcher() {
                 type="button"
                 disabled={isPending}
                 onClick={() => onPick(l)}
-                className="flex w-full items-center justify-between rounded-md px-2 py-2 text-(--fg) text-sm transition-colors hover:bg-(--accent)/10 focus-visible:bg-(--accent)/15 focus-visible:outline-none aria-selected:text-(--accent) data-[selected=true]:text-(--accent)"
+                className="flex w-full items-center justify-between rounded-md px-2 py-2 text-sm text-(--fg) transition-colors hover:bg-(--accent)/10 focus-visible:bg-(--accent)/15 focus-visible:outline-none aria-selected:text-(--accent) data-[selected=true]:text-(--accent)"
                 data-selected={l === locale}
               >
                 <span>{t(l)}</span>

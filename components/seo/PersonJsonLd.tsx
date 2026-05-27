@@ -24,11 +24,7 @@ export function PersonJsonLd({ locale }: { locale: string }) {
       addressLocality: "Ha Noi",
       addressCountry: "VN",
     },
-    sameAs: [
-      CONTACT.links.linkedin,
-      CONTACT.links.github,
-      CONTACT.links.facebook,
-    ],
+    sameAs: [CONTACT.links.linkedin, CONTACT.links.github, CONTACT.links.facebook],
     knowsAbout,
     knowsLanguage: ["English", "Vietnamese"],
     alumniOf: {
@@ -38,9 +34,6 @@ export function PersonJsonLd({ locale }: { locale: string }) {
   } as const;
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }

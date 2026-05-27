@@ -11,8 +11,11 @@
   --color-accent-2: #f59e0b;
   --color-accent-3: #f97316;
 
-  --font-berkeley: "Berkeley Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  --font-pixel: var(--font-silkscreen), var(--font-fira-code), Monaco, Consolas, "Ubuntu Mono", monospace;
+  --font-berkeley:
+    "Berkeley Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-pixel:
+    var(--font-silkscreen), var(--font-fira-code), Monaco, Consolas, "Ubuntu Mono", monospace;
   --font-sans: var(--font-berkeley);
   --font-mono: var(--font-berkeley);
   --font-display: var(--font-berkeley);
@@ -70,7 +73,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 html {
@@ -156,8 +161,12 @@ body {
 }
 
 @keyframes aurora {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  100% { transform: translate3d(4vw, 2vw, 0) scale(1.1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(4vw, 2vw, 0) scale(1.1);
+  }
 }
 
 /* Gradient text */
@@ -171,8 +180,13 @@ body {
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Glass card */
@@ -200,7 +214,13 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: conic-gradient(from var(--angle, 0deg), var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    var(--accent),
+    var(--accent-2),
+    var(--accent-3),
+    var(--accent)
+  );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -214,7 +234,9 @@ body {
 }
 
 @keyframes rotate-border {
-  to { --angle: 360deg; }
+  to {
+    --angle: 360deg;
+  }
 }
 
 /* Marquee */
@@ -239,7 +261,9 @@ body {
 }
 
 @keyframes marquee {
-  to { transform: translateX(-50%); }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Spotlight cursor */
@@ -251,13 +275,19 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), color-mix(in oklab, var(--accent) 18%, transparent), transparent 40%);
+  background: radial-gradient(
+    400px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--accent) 18%, transparent),
+    transparent 40%
+  );
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
   border-radius: inherit;
 }
-.spotlight:hover::after { opacity: 1; }
+.spotlight:hover::after {
+  opacity: 1;
+}
 
 /* Noise overlay */
 .noise {
@@ -317,7 +347,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 .reveal.is-visible {
   opacity: 1;
@@ -366,12 +398,7 @@ a[data-nav-link]::after {
   bottom: -2px;
   height: 2px;
   border-radius: 9999px;
-  background: linear-gradient(
-    to right,
-    var(--accent),
-    var(--accent-3),
-    var(--accent-2)
-  );
+  background: linear-gradient(to right, var(--accent), var(--accent-3), var(--accent-2));
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -424,22 +451,36 @@ section[data-section="contact"] > .container-page {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Float */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-.floating { animation: float 6s ease-in-out infinite; }
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .aurora::before, .aurora::after { animation: none; }
+  .aurora::before,
+  .aurora::after {
+    animation: none;
+  }
 }

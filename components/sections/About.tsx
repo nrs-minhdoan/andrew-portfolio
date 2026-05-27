@@ -21,7 +21,7 @@ export function About() {
         />
 
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-5 text-(--muted) text-base leading-relaxed sm:text-lg">
+          <div className="space-y-5 text-base leading-relaxed text-(--muted) sm:text-lg">
             {(["p1", "p2", "p3", "p4"] as const).map((k, i) => (
               <Reveal key={k} delay={i * 0.06} as="div">
                 <p
@@ -37,7 +37,7 @@ export function About() {
           </div>
 
           <Reveal delay={0.1} className="space-y-4">
-            <h3 className="font-display font-semibold text-(--muted) text-sm uppercase tracking-widest">
+            <h3 className="font-display text-sm font-semibold tracking-widest text-(--muted) uppercase">
               {t("highlightTitle")}
             </h3>
             <ul className="grid gap-3">
@@ -56,7 +56,7 @@ export function About() {
                       <div className="font-display font-semibold">
                         {t(`highlights.${key}.title`)}
                       </div>
-                      <p className="mt-1 text-(--muted) text-sm">{t(`highlights.${key}.desc`)}</p>
+                      <p className="mt-1 text-sm text-(--muted)">{t(`highlights.${key}.desc`)}</p>
                     </div>
                   </div>
                 </Reveal>

@@ -9,9 +9,7 @@ export interface OffshoreEngagement {
  * Offshore engagements per company. Not full-ownership builds — listed as
  * lightweight contributions, distinct from the project grid.
  */
-export const OFFSHORE_ENGAGEMENTS: Partial<
-  Record<CompanySlug, readonly OffshoreEngagement[]>
-> = {
+export const OFFSHORE_ENGAGEMENTS: Partial<Record<CompanySlug, readonly OffshoreEngagement[]>> = {
   vmo: [
     { name: "Optix Solutions", url: "https://www.optixsolutions.com.hk/" },
     {

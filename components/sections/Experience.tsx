@@ -36,30 +36,21 @@ export function Experience() {
             const slug = company.slug as CompanySlug;
             const items = PROJECTS.filter((p) => p.company === slug);
             return (
-              <Reveal
-                as="li"
-                key={slug}
-                delay={idx * 0.05}
-                className="relative pl-6 md:pl-14"
-              >
+              <Reveal as="li" key={slug} delay={idx * 0.05} className="relative pl-6 md:pl-14">
                 <span
                   aria-hidden
                   className="absolute top-1.5 left-0 h-3 w-3 rounded-full md:top-1.5 md:left-2 md:h-5 md:w-5"
                   style={{
-                    background:
-                      "linear-gradient(135deg, var(--accent), var(--accent-3))",
-                    boxShadow:
-                      "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
+                    background: "linear-gradient(135deg, var(--accent), var(--accent-3))",
+                    boxShadow: "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
                   }}
                 />
                 <header className="mb-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                  <h3 className="font-bold font-display text-xl sm:text-2xl">
+                  <h3 className="font-display text-xl font-bold sm:text-2xl">
                     {t(`companies.${slug}.title`)},{" "}
-                    <span className="text-(--accent)">
-                      {t(`companies.${slug}.org`)}
-                    </span>
+                    <span className="text-(--accent)">{t(`companies.${slug}.org`)}</span>
                   </h3>
-                  <span className="text-(--muted) text-xs uppercase tracking-widest">
+                  <span className="text-xs tracking-widest text-(--muted) uppercase">
                     {company.period}
                     {company.ongoing ? ` · ${t("present")}` : ""}
                   </span>
@@ -80,7 +71,7 @@ export function Experience() {
                 {OFFSHORE_ENGAGEMENTS[slug]?.length ? (
                   <div className="glass mt-4 rounded-xl px-4 py-3">
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                      <span className="inline-flex items-center gap-1.5 font-semibold text-(--muted)/80 text-[10px] uppercase tracking-[0.14em]">
+                      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.14em] text-(--muted)/80 uppercase">
                         <span
                           aria-hidden
                           className="inline-block h-1.5 w-1.5 rounded-full bg-(--muted)/50"
@@ -96,7 +87,7 @@ export function Experience() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`${e.name} — visit site`}
-                                className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-(--border) px-2.5 py-0.5 text-(--muted) text-xs transition-colors hover:border-(--accent)/60 hover:text-(--fg)"
+                                className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-(--border) px-2.5 py-0.5 text-xs text-(--muted) transition-colors hover:border-(--accent)/60 hover:text-(--fg)"
                               >
                                 <Image
                                   src={getFaviconUrl(e.url)}
@@ -109,7 +100,7 @@ export function Experience() {
                                 {e.name}
                               </a>
                             ) : (
-                              <span className="rounded-full border border-(--border) px-2.5 py-0.5 text-(--muted) text-xs">
+                              <span className="rounded-full border border-(--border) px-2.5 py-0.5 text-xs text-(--muted)">
                                 {e.name}
                               </span>
                             )}
@@ -140,10 +131,10 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
   // Prefer the supplied logo over a remote favicon for the title icon slot.
   const icon = project.image ?? favicon;
   return (
-    <li className="glass group relative block overflow-hidden rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-(--accent)/40 focus-within:border-(--accent)/60">
+    <li className="glass group relative block overflow-hidden rounded-2xl p-5 transition-all focus-within:border-(--accent)/60 hover:-translate-y-0.5 hover:border-(--accent)/40">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h4 className="flex items-center gap-2 font-bold font-display text-base">
+          <h4 className="font-display flex items-center gap-2 text-base font-bold">
             {icon ? (
               <span
                 className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded p-0.5 ${project.logoLightBg ? "bg-white" : ""}`}
@@ -166,7 +157,7 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${name} — visit site`}
-                className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2"
+                className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
               >
                 {name}
               </a>
@@ -180,18 +171,18 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
               />
             ) : null}
           </h4>
-          <p className="mt-1 text-(--muted) text-xs">{project.period}</p>
+          <p className="mt-1 text-xs text-(--muted)">{project.period}</p>
         </div>
         {project.awards?.length ? (
           <span
             title={project.awards.join(" · ")}
-            className="inline-flex items-center gap-1.5 rounded-full border border-(--accent-3)/40 bg-(--accent-3)/10 px-2 py-1 font-semibold text-(--accent-3) text-[10px] uppercase tracking-wider"
+            className="inline-flex items-center gap-1.5 rounded-full border border-(--accent-3)/40 bg-(--accent-3)/10 px-2 py-1 text-[10px] font-semibold tracking-wider text-(--accent-3) uppercase"
           >
             <Award className="h-3 w-3" aria-hidden />
             {project.awards.length > 1 ? (
               <>
                 award
-                <span className="rounded-full bg-(--accent-3)/25 px-1.5 py-px font-bold text-[9px] leading-none">
+                <span className="rounded-full bg-(--accent-3)/25 px-1.5 py-px text-[9px] leading-none font-bold">
                   ×{project.awards.length}
                 </span>
               </>
@@ -201,8 +192,8 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
           </span>
         ) : null}
       </div>
-      <p className="mt-3 text-(--muted) text-sm">{summary}</p>
-      <div className="mt-3 flex items-center gap-3 text-(--muted) text-xs">
+      <p className="mt-3 text-sm text-(--muted)">{summary}</p>
+      <div className="mt-3 flex items-center gap-3 text-xs text-(--muted)">
         <span className="inline-flex items-center gap-1">
           <Users className="h-3.5 w-3.5" aria-hidden /> {project.teamSize}
         </span>
@@ -224,7 +215,7 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${tech.name} — official site`}
-                  className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2"
+                  className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
                 >
                   {icon}
                 </a>
@@ -235,9 +226,7 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
           );
         })}
         {project.techs.length > 8 ? (
-          <li className="text-(--muted) text-xs">
-            +{project.techs.length - 8}
-          </li>
+          <li className="text-xs text-(--muted)">+{project.techs.length - 8}</li>
         ) : null}
       </ul>
     </li>

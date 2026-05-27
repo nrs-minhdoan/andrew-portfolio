@@ -216,13 +216,14 @@
     "emailMe": "Gửi email",
     "callMe": "Gọi điện",
     "location": "Tôi đang ở",
+    "address": "Hà Nội, Việt Nam",
     "social": "Tìm tôi online",
     "copy": "Sao chép",
     "copied": "Đã sao chép!"
   },
   "Footer": {
     "rights": "Bảo lưu mọi quyền.",
-    "built": "Xây bằng Next.js, TypeScript, Tailwind & Framer Motion."
+    "built": "Xây dựng bằng Next.js, TypeScript, Tailwind & Framer Motion."
   },
   "Theme": {
     "toggle": "Đổi giao diện",

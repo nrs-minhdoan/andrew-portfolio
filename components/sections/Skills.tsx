@@ -23,7 +23,7 @@ export function Skills() {
         />
 
         <Reveal className="mb-6 flex items-center gap-3">
-          <h3 className="font-display font-semibold text-(--muted) text-sm uppercase tracking-widest">
+          <h3 className="font-display text-sm font-semibold tracking-widest text-(--muted) uppercase">
             {t("mainStacks")}
           </h3>
           <span className="h-px flex-1 bg-(--border)" />
@@ -38,7 +38,7 @@ export function Skills() {
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-(--bg)/40 transition-transform group-hover:scale-110 sm:h-14 sm:w-14">
                     <TechIcon techKey={key} size={28} />
                   </span>
-                  <span className="line-clamp-1 break-all font-semibold text-xs sm:text-sm">
+                  <span className="line-clamp-1 text-xs font-semibold break-all sm:text-sm">
                     {tech.name}
                   </span>
                   <span
@@ -60,7 +60,7 @@ export function Skills() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${tech.name} — official site`}
-                      className={`${cardClass} cursor-pointer focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2`}
+                      className={`${cardClass} cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)`}
                     >
                       {cardBody}
                     </a>
@@ -74,7 +74,7 @@ export function Skills() {
         </Reveal>
 
         <Reveal className="mt-14 mb-6 flex items-center gap-3">
-          <h3 className="font-display font-semibold text-(--muted) text-sm uppercase tracking-widest">
+          <h3 className="font-display text-sm font-semibold tracking-widest text-(--muted) uppercase">
             {t("integrationStacks")}
           </h3>
           <span className="h-px flex-1 bg-(--border)" />

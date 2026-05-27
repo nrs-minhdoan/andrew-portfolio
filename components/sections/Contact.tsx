@@ -37,12 +37,12 @@ export function Contact() {
           <div className="glass rounded-2xl p-4 sm:col-span-2 sm:p-5">
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div className="min-w-0">
-                <div className="text-(--muted) text-[10px] uppercase tracking-widest sm:text-xs">
+                <div className="text-[10px] tracking-widest text-(--muted) uppercase sm:text-xs">
                   {t("location")}
                 </div>
-                <div className="mt-1 inline-flex items-center gap-2 break-words font-bold font-display text-base sm:text-lg">
+                <div className="font-display mt-1 inline-flex items-center gap-2 text-base font-bold break-words sm:text-lg">
                   <MapPin className="h-4 w-4 shrink-0 text-(--accent) sm:h-5 sm:w-5" aria-hidden />
-                  {CONTACT.location}
+                  {t("address")}
                 </div>
               </div>
               <div className="flex shrink-0 items-center gap-2">
@@ -103,12 +103,12 @@ function ContactRow({
         {icon}
       </span>
       <div className="min-w-0 flex-1">
-        <div className="text-(--muted) text-[10px] uppercase tracking-widest sm:text-xs">
+        <div className="text-[10px] tracking-widest text-(--muted) uppercase sm:text-xs">
           {label}
         </div>
         <a
           href={href}
-          className="block truncate font-display font-semibold text-xs hover:text-(--accent) sm:text-base"
+          className="font-display block truncate text-xs font-semibold hover:text-(--accent) sm:text-base"
         >
           {value}
         </a>

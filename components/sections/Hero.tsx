@@ -6,12 +6,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TypewriterRoles } from "@/components/ui/TypewriterRoles";
 import { CONTACT, STATS } from "@/data/portfolio";
 
-const HeroBackground = dynamic(() =>
-  import("./HeroBackground").then((m) => m.HeroBackground),
-);
+const HeroBackground = dynamic(() => import("./HeroBackground").then((m) => m.HeroBackground));
 
 export function Hero() {
   const t = useTranslations("Hero");
+  const tContact = useTranslations("Contact");
   const roles = t.raw("roles") as string[];
 
   return (
@@ -21,7 +20,7 @@ export function Hero() {
       className="relative isolate flex min-h-svh items-start pt-20 sm:pt-28 lg:items-center lg:pt-24"
     >
       <div className="aurora" aria-hidden />
-      <div className="absolute inset-0 bg-grid" aria-hidden />
+      <div className="bg-grid absolute inset-0" aria-hidden />
       <HeroBackground />
       <div className="noise" aria-hidden />
 
@@ -35,36 +34,31 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <h1 className="text-balance font-bold font-display leading-[1.1] tracking-tight">
+            <h1 className="font-display leading-[1.1] font-bold tracking-tight text-balance">
               {/* Name never wraps — cap at text-6xl so 16 chars always fit
                   the container at every breakpoint, then force single-line. */}
-              <span className="block whitespace-nowrap text-3xl sm:text-5xl md:text-6xl">
+              <span className="block text-3xl whitespace-nowrap sm:text-5xl md:text-6xl">
                 {t("name")}
               </span>
               {/* Reserve 3 lines of typewriter height on md+ so the layout
                   below doesn't shift as role text cycles through lengths.
                   Mobile keeps natural flow — already handled there. */}
-              <span className="gradient-text mt-2 block break-words text-3xl sm:text-5xl md:text-6xl lg:text-7xl md:min-h-[3.3em]">
+              <span className="gradient-text mt-2 block text-3xl break-words sm:text-5xl md:min-h-[3.3em] md:text-6xl lg:text-7xl">
                 <TypewriterRoles roles={roles} />
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.18}>
-            <p className="max-w-xl text-(--muted) text-base sm:text-xl">
-              {t("tagline")}
-            </p>
+            <p className="max-w-xl text-base text-(--muted) sm:text-xl">{t("tagline")}</p>
           </Reveal>
 
           <Reveal delay={0.26}>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-(--muted) text-xs sm:gap-4 sm:text-sm">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-(--muted) sm:gap-4 sm:text-sm">
               <span className="inline-flex items-center gap-1.5">
-                <MapPin className="h-4 w-4" /> {CONTACT.location}
+                <MapPin className="h-4 w-4" /> {tContact("address")}
               </span>
-              <span
-                className="hidden h-1 w-1 rounded-full bg-(--muted)/40 sm:block"
-                aria-hidden
-              />
+              <span className="hidden h-1 w-1 rounded-full bg-(--muted)/40 sm:block" aria-hidden />
               <a
                 className="inline-flex items-center gap-1.5 break-all hover:text-(--fg)"
                 href={`mailto:${CONTACT.email}`}
@@ -75,21 +69,13 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.34}>
-            <HeroCTAs
-              labels={{ projects: t("ctaProjects"), contact: t("ctaContact") }}
-            />
+            <HeroCTAs labels={{ projects: t("ctaProjects"), contact: t("ctaContact") }} />
           </Reveal>
         </div>
 
         <Reveal delay={0.4} className="grid grid-cols-2 gap-3 sm:gap-4">
-          <StatCard
-            value={`${STATS.yearsExperience}+`}
-            label={t("stats.yearsExperience")}
-          />
-          <StatCard
-            value={`${STATS.yearsLeading}+`}
-            label={t("stats.yearsLeading")}
-          />
+          <StatCard value={`${STATS.yearsExperience}+`} label={t("stats.yearsExperience")} />
+          <StatCard value={`${STATS.yearsLeading}+`} label={t("stats.yearsLeading")} />
           <StatCard value={STATS.teamSize} label={t("stats.teamSize")} />
           <StatCard value={`${STATS.projects}`} label={t("stats.projects")} />
         </Reveal>
@@ -98,7 +84,7 @@ export function Hero() {
       <a
         href="#about"
         aria-label={t("scroll")}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-(--muted) text-xs uppercase tracking-[0.2em]"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-xs tracking-[0.2em] text-(--muted) uppercase"
       >
         <span className="floating inline-block">↓ {t("scroll")}</span>
       </a>
@@ -109,10 +95,10 @@ export function Hero() {
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="glass rounded-2xl p-4 sm:p-5">
-      <div className="font-bold font-display text-3xl sm:text-4xl">
+      <div className="font-display text-3xl font-bold sm:text-4xl">
         <span className="gradient-text">{value}</span>
       </div>
-      <div className="mt-1 text-(--muted) text-xs sm:text-sm">{label}</div>
+      <div className="mt-1 text-xs text-(--muted) sm:text-sm">{label}</div>
     </div>
   );
 }

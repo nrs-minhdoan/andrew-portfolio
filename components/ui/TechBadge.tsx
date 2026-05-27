@@ -83,7 +83,7 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
         />
       ) : (
         <span
-          className="grid h-[1.2em] w-[1.2em] place-items-center rounded-sm font-bold text-[0.6em] text-white"
+          className="grid h-[1.2em] w-[1.2em] place-items-center rounded-sm text-[0.6em] font-bold text-white"
           style={{ background: tech.color }}
           aria-hidden
         >

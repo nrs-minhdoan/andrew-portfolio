@@ -100,9 +100,7 @@ export function NavController() {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
-      contactLinks.forEach((el) =>
-        el.removeEventListener("click", onContactClick),
-      );
+      contactLinks.forEach((el) => el.removeEventListener("click", onContactClick));
     };
   }, []);
 

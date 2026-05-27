@@ -38,14 +38,14 @@ export function Achievements() {
                     >
                       <Trophy className="h-5 w-5" aria-hidden />
                     </span>
-                    <span className="text-(--muted) text-xs uppercase tracking-widest">
+                    <span className="text-xs tracking-widest text-(--muted) uppercase">
                       {item.date}
                     </span>
                   </div>
-                  <h3 className="font-bold font-display text-base">
+                  <h3 className="font-display text-base font-bold">
                     {t(`items.${item.slug}.title`)}
                   </h3>
-                  <p className="mt-1 text-(--muted) text-sm">{t(`items.${item.slug}.desc`)}</p>
+                  <p className="mt-1 text-sm text-(--muted)">{t(`items.${item.slug}.desc`)}</p>
                   <Award
                     aria-hidden
                     className="pointer-events-none absolute -right-3 -bottom-3 h-24 w-24 text-(--accent)/5 transition-transform group-hover:scale-110"
@@ -57,12 +57,12 @@ export function Achievements() {
 
           <Reveal delay={0.1}>
             <div className="glass rounded-2xl p-6">
-              <div className="mb-3 inline-flex items-center gap-2 text-(--muted) text-xs uppercase tracking-widest">
+              <div className="mb-3 inline-flex items-center gap-2 text-xs tracking-widest text-(--muted) uppercase">
                 <GraduationCap className="h-4 w-4 text-(--accent)" /> {t("education.label")}
               </div>
-              <h3 className="font-bold font-display text-lg">{t("education.engineer")}</h3>
-              <p className="mt-1 text-(--muted) text-sm">{EDUCATION.school}</p>
-              <p className="mt-3 text-(--muted) text-xs uppercase tracking-widest">
+              <h3 className="font-display text-lg font-bold">{t("education.engineer")}</h3>
+              <p className="mt-1 text-sm text-(--muted)">{EDUCATION.school}</p>
+              <p className="mt-3 text-xs tracking-widest text-(--muted) uppercase">
                 {EDUCATION.period} · {EDUCATION.location}
               </p>
             </div>

@@ -23,7 +23,7 @@ export function Projects() {
 
   return (
     <section id="projects" data-section="projects" className="relative">
-      <div className="absolute inset-0 bg-grid opacity-50" aria-hidden />
+      <div className="bg-grid absolute inset-0 opacity-50" aria-hidden />
       <div className="container-page relative">
         <SectionHeader
           label={t("label")}
@@ -40,8 +40,8 @@ export function Projects() {
             const projectName = t(`items.${project.slug}.name`);
             return (
               <Reveal as="li" key={project.slug} delay={i * 0.05}>
-                <SpotlightCard className="glass group relative h-full overflow-hidden rounded-2xl transition-all hover:-translate-y-1 hover:border-(--accent)/40 focus-within:border-(--accent)/60">
-                  <div className="relative aspect-video overflow-hidden border-(--border) border-b">
+                <SpotlightCard className="glass group relative h-full overflow-hidden rounded-2xl transition-all focus-within:border-(--accent)/60 hover:-translate-y-1 hover:border-(--accent)/40">
+                  <div className="relative aspect-video overflow-hidden border-b border-(--border)">
                     <Image
                       src={PLACEHOLDER}
                       alt=""
@@ -70,13 +70,13 @@ export function Projects() {
                     {project.awards?.length ? (
                       <span
                         title={project.awards.join(" · ")}
-                        className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-(--accent-3)/90 px-2.5 py-1 font-semibold text-[10px] text-white uppercase tracking-wider shadow"
+                        className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-(--accent-3)/90 px-2.5 py-1 text-[10px] font-semibold tracking-wider text-white uppercase shadow"
                       >
                         <Award className="h-3 w-3" aria-hidden />
                         {project.awards.length > 1 ? (
                           <>
                             award
-                            <span className="rounded-full bg-white/25 px-1.5 py-px font-bold text-[9px] leading-none">
+                            <span className="rounded-full bg-white/25 px-1.5 py-px text-[9px] leading-none font-bold">
                               ×{project.awards.length}
                             </span>
                           </>
@@ -88,7 +88,7 @@ export function Projects() {
                   </div>
                   <div className="space-y-3 p-5">
                     <header className="flex items-start justify-between gap-3">
-                      <h3 className="flex items-center gap-2 font-bold font-display text-lg leading-tight">
+                      <h3 className="font-display flex items-center gap-2 text-lg leading-tight font-bold">
                         {icon ? (
                           <span
                             className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded p-0.5 ${project.logoLightBg ? "bg-white" : ""}`}
@@ -109,7 +109,7 @@ export function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${projectName} — visit site`}
-                            className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2"
+                            className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
                           >
                             {projectName}
                           </a>
@@ -119,14 +119,11 @@ export function Projects() {
                       </h3>
                       <ArrowUpRight className="h-5 w-5 shrink-0 text-(--muted) transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-(--accent)" />
                     </header>
-                    <p className="text-(--muted) text-sm">
-                      {t(`items.${project.slug}.summary`)}
-                    </p>
-                    <div className="flex items-center gap-3 text-(--muted) text-xs">
+                    <p className="text-sm text-(--muted)">{t(`items.${project.slug}.summary`)}</p>
+                    <div className="flex items-center gap-3 text-xs text-(--muted)">
                       <span>{project.period}</span>
                       <span className="inline-flex items-center gap-1">
-                        <Users className="h-3.5 w-3.5" aria-hidden />{" "}
-                        {project.teamSize}
+                        <Users className="h-3.5 w-3.5" aria-hidden /> {project.teamSize}
                       </span>
                     </div>
                     {/* Tech list sits above the card-link overlay via z-10 so
@@ -144,7 +141,7 @@ export function Projects() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={`${tech.name} — official site`}
-                                className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2"
+                                className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
                               >
                                 {icon}
                               </a>
@@ -155,9 +152,7 @@ export function Projects() {
                         );
                       })}
                       {project.techs.length > 6 ? (
-                        <li className="text-(--muted) text-xs">
-                          +{project.techs.length - 6}
-                        </li>
+                        <li className="text-xs text-(--muted)">+{project.techs.length - 6}</li>
                       ) : null}
                     </ul>
                   </div>
@@ -170,7 +165,7 @@ export function Projects() {
         <Reveal className="mt-10 flex justify-center" delay={0.1}>
           <a
             href="#experience"
-            className="inline-flex items-center gap-2 rounded-full border border-(--border-strong) px-5 py-2.5 font-semibold text-sm transition-colors hover:border-(--accent)/60 hover:bg-(--accent)/5"
+            className="inline-flex items-center gap-2 rounded-full border border-(--border-strong) px-5 py-2.5 text-sm font-semibold transition-colors hover:border-(--accent)/60 hover:bg-(--accent)/5"
           >
             {t("viewAll")} <ArrowUpRight className="h-4 w-4" />
           </a>

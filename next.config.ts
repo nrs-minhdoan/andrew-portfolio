@@ -51,12 +51,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  transpilePackages: [
-    "react-native-web",
-    "tamagui",
-    "@tamagui/config",
-    "@tamagui/core",
-  ],
+  transpilePackages: ["react-native-web", "tamagui", "@tamagui/config", "@tamagui/core"],
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },

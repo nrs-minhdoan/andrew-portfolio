@@ -29,13 +29,13 @@ export function Navigation() {
     <>
       <header
         data-nav-shell
-        className="fixed inset-x-0 top-0 z-50 border-transparent border-b transition-all duration-300 data-[scrolled=true]:border-(--border) data-[scrolled=true]:bg-(--bg)/80 data-[scrolled=true]:backdrop-blur-md"
+        className="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-300 data-[scrolled=true]:border-(--border) data-[scrolled=true]:bg-(--bg)/80 data-[scrolled=true]:backdrop-blur-md"
       >
         <div className="container-page flex h-16 min-w-0 items-center justify-between gap-2 sm:gap-4">
           <a
             href="#hero"
             aria-label="Andrew — home"
-            className="group inline-flex min-w-0 items-center gap-6 font-bold font-display text-base"
+            className="group font-display inline-flex min-w-0 items-center gap-6 text-base font-bold"
           >
             <Image
               src="/logo.svg"
@@ -50,16 +50,13 @@ export function Navigation() {
             <span className="font-pixel">Andrew</span>
           </a>
 
-          <nav
-            className="hidden items-center gap-1 md:flex"
-            aria-label="Primary"
-          >
+          <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
             {SECTIONS.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
                 data-nav-link={s.id}
-                className="rounded-md px-3 py-2 text-(--muted) text-sm outline-none transition-colors hover:text-(--fg) focus-visible:text-(--fg) focus-visible:ring-2 focus-visible:ring-(--accent)/60 data-[active=true]:text-(--fg)"
+                className="rounded-md px-3 py-2 text-sm text-(--muted) transition-colors outline-none hover:text-(--fg) focus-visible:text-(--fg) focus-visible:ring-2 focus-visible:ring-(--accent)/60 data-[active=true]:text-(--fg)"
               >
                 {t(s.key)}
               </a>
@@ -85,7 +82,7 @@ export function Navigation() {
                     key={s.id}
                     href={`#${s.id}`}
                     data-nav-link={s.id}
-                    className="rounded-xl px-3 py-2.5 text-(--fg) text-sm transition-colors hover:bg-(--accent)/10 data-[active=true]:bg-(--accent)/15 data-[active=true]:text-(--accent)"
+                    className="rounded-xl px-3 py-2.5 text-sm text-(--fg) transition-colors hover:bg-(--accent)/10 data-[active=true]:bg-(--accent)/15 data-[active=true]:text-(--accent)"
                   >
                     {t(s.key)}
                   </a>
