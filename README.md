@@ -1,22 +1,22 @@
-# Minh Doan — Portfolio
+# Andrew — Portfolio
 
 A personal portfolio website built with Next.js (App Router), internationalized in English and Vietnamese, with a hardened security posture and a content-driven architecture.
 
 ## Tech Stack
 
-| Area | Technology |
-| --- | --- |
-| Framework | [Next.js 16](https://nextjs.org/) (App Router, Turbopack) |
-| Language | [TypeScript 5](https://www.typescriptlang.org/) (`strict` mode) |
-| UI runtime | [React 19](https://react.dev/) |
-| Styling | [Tailwind CSS 4](https://tailwindcss.com/) + [Tamagui](https://tamagui.dev/) (via `react-native-web`) |
-| Animation | [Framer Motion](https://www.framer.com/motion/) |
-| i18n | [next-intl](https://next-intl.dev/) (`en`, `vi`) |
-| Theming | [next-themes](https://github.com/pacocoursey/next-themes) (light/dark) |
-| Icons | [lucide-react](https://lucide.dev/), [Simple Icons](https://simpleicons.org/), [Devicon](https://devicon.dev/) |
-| Fonts | [Geist](https://vercel.com/font) |
-| Lint / Format | [Biome](https://biomejs.dev/) |
-| Package manager | [pnpm](https://pnpm.io/) (enforced via `only-allow`) |
+| Area            | Technology                                                                                                     |
+| --------------- | -------------------------------------------------------------------------------------------------------------- |
+| Framework       | [Next.js 16](https://nextjs.org/) (App Router, Turbopack)                                                      |
+| Language        | [TypeScript 5](https://www.typescriptlang.org/) (`strict` mode)                                                |
+| UI runtime      | [React 19](https://react.dev/)                                                                                 |
+| Styling         | [Tailwind CSS 4](https://tailwindcss.com/) + [Tamagui](https://tamagui.dev/) (via `react-native-web`)          |
+| Animation       | [Framer Motion](https://www.framer.com/motion/)                                                                |
+| i18n            | [next-intl](https://next-intl.dev/) (`en`, `vi`)                                                               |
+| Theming         | [next-themes](https://github.com/pacocoursey/next-themes) (light/dark)                                         |
+| Icons           | [lucide-react](https://lucide.dev/), [Simple Icons](https://simpleicons.org/), [Devicon](https://devicon.dev/) |
+| Fonts           | [Geist](https://vercel.com/font)                                                                               |
+| Lint / Format   | [Biome](https://biomejs.dev/)                                                                                  |
+| Package manager | [pnpm](https://pnpm.io/) (enforced via `only-allow`)                                                           |
 
 ## Requirements
 
@@ -41,12 +41,12 @@ pnpm start
 
 ## Scripts
 
-| Script | Purpose |
-| --- | --- |
-| `pnpm dev` | Start the Next.js dev server |
-| `pnpm build` | Production build |
-| `pnpm start` | Serve the production build |
-| `pnpm lint` | Run `next lint` |
+| Script           | Purpose                        |
+| ---------------- | ------------------------------ |
+| `pnpm dev`       | Start the Next.js dev server   |
+| `pnpm build`     | Production build               |
+| `pnpm start`     | Serve the production build     |
+| `pnpm lint`      | Run `next lint`                |
 | `pnpm typecheck` | Type-check with `tsc --noEmit` |
 | `pnpm audit:fix` | Fix dependency vulnerabilities |
 

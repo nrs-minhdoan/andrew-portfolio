@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fira_Code, Silkscreen } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -8,6 +9,19 @@ import { Providers } from "@/components/Providers";
 import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+
+const silkscreen = Silkscreen({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-silkscreen",
+  display: "swap",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fira-code",
+  display: "swap",
+});
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://minhdoan.dev";
 
@@ -67,7 +81,11 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={`${silkscreen.variable} ${firaCode.variable}`}
+    >
       <body className="min-h-screen font-sans antialiased">
         <PersonJsonLd locale={locale} />
         <NextIntlClientProvider>

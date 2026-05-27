@@ -12,6 +12,7 @@
   --color-accent-3: #f97316;
 
   --font-berkeley: "Berkeley Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-pixel: var(--font-silkscreen), var(--font-fira-code), Monaco, Consolas, "Ubuntu Mono", monospace;
   --font-sans: var(--font-berkeley);
   --font-mono: var(--font-berkeley);
   --font-display: var(--font-berkeley);

@@ -34,7 +34,7 @@ export function Navigation() {
         <div className="container-page flex h-16 min-w-0 items-center justify-between gap-2 sm:gap-4">
           <a
             href="#hero"
-            aria-label="Minh Doan — home"
+            aria-label="Andrew — home"
             className="group inline-flex min-w-0 items-center gap-6 font-bold font-display text-base"
           >
             <Image
@@ -47,7 +47,7 @@ export function Navigation() {
               unoptimized
               className="h-9 w-auto transition-transform group-hover:scale-110"
             />
-            <span>Andrew</span>
+            <span className="font-pixel">Andrew</span>
           </a>
 
           <nav
