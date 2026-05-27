@@ -1,0 +1,238 @@
+{
+  "Meta": {
+    "title": "Minh Truong Doan — Front-end Developer",
+    "description": "Front-end Developer with 7+ years of experience leading teams and building scalable web & mobile applications with React, Next.js, Vue.js, Angular, and React Native."
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "Hero": {
+    "eyebrow": "Front-end Developer · Lead",
+    "name": "Minh Truong Doan",
+    "tagline": "I build performant, scalable web & mobile products.",
+    "roles": [
+      "Front-end Lead",
+      "Front-end Developer",
+      "React Native Mobile Developer"
+    ],
+    "ctaProjects": "Explore projects",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll to explore",
+    "stats": {
+      "yearsExperience": "Years experience",
+      "yearsLeading": "Years leading teams",
+      "teamSize": "Engineers mentored",
+      "projects": "Shipped projects"
+    }
+  },
+  "About": {
+    "label": "About me",
+    "title": "Crafting Front-end Systems that scale.",
+    "p1": "I am a Front-end Developer with <b>7+ years</b> of professional experience in <b>Web and Mobile Application Development</b>, including <b>5+ years</b> of leading and mentoring teams of <b>4–8 engineers</b>. I design scalable front-end architectures, drive technical decisions, and deliver high-quality products from concept to production.",
+    "p2": "Highly proficient in modern front-end technologies and frameworks such as <b>React</b>, <b>Angular</b> and <b>Vue.js</b>, with extensive mobile development experience using <b>React Native</b> for both iOS and Android platforms. I focus on building performant, maintainable, and scalable applications with excellent user experience.",
+    "p3": "I have led and contributed to complex products including <b>e-commerce platforms</b>, <b>financial applications</b>, <b>financial trading platforms</b>, and <b>real-time systems</b>. My responsibilities include system architecture design, performance optimization, real-time data handling, code quality enforcement, and cross-functional collaboration with Back-end, product, and design teams.",
+    "p4": "I am passionate about improving engineering standards, mentoring developers, and driving continuous improvement in development processes and product quality.",
+    "highlightTitle": "What I bring to the table",
+    "highlights": {
+      "architecture": {
+        "title": "Scalable Architecture",
+        "desc": "Module Federation, monorepos (Nx), micro-frontends, reusable design systems."
+      },
+      "performance": {
+        "title": "Performance Engineering",
+        "desc": "Bundle splitting, lazy loading, real-time data streams, render-path optimization."
+      },
+      "leadership": {
+        "title": "Team Leadership",
+        "desc": "Led teams of 4-8 engineers, set coding standards, mentored juniors into seniors."
+      },
+      "delivery": {
+        "title": "End-to-end Delivery",
+        "desc": "From discovery to production — design, build, test, ship, observe."
+      }
+    }
+  },
+  "Skills": {
+    "label": "Tech Stack",
+    "title": "Tools I build with.",
+    "subtitle": "Battle-tested in production across trading platforms, e-commerce, mobile apps and real-time systems.",
+    "mainStacks": "Main stacks",
+    "integrationStacks": "Integration stacks"
+  },
+  "Experience": {
+    "label": "Experience",
+    "title": "Career Timeline",
+    "subtitle": "Seven years building products. Five years leading teams.",
+    "present": "Present",
+    "teamSize": "Team size",
+    "role": "Role",
+    "viewProject": "View project",
+    "offshoreLabel": "ODC engagements",
+    "companies": {
+      "blitz": {
+        "title": "Front-end Lead",
+        "org": "Blitz Labo",
+        "location": "Ha Noi"
+      },
+      "cryptopie": {
+        "title": "Front-end Lead",
+        "org": "CryptoPie Labo",
+        "location": "Ha Noi"
+      },
+      "vmo": {
+        "title": "Front-end Lead",
+        "org": "VMO Group",
+        "location": "Ha Noi"
+      },
+      "freelance": {
+        "title": "Front-end Developer",
+        "org": "Freelancer",
+        "location": "Ha Noi"
+      }
+    },
+    "roles": {
+      "lead": "Front-end Lead",
+      "fe": "Front-end Developer",
+      "mobile": "Mobile Developer",
+      "fe_mobile": "Front-end / Mobile Developer"
+    }
+  },
+  "Projects": {
+    "label": "Featured projects",
+    "title": "Selected Work",
+    "subtitle": "A curated slice of the products I have shipped.",
+    "viewAll": "See all projects",
+    "team": "Team",
+    "members": "members",
+    "member": "member",
+    "items": {
+      "bcefx": {
+        "name": "BCEFX",
+        "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI."
+      },
+      "bitcastle-fx": {
+        "name": "Bitcastle FX",
+        "summary": "Forex trading platform for the Japanese market on MetaQuotes 5."
+      },
+      "bitcastle-fx-partner": {
+        "name": "Bitcastle FX Partner",
+        "summary": "Forex Partner Program portal for affiliates and IBs."
+      },
+      "bitcastle": {
+        "name": "Bitcastle",
+        "summary": "Full-featured cryptocurrency exchange with real-time order book."
+      },
+      "dentity-kyc": {
+        "name": "Dentity",
+        "summary": "Identity authentication platform handling verifications and payments."
+      },
+      "yellow": {
+        "name": "Yellow",
+        "summary": "E-commerce platform to wholesale all kinds of items in the Thai market."
+      },
+      "reddiz": {
+        "name": "ReddiZ",
+        "summary": "Mobile app for a Vietnamese telecommunications social network."
+      },
+      "appi-team": {
+        "name": "APPI Team",
+        "summary": "Internal governance & work management — a French Jira-style suite."
+      },
+      "chubb": {
+        "name": "Chubb",
+        "summary": "Front-end work for the world's largest publicly traded P&C insurer."
+      },
+      "my-coach": {
+        "name": "MyCoach.work",
+        "summary": "Personal trainer search platform for the Japanese market."
+      },
+      "viecnha-24h": {
+        "name": "ViecNha 24H",
+        "summary": "On-demand household chores delivery & pickup mobile app."
+      },
+      "photobook-ai": {
+        "name": "Photobook AI",
+        "summary": "Upload images and generate a printed photobook in a single click."
+      },
+      "bicycle-blue-book": {
+        "name": "Bicycle Blue Book",
+        "summary": "E-commerce platform to wholesale bicycle items in the US market."
+      },
+      "hate-crime-report": {
+        "name": "Hate Crime - Easy Report",
+        "summary": "A powerful mobile tool to report hate crimes with ease and efficiency."
+      },
+      "xlvphc": {
+        "name": "XLVPHC - Sóc Trăng",
+        "summary": "Mobile app for Soc Trang police to manage administrative & criminal violations."
+      },
+      "mechanics-marketplace": {
+        "name": "Mechanics Marketplace",
+        "summary": "Marketplace website & mobile app for the auto repair industry."
+      }
+    }
+  },
+  "Achievements": {
+    "label": "Recognition",
+    "title": "Awards & Milestones",
+    "items": {
+      "torch-2022": {
+        "title": "CryptoPie Labo — The Torch Award",
+        "desc": "Top 10 Influencers 2022."
+      },
+      "shining-star-2019": {
+        "title": "VMO's Shining Star 2019",
+        "desc": "Recognized for outstanding contribution and leadership."
+      },
+      "project-2022": {
+        "title": "VMO Project of the Year 2022",
+        "desc": "Awarded for the Dentity platform."
+      },
+      "project-2018": {
+        "title": "VMO Project of the Year 2018",
+        "desc": "Awarded for the Bicycle Blue Book project."
+      },
+      "project-2019": {
+        "title": "VMO Project of the Year 2019",
+        "desc": "Awarded for the Bicycle Blue Book project."
+      }
+    },
+    "education": {
+      "label": "Education",
+      "engineer": "Engineer's degree"
+    }
+  },
+  "Contact": {
+    "label": "Let's connect",
+    "title": "Have a project in mind?",
+    "subtitle": "I'm open to leadership roles, contract work, and interesting front-end challenges.",
+    "emailMe": "Email me",
+    "callMe": "Call me",
+    "location": "Based in",
+    "social": "Find me online",
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Next.js, TypeScript, Tailwind & Framer Motion."
+  },
+  "Theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Language": {
+    "label": "Language",
+    "en": "English",
+    "vi": "Vietnamese"
+  }
+}

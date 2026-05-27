@@ -1,0 +1,51 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+interface Props {
+  roles: string[];
+}
+
+/**
+ * SSR-friendly typewriter. First render outputs the full first role so the
+ * HTML payload contains keyword-rich H1 text for SEO crawlers. After mount,
+ * the deleting/typing cycle kicks in and rotates through the rest.
+ */
+export function TypewriterRoles({ roles }: Props) {
+  const first = roles[0] ?? "";
+  const [text, setText] = useState(first);
+  const [index, setIndex] = useState(0);
+  const [phase, setPhase] = useState<"hold" | "typing" | "pausing" | "deleting">("hold");
+
+  useEffect(() => {
+    if (roles.length <= 1) return;
+    if (phase === "hold") {
+      const t = window.setTimeout(() => setPhase("deleting"), 1800);
+      return () => window.clearTimeout(t);
+    }
+    const current = roles[index]!;
+    if (phase === "typing") {
+      if (text.length < current.length) {
+        const t = window.setTimeout(() => setText(current.slice(0, text.length + 1)), 55);
+        return () => window.clearTimeout(t);
+      }
+      const t = window.setTimeout(() => setPhase("deleting"), 1600);
+      return () => window.clearTimeout(t);
+    }
+    if (phase === "deleting") {
+      if (text.length > 0) {
+        const t = window.setTimeout(() => setText(current.slice(0, text.length - 1)), 28);
+        return () => window.clearTimeout(t);
+      }
+      const next = (index + 1) % roles.length;
+      setIndex(next);
+      setPhase("typing");
+    }
+  }, [text, phase, index, roles]);
+
+  return (
+    <span className="caret mono block min-h-[2lh] text-(--accent) lg:min-h-[1lh]">
+      {text}
+    </span>
+  );
+}

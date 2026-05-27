@@ -1,0 +1,238 @@
+{
+  "Meta": {
+    "title": "Minh Trương Đoàn — Lập trình viên Front-end",
+    "description": "Lập trình viên Front-end với hơn 7 năm kinh nghiệm dẫn dắt đội ngũ và xây dựng các ứng dụng web & mobile mở rộng cùng React, Next.js, Vue.js, Angular và React Native."
+  },
+  "Nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "achievements": "Thành tích",
+    "contact": "Liên hệ",
+    "resume": "Hồ sơ"
+  },
+  "Hero": {
+    "eyebrow": "Lập trình viên Front-end · Trưởng nhóm",
+    "name": "Minh Trương Đoàn",
+    "tagline": "Tôi xây dựng các sản phẩm web & mobile hiệu năng cao, dễ mở rộng.",
+    "roles": [
+      "Trưởng nhóm Front-end",
+      "Lập trình viên Front-end",
+      "Lập trình viên Mobile React Native"
+    ],
+    "ctaProjects": "Khám phá dự án",
+    "ctaContact": "Liên hệ ngay",
+    "scroll": "Cuộn để khám phá",
+    "stats": {
+      "yearsExperience": "Năm kinh nghiệm",
+      "yearsLeading": "Năm dẫn dắt đội",
+      "teamSize": "Kỹ sư đã dẫn dắt",
+      "projects": "Dự án đã triển khai"
+    }
+  },
+  "About": {
+    "label": "Về tôi",
+    "title": "Kiến tạo hệ thống front-end có khả năng mở rộng.",
+    "p1": "Tôi là Lập trình viên Front-end với <b>hơn 7 năm</b> kinh nghiệm chuyên môn trong <b>phát triển ứng dụng Web và Mobile</b>, trong đó có <b>hơn 5 năm</b> dẫn dắt và đào tạo đội ngũ <b>4–8 kỹ sư</b>. Tôi thiết kế kiến trúc front-end mở rộng, đưa ra quyết định kỹ thuật và triển khai sản phẩm chất lượng cao từ ý tưởng đến production.",
+    "p2": "Thành thạo các công nghệ và framework front-end hiện đại như <b>React</b>, <b>Angular</b> và <b>Vue.js</b>, đồng thời có kinh nghiệm phát triển mobile sâu rộng với <b>React Native</b> trên cả iOS và Android. Tôi tập trung xây dựng các ứng dụng hiệu năng cao, dễ bảo trì và có trải nghiệm người dùng xuất sắc.",
+    "p3": "Tôi đã dẫn dắt và đóng góp vào các sản phẩm phức tạp như <b>nền tảng thương mại điện tử</b>, <b>ứng dụng tài chính</b>, <b>nền tảng giao dịch tài chính</b> và <b>hệ thống thời gian thực</b>. Trách nhiệm bao gồm thiết kế kiến trúc hệ thống, tối ưu hiệu năng, xử lý dữ liệu thời gian thực, đảm bảo chất lượng code và phối hợp liên phòng ban với Back-end, sản phẩm và thiết kế.",
+    "p4": "Tôi đam mê nâng cao chuẩn mực kỹ thuật, đào tạo lập trình viên và liên tục cải tiến quy trình phát triển cũng như chất lượng sản phẩm.",
+    "highlightTitle": "Giá trị tôi mang lại",
+    "highlights": {
+      "architecture": {
+        "title": "Kiến trúc mở rộng",
+        "desc": "Module Federation, monorepo (Nx), micro-frontend, hệ thống thiết kế tái sử dụng."
+      },
+      "performance": {
+        "title": "Tối ưu hiệu năng",
+        "desc": "Tách bundle, lazy load, luồng dữ liệu thời gian thực, tối ưu render path."
+      },
+      "leadership": {
+        "title": "Dẫn dắt đội ngũ",
+        "desc": "Dẫn dắt 4–8 kỹ sư, thiết lập tiêu chuẩn code, đào tạo junior thành senior."
+      },
+      "delivery": {
+        "title": "Giao hàng trọn vòng",
+        "desc": "Từ khám phá tới production — thiết kế, xây dựng, test, ship, vận hành."
+      }
+    }
+  },
+  "Skills": {
+    "label": "Stack công nghệ",
+    "title": "Công cụ tôi sử dụng.",
+    "subtitle": "Đã được kiểm chứng trên production qua nền tảng giao dịch, thương mại điện tử, ứng dụng mobile và hệ thống thời gian thực.",
+    "mainStacks": "Stack chính",
+    "integrationStacks": "Stack tích hợp"
+  },
+  "Experience": {
+    "label": "Kinh nghiệm",
+    "title": "Hành trình sự nghiệp",
+    "subtitle": "Bảy năm xây dựng sản phẩm. Năm năm dẫn dắt đội ngũ.",
+    "present": "Hiện tại",
+    "teamSize": "Quy mô đội",
+    "role": "Vai trò",
+    "viewProject": "Xem dự án",
+    "offshoreLabel": "Tham gia ODC",
+    "companies": {
+      "blitz": {
+        "title": "Trưởng nhóm Front-end",
+        "org": "Blitz Labo",
+        "location": "Hà Nội"
+      },
+      "cryptopie": {
+        "title": "Trưởng nhóm Front-end",
+        "org": "CryptoPie Labo",
+        "location": "Hà Nội"
+      },
+      "vmo": {
+        "title": "Trưởng nhóm Front-end",
+        "org": "VMO Group",
+        "location": "Hà Nội"
+      },
+      "freelance": {
+        "title": "Lập trình viên Front-end",
+        "org": "Freelancer",
+        "location": "Hà Nội"
+      }
+    },
+    "roles": {
+      "lead": "Trưởng nhóm Front-end",
+      "fe": "Lập trình viên Front-end",
+      "mobile": "Lập trình viên Mobile",
+      "fe_mobile": "Lập trình viên Front-end / Mobile"
+    }
+  },
+  "Projects": {
+    "label": "Dự án nổi bật",
+    "title": "Một số sản phẩm tiêu biểu",
+    "subtitle": "Một phần các sản phẩm tôi đã triển khai.",
+    "viewAll": "Xem tất cả dự án",
+    "team": "Đội",
+    "members": "thành viên",
+    "member": "thành viên",
+    "items": {
+      "bcefx": {
+        "name": "BCEFX",
+        "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI."
+      },
+      "bitcastle-fx": {
+        "name": "Bitcastle FX",
+        "summary": "Nền tảng giao dịch Forex cho thị trường Nhật Bản trên MetaQuotes 5."
+      },
+      "bitcastle-fx-partner": {
+        "name": "Bitcastle FX Partner",
+        "summary": "Cổng chương trình đối tác Forex cho affiliate và IB."
+      },
+      "bitcastle": {
+        "name": "Bitcastle",
+        "summary": "Sàn giao dịch tiền mã hóa đầy đủ tính năng với order book thời gian thực."
+      },
+      "dentity-kyc": {
+        "name": "Dentity",
+        "summary": "Nền tảng xác thực danh tính, xử lý KYC và thanh toán."
+      },
+      "yellow": {
+        "name": "Yellow",
+        "summary": "Nền tảng TMĐT bán sỉ đa dạng sản phẩm tại thị trường Thái Lan."
+      },
+      "reddiz": {
+        "name": "ReddiZ",
+        "summary": "Ứng dụng mobile mạng xã hội viễn thông Việt Nam."
+      },
+      "appi-team": {
+        "name": "APPI Team",
+        "summary": "Hệ thống quản trị nội bộ & công việc theo phong cách Jira của Pháp."
+      },
+      "chubb": {
+        "name": "Chubb",
+        "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới."
+      },
+      "my-coach": {
+        "name": "MyCoach.work",
+        "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản."
+      },
+      "viecnha-24h": {
+        "name": "ViecNha 24H",
+        "summary": "Ứng dụng mobile nhận và giao việc nhà theo yêu cầu."
+      },
+      "photobook-ai": {
+        "name": "Photobook AI",
+        "summary": "Upload ảnh và tạo photobook in ấn chỉ với một cú click."
+      },
+      "bicycle-blue-book": {
+        "name": "Bicycle Blue Book",
+        "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ."
+      },
+      "hate-crime-report": {
+        "name": "Hate Crime - Easy Report",
+        "summary": "Công cụ mobile mạnh mẽ để báo cáo tội phạm thù ghét nhanh chóng."
+      },
+      "xlvphc": {
+        "name": "XLVPHC - Sóc Trăng",
+        "summary": "Ứng dụng mobile cho công an Sóc Trăng quản lý vi phạm hành chính & hình sự."
+      },
+      "mechanics-marketplace": {
+        "name": "Mechanics Marketplace",
+        "summary": "Website & mobile marketplace cho ngành sửa chữa ô tô."
+      }
+    }
+  },
+  "Achievements": {
+    "label": "Vinh danh",
+    "title": "Giải thưởng & Cột mốc",
+    "items": {
+      "torch-2022": {
+        "title": "CryptoPie Labo — The Torch Award",
+        "desc": "Top 10 Influencers 2022."
+      },
+      "shining-star-2019": {
+        "title": "VMO's Shining Star 2019",
+        "desc": "Vinh danh đóng góp xuất sắc và năng lực dẫn dắt."
+      },
+      "project-2022": {
+        "title": "VMO Project of the Year 2022",
+        "desc": "Giải thưởng cho nền tảng Dentity KYC."
+      },
+      "project-2018": {
+        "title": "VMO Project of the Year 2018",
+        "desc": "Giải thưởng cho dự án TMĐT Bicycle Blue Book."
+      },
+      "project-2019": {
+        "title": "VMO Project of the Year 2019",
+        "desc": "Giải thưởng cho dự án TMĐT Bicycle Blue Book."
+      }
+    },
+    "education": {
+      "label": "Học vấn",
+      "engineer": "Bằng Kỹ sư"
+    }
+  },
+  "Contact": {
+    "label": "Kết nối",
+    "title": "Bạn có dự án trong đầu?",
+    "subtitle": "Tôi cởi mở với vị trí leadership, hợp đồng và các thử thách front-end thú vị.",
+    "emailMe": "Gửi email",
+    "callMe": "Gọi điện",
+    "location": "Tôi đang ở",
+    "social": "Tìm tôi online",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!"
+  },
+  "Footer": {
+    "rights": "Bảo lưu mọi quyền.",
+    "built": "Xây bằng Next.js, TypeScript, Tailwind & Framer Motion."
+  },
+  "Theme": {
+    "toggle": "Đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống"
+  },
+  "Language": {
+    "label": "Ngôn ngữ",
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  }
+}

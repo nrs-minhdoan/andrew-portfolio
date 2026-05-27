@@ -1,0 +1,444 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: #ffffff;
+  --color-fg: #0a0a0a;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #dc2626;
+  --color-accent-2: #f59e0b;
+  --color-accent-3: #f97316;
+
+  --font-berkeley: "Berkeley Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-sans: var(--font-berkeley);
+  --font-mono: var(--font-berkeley);
+  --font-display: var(--font-berkeley);
+  --font-label: var(--font-berkeley);
+  --font-description: var(--font-berkeley);
+}
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-soft: #fdf4f4;
+  --fg: #0a0a0a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --border-strong: #d4d4d8;
+  --accent: #dc2626;
+  --accent-2: #f59e0b;
+  --accent-3: #f97316;
+  --card: rgba(255, 255, 255, 0.7);
+  --grid-color: rgba(0, 0, 0, 0.05);
+  --noise-opacity: 0.025;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #0d0506;
+  --bg-soft: #14080a;
+  --fg: #f4e8e8;
+  --muted: #b89898;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --accent: #ef4444;
+  --accent-2: #fbbf24;
+  --accent-3: #fb923c;
+  --card: rgba(255, 255, 255, 0.04);
+  --grid-color: rgba(255, 255, 255, 0.05);
+  --noise-opacity: 0.05;
+}
+
+/* Always-hidden scrollbar. Keep scroll behavior, no visible track/thumb. */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Slider-style snap on desktop only. Mobile + tablet keep natural scroll
+     so the experience matches platform expectations (no forced snap-fight
+     against touch momentum) and avoids the broken layout when tall sections
+     are jammed into 100svh. Tailwind `md` = 768px. */
+  scroll-padding-top: 4rem;
+  overflow-x: clip;
+}
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: clip;
+  max-width: 100vw;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Container. Box-sizing border-box so the inline padding is part of the
+   width budget — prevents the container from spilling past the viewport
+   when used as a flex item that stretches to fill its parent. */
+.container-page {
+  width: 100%;
+  max-width: min(1200px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+/* Animated grid background */
+.bg-grid {
+  --grid-size: 56px;
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 80%);
+}
+
+/* Aurora gradient blobs */
+.aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.55;
+  animation: aurora 18s ease-in-out infinite alternate;
+}
+.aurora::before {
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+  top: -10vw;
+  left: -10vw;
+}
+.aurora::after {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--accent-2) 0%, transparent 60%);
+  bottom: -10vw;
+  right: -10vw;
+  animation-delay: -6s;
+}
+
+@keyframes aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(4vw, 2vw, 0) scale(1.1); }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-3) 50%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glass card */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animated border via conic gradient */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.border-flow {
+  position: relative;
+  isolation: isolate;
+}
+.border-flow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--angle, 0deg), var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rotate-border 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate-border {
+  to { --angle: 360deg; }
+}
+
+/* Marquee */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 2.5rem;
+  animation: marquee var(--marquee-duration, 35s) linear infinite;
+  min-width: max-content;
+  align-items: center;
+}
+.marquee[data-reverse="true"] .marquee-track {
+  animation-direction: reverse;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* Spotlight cursor */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), color-mix(in oklab, var(--accent) 18%, transparent), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.spotlight:hover::after { opacity: 1; }
+
+/* Noise overlay */
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--noise-opacity);
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.7'/></svg>");
+}
+
+/* Section header label badge. Pixel-style Silkscreen so it reads as a tag
+   chip, falling back to Fira Code / system monos when the webfont is loading
+   or unavailable. */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+/* Body / description text — Berkeley Mono first, then ui-monospace chain. */
+.description {
+  font-family: var(--font-description);
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Glow ring */
+.glow {
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--accent) 30%, transparent),
+    0 18px 60px -10px color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+/* Tilt card */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+/* Code blob */
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+/* Scroll-reveal fallback */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section spacing + snap behavior. Each section is a slider page:
+   - min-height 100svh so every section can satisfy the viewport
+   - scroll-snap-align start so the section top docks to the snap rail
+   - flex center so content stays vertically centered inside short pages */
+section[data-section] {
+  position: relative;
+  /* Tighter on mobile (3rem floor), generous on desktop (up to 7rem). */
+  padding-block: clamp(2.5rem, 9vw, 7rem);
+  /* No forced viewport height on mobile — sections shrink to content. */
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  scroll-snap-align: none;
+  max-width: 100vw;
+  width: 100%;
+  /* Hard clip any rogue child (aurora blobs, marquee tracks, animations)
+     that tries to push past the section edges. Combined with the body-level
+     clip, prevents any horizontal layout shift on phones. */
+  overflow-x: clip;
+}
+
+/* Hero is the first section and sits at scroll 0, so it must clear the
+   fixed 64px header. Override the generic clamp() with a min of header-height
+   + 16px spacing so the eyebrow badge never tucks under the nav. */
+section[data-section="hero"] {
+  padding-block-start: clamp(5rem, 9vw, 7rem);
+}
+
+/* Active nav-link gradient underline. Pseudo-element is always present so
+   it can fade in smoothly via opacity transition — matches the original
+   span-based behavior. Lights up on `data-active="true"` or focus-visible. */
+a[data-nav-link] {
+  position: relative;
+}
+a[data-nav-link]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.75rem;
+  bottom: -2px;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    var(--accent),
+    var(--accent-3),
+    var(--accent-2)
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+a[data-nav-link][data-active="true"]::after,
+a[data-nav-link]:focus-visible::after {
+  opacity: 1;
+}
+/* Restore slider behavior at md+ where layout has room to fill 100svh. */
+@media (min-width: 768px) {
+  section[data-section] {
+    min-height: 100svh;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+}
+
+/* Anchor offset under fixed nav. Works with scroll-padding-top above. */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+/* Hero already centers itself via its own flex; skip min-height bump
+   for sections that explicitly opt out via data-snap="off". */
+section[data-snap="off"] {
+  min-height: 0;
+  scroll-snap-align: none;
+}
+
+/* Contact is the last section and embeds the site footer. Top padding stays
+   so content has breathing room below the fixed nav, bottom padding goes to
+   zero so the footer docks to the true viewport bottom. Children stack
+   start-to-end with the content region growing to fill the gap. */
+section[data-section="contact"] {
+  padding-bottom: 0;
+  justify-content: flex-start;
+  scroll-snap-align: end;
+  scroll-margin-top: 0;
+}
+section[data-section="contact"] > .container-page {
+  flex: 1;
+}
+
+/* Animated cursor underscore */
+.caret::after {
+  content: "_";
+  margin-left: 2px;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.floating { animation: float 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .aurora::before, .aurora::after { animation: none; }
+}
