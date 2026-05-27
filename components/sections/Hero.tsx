@@ -43,7 +43,7 @@ export function Hero() {
               {/* Reserve 3 lines of typewriter height on md+ so the layout
                   below doesn't shift as role text cycles through lengths.
                   Mobile keeps natural flow — already handled there. */}
-              <span className="gradient-text mt-2 block text-3xl break-words sm:text-5xl md:min-h-[3.3em] md:text-6xl lg:text-7xl">
+              <span className="gradient-text mt-2 block text-3xl wrap-break-word sm:text-5xl md:min-h-[3.3em] md:text-6xl lg:text-7xl">
                 <TypewriterRoles roles={roles} />
               </span>
             </h1>

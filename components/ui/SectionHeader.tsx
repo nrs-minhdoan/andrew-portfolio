@@ -20,12 +20,12 @@ export function SectionHeader({ label, title, subtitle, align = "left" }: Props)
       {/* Inline-flex on the badge means it sizes to content; the parent
           previously stretched it to full container width on mobile. */}
       <span className="label max-w-full">{label}</span>
-      <h2 className="font-display max-w-full text-2xl font-bold tracking-tight text-balance break-words sm:text-4xl md:text-5xl">
+      <h2 className="font-display max-w-full text-2xl font-bold tracking-tight wrap-break-word sm:text-4xl md:text-5xl">
         {title}
       </h2>
       {subtitle ? (
         <p
-          className={`description max-w-full min-w-0 text-sm break-words text-(--muted) sm:max-w-2xl sm:text-base ${
+          className={`description max-w-full min-w-0 text-sm wrap-break-word text-(--muted) sm:max-w-2xl sm:text-base ${
             isCenter ? "mx-auto" : ""
           }`}
         >

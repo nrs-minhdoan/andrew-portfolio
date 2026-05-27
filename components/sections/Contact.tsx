@@ -40,7 +40,7 @@ export function Contact() {
                 <div className="text-[10px] tracking-widest text-(--muted) uppercase sm:text-xs">
                   {t("location")}
                 </div>
-                <div className="font-display mt-1 inline-flex items-center gap-2 text-base font-bold break-words sm:text-lg">
+                <div className="font-display mt-1 inline-flex items-center gap-2 text-base font-bold wrap-break-word sm:text-lg">
                   <MapPin className="h-4 w-4 shrink-0 text-(--accent) sm:h-5 sm:w-5" aria-hidden />
                   {t("address")}
                 </div>
