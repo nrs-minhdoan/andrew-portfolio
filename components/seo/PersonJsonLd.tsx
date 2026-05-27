@@ -13,7 +13,7 @@ export function PersonJsonLd({ locale }: { locale: string }) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Minh Truong Doan",
-    alternateName: locale === "vi" ? "Minh Trương Đoàn" : "Minh Truong Doan",
+    alternateName: locale === "vi" ? "Đoàn Trương Minh" : "Minh Truong Doan",
     jobTitle: "Front-end Developer & Team Leader",
     email: `mailto:${CONTACT.email}`,
     telephone: CONTACT.phone,

@@ -1,6 +1,6 @@
 {
   "Meta": {
-    "title": "Minh Trương Đoàn — Lập trình viên Front-end",
+    "title": "Đoàn Trương Minh — Lập trình viên Front-end",
     "description": "Lập trình viên Front-end với hơn 7 năm kinh nghiệm dẫn dắt đội ngũ và xây dựng các ứng dụng web & mobile mở rộng cùng React, Next.js, Vue.js, Angular và React Native."
   },
   "Nav": {
@@ -15,7 +15,7 @@
   },
   "Hero": {
     "eyebrow": "Lập trình viên Front-end · Trưởng nhóm",
-    "name": "Minh Trương Đoàn",
+    "name": "Đoàn Trương Minh",
     "tagline": "Tôi xây dựng các sản phẩm web & mobile hiệu năng cao, dễ mở rộng.",
     "roles": [
       "Trưởng nhóm Front-end",
