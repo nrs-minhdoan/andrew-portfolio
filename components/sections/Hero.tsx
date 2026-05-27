@@ -17,7 +17,7 @@ export function Hero() {
     <section
       id="hero"
       data-section="hero"
-      className="relative isolate flex min-h-svh items-start pt-20 sm:pt-28 lg:items-center lg:pt-24"
+      className="relative isolate flex min-h-svh flex-col items-stretch pt-20 sm:flex-row sm:items-start sm:pt-28 lg:items-center lg:pt-24"
     >
       <div className="aurora" aria-hidden />
       <div className="bg-grid absolute inset-0" aria-hidden />
@@ -84,7 +84,7 @@ export function Hero() {
       <a
         href="#about"
         aria-label={t("scroll")}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-xs tracking-[0.2em] text-(--muted) uppercase"
+        className="mt-10 mb-2 self-center text-xs tracking-[0.2em] text-(--muted) uppercase sm:absolute sm:bottom-8 sm:left-1/2 sm:z-10 sm:mt-0 sm:mb-0 sm:-translate-x-1/2"
       >
         <span className="floating inline-block">↓ {t("scroll")}</span>
       </a>

@@ -86,7 +86,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${silkscreen.variable} ${firaCode.variable}`}
     >
-      <body className="min-h-screen font-sans antialiased">
+      <body className="min-h-screen font-sans antialiased" suppressHydrationWarning>
         <PersonJsonLd locale={locale} />
         <NextIntlClientProvider>
           <Providers>

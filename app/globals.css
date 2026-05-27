@@ -422,6 +422,15 @@ section[id] {
   scroll-margin-top: 4rem;
 }
 
+/* Mobile: drop scroll-margin so it doesn't stack with html's scroll-padding-top.
+   Desktop snap re-aligns the section to snap-start so the double offset is invisible
+   there; mobile has no snap, so the duplicate 4rem leaks the previous section's tail. */
+@media (max-width: 767px) {
+  section[id] {
+    scroll-margin-top: 0;
+  }
+}
+
 /* Hero already centers itself via its own flex; skip min-height bump
    for sections that explicitly opt out via data-snap="off". */
 section[data-snap="off"] {
