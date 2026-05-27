@@ -47,7 +47,7 @@ export function Navigation() {
               unoptimized
               className="h-9 w-auto transition-transform group-hover:scale-110"
             />
-            <span>Minh Doan</span>
+            <span>Andrew</span>
           </a>
 
           <nav
