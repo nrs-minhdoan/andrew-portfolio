@@ -141,11 +141,11 @@ function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProp
     <li className="glass group relative block overflow-hidden rounded-2xl p-5 transition-all focus-within:border-(--accent)/60 hover:-translate-y-0.5 hover:border-(--accent)/40">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h4 className="font-display flex items-center gap-2 text-base font-bold">
+          <h4 className="font-display flex items-center gap-2.5 text-base font-bold">
             {icon ? (
-              <LogoMark src={icon} lightBg={project.logoLightBg} />
+              <LogoMark src={icon} size={32} lightBg={project.logoLightBg} />
             ) : (
-              <Briefcase className="h-4 w-4 text-(--accent)" aria-hidden />
+              <Briefcase className="h-5 w-5 text-(--accent)" aria-hidden />
             )}
             {project.url ? (
               <a

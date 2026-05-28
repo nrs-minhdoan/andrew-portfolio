@@ -2,7 +2,6 @@ import { ArrowUpRight, Users } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AwardBadge } from "@/components/ui/AwardBadge";
-import { LogoMark } from "@/components/ui/LogoMark";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
@@ -73,7 +72,7 @@ export function Projects() {
                     />
                     {icon ? (
                       <span
-                        className={`absolute right-3 bottom-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-(--border) p-1.5 shadow-lg backdrop-blur ${project.logoLightBg ? "bg-white" : "bg-(--bg)/85"}`}
+                        className={`absolute right-3 bottom-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-(--border-strong) p-1.5 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.45),0_2px_6px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.06)] ring-1 ring-black/5 backdrop-blur ${project.logoLightBg ? "bg-white" : "bg-(--bg)/90"}`}
                       >
                         <img
                           src={icon}
@@ -97,8 +96,7 @@ export function Projects() {
                   </div>
                   <div className="space-y-3 p-5">
                     <header className="flex items-start justify-between gap-2">
-                      <h3 className="font-display flex items-center gap-2 text-lg leading-tight font-bold">
-                        {icon ? <LogoMark src={icon} lightBg={project.logoLightBg} /> : null}
+                      <h3 className="font-display text-lg leading-tight font-bold">
                         {project.url ? (
                           <a
                             href={project.url}
