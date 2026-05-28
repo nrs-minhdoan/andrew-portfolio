@@ -26,10 +26,38 @@ export type TechKey =
   | "vite"
   | "handlebars"
   | "twig"
-  | "pugjs";
+  | "pugjs"
+  | "recoil"
+  | "swr"
+  | "formik"
+  | "reacthookform"
+  | "reactrouter"
+  | "reactnavigation"
+  | "tanstackrouter"
+  | "mui"
+  | "antdesign"
+  | "chakraui"
+  | "tamagui"
+  | "ngzorro"
+  | "angularmaterial"
+  | "tailwindcss"
+  | "sass"
+  | "jss"
+  | "styledcomponents"
+  | "apolloclient"
+  | "bootstrap"
+  | "firebase"
+  | "reactstrap"
+  | "ngbootstrap"
+  | "onesignal"
+  | "appcenter"
+  | "sentry";
+
+export type TechCategory = "main" | "small_integration" | "big_integration";
 
 export interface TechMeta {
   key: TechKey;
+  type: TechCategory;
   name: string;
   /** devicon path under cdn.jsdelivr.net/gh/devicons/devicon/icons */
   icon?: string;
@@ -40,4 +68,6 @@ export interface TechMeta {
   color: string;
   /** official homepage — click target on TechIcon/TechBadge */
   url?: string;
+  /** apply CSS invert filter in dark theme (for black-only logos) */
+  invertOnDark?: boolean;
 }

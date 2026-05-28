@@ -11,13 +11,14 @@
 export type {
   TechKey,
   TechMeta,
+  TechCategory,
   CompanySlug,
   CompanySpec,
   ProjectRole,
   ProjectSpec,
   AchievementSpec,
 } from "@/types";
-export { TECHS, MAIN_STACKS, INTEGRATION_STACKS } from "./techs";
+export { TECHS, TECH_LIST } from "./techs";
 export { COMPANIES } from "./companies";
 export { PROJECTS } from "./projects";
 export { OFFSHORE_ENGAGEMENTS } from "./offshore";

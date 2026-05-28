@@ -1,17 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import { CONTACT } from "@/data/portfolio";
+import { SITE_URL } from "@/lib/site";
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0d0506" },
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-  ],
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://minhdoan.dev"),
-  title: { default: "Minh Truong Doan", template: "%s · Minh Truong Doan" },
+  metadataBase: new URL(SITE_URL),
+  title: { default: CONTACT.fullName, template: `%s · ${CONTACT.fullName}` },
   description: "Front-end Developer & Team Leader with 7+ years of experience.",
 };
 

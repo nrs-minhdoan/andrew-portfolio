@@ -1,84 +1,50 @@
 "use client";
 
-import type { ComponentType } from "react";
-import { Button as TamaguiButton, type ButtonProps as TamaguiButtonProps } from "tamagui";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-// Tamagui v2 has strict prop typings against raw CSS strings; cast escape.
-type AnyProps = Record<string, unknown>;
-const RawButton = TamaguiButton as unknown as ComponentType<AnyProps>;
+type Intent = "primary" | "ghost" | "outline";
 
-export interface ButtonProps extends Omit<TamaguiButtonProps, "color"> {
-  intent?: "primary" | "ghost" | "outline";
+export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
+  intent?: Intent;
+  iconAfter?: ReactNode;
+  /** Tamagui-era alias kept for callsite compatibility. */
+  onPress?: () => void;
 }
 
-export function Button({ intent = "outline", children, ...rest }: ButtonProps) {
-  const isPrimary = intent === "primary";
-  const palette =
-    intent === "primary"
-      ? {
-          bg: "transparent",
-          border: "transparent",
-          fg: "#ffffff",
-          hoverBg: "transparent",
-          hoverBorder: "transparent",
-        }
-      : intent === "ghost"
-        ? {
-            bg: "transparent",
-            border: "transparent",
-            fg: "var(--fg)",
-            hoverBg: "color-mix(in oklab, var(--accent) 12%, transparent)",
-            hoverBorder: "transparent",
-          }
-        : {
-            bg: "transparent",
-            border: "var(--border-strong)",
-            fg: "var(--fg)",
-            hoverBg: "color-mix(in oklab, var(--accent) 8%, transparent)",
-            hoverBorder: "var(--accent)",
-          };
+const baseClass =
+  "inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 font-semibold transition-[background,border-color,filter,opacity,color,box-shadow] duration-200 outline-none focus-visible:ring-2 focus-visible:ring-(--accent) focus-visible:ring-offset-2 focus-visible:ring-offset-(--bg) active:opacity-85 disabled:opacity-50";
 
-  const primaryGradient = isPrimary
-    ? {
-        background: "linear-gradient(135deg, var(--accent), var(--accent-3))",
-        boxShadow: "0 10px 30px -10px color-mix(in oklab, var(--accent) 60%, transparent)",
-      }
-    : undefined;
+const intentClass: Record<Intent, string> = {
+  primary:
+    "border border-transparent text-white shadow-[0_10px_30px_-10px_color-mix(in_oklab,var(--accent)_60%,transparent)] [background:linear-gradient(135deg,var(--accent),var(--accent-3))] hover:brightness-110",
+  ghost:
+    "border border-transparent text-(--fg) hover:bg-[color-mix(in_oklab,var(--accent)_12%,transparent)]",
+  outline:
+    "border border-(--border-strong) bg-transparent text-(--fg) hover:border-(--accent) hover:bg-[color-mix(in_oklab,var(--accent)_8%,transparent)]",
+};
 
+export function Button({
+  intent = "outline",
+  iconAfter,
+  onPress,
+  onClick,
+  className,
+  children,
+  type = "button",
+  ...rest
+}: ButtonProps) {
   return (
-    <RawButton
-      animation="medium"
-      borderRadius={9999}
-      paddingHorizontal={22}
-      height={44}
-      borderWidth={1}
-      backgroundColor={palette.bg}
-      borderColor={palette.border}
-      color={palette.fg}
-      fontWeight="600"
-      fontFamily="var(--font-sans)"
-      cursor="pointer"
-      gap={8}
-      style={{
-        ...primaryGradient,
-        transition:
-          "background-color 250ms ease-out, border-color 250ms ease-out, filter 250ms ease-out, opacity 200ms ease-out, color 250ms ease-out, box-shadow 250ms ease-out",
-      }}
-      hoverStyle={
-        isPrimary
-          ? { filter: "brightness(1.12)" }
-          : { backgroundColor: palette.hoverBg, borderColor: palette.hoverBorder }
-      }
-      pressStyle={{ opacity: 0.85 }}
-      focusVisibleStyle={{
-        outlineColor: "var(--accent)",
-        outlineWidth: 2,
-        outlineStyle: "solid",
-        outlineOffset: 2,
+    <button
+      type={type}
+      className={`${baseClass} ${intentClass[intent]} ${className ?? ""}`.trim()}
+      onClick={(e) => {
+        onClick?.(e);
+        onPress?.();
       }}
       {...rest}
     >
       {children}
-    </RawButton>
+      {iconAfter}
+    </button>
   );
 }

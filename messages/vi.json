@@ -73,6 +73,7 @@
     "present": "Hiện tại",
     "teamSize": "Quy mô đội",
     "role": "Vai trò",
+    "award": "giải thưởng",
     "viewProject": "Xem dự án",
     "offshoreLabel": "Tham gia ODC",
     "companies": {
@@ -109,21 +110,14 @@
     "title": "Một số sản phẩm tiêu biểu",
     "subtitle": "Một phần các sản phẩm tôi đã triển khai.",
     "viewAll": "Xem tất cả dự án",
+    "award": "giải thưởng",
     "team": "Đội",
     "members": "thành viên",
     "member": "thành viên",
     "items": {
-      "bcefx": {
-        "name": "BCEFX",
-        "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI."
-      },
       "bitcastle-fx": {
         "name": "Bitcastle FX",
-        "summary": "Nền tảng giao dịch Forex cho thị trường Nhật Bản trên MetaQuotes 5."
-      },
-      "bitcastle-fx-partner": {
-        "name": "Bitcastle FX Partner",
-        "summary": "Cổng chương trình đối tác Forex cho affiliate và IB."
+        "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI."
       },
       "bitcastle": {
         "name": "Bitcastle",
@@ -190,10 +184,6 @@
       "shining-star-2019": {
         "title": "VMO's Shining Star 2019",
         "desc": "Vinh danh đóng góp xuất sắc và năng lực dẫn dắt."
-      },
-      "project-2022": {
-        "title": "VMO Project of the Year 2022",
-        "desc": "Giải thưởng cho nền tảng Dentity KYC."
       },
       "project-2018": {
         "title": "VMO Project of the Year 2018",

@@ -10,11 +10,11 @@ interface Props {
   showLabel?: boolean;
 }
 
-const SIZES = {
+const SIZES: Record<"sm" | "md" | "lg", { icon: number; badge: string }> = {
   sm: { icon: 16, badge: "h-7 px-2 text-xs gap-1.5" },
   md: { icon: 20, badge: "h-9 px-3 text-sm gap-2" },
   lg: { icon: 28, badge: "h-12 px-4 text-base gap-2.5" },
-} as const;
+};
 
 function resolveIconSrc(tech: (typeof TECHS)[TechKey]): string | null {
   if (tech.iconUrl) return tech.iconUrl;
@@ -26,7 +26,7 @@ function resolveIconSrc(tech: (typeof TECHS)[TechKey]): string | null {
  * Anchor when tech has an official URL, plain span otherwise. Same visual.
  * Keyboard / screen-reader semantics inherit from the chosen element.
  */
-function LinkOrSpan({
+export function LinkOrSpan({
   url,
   name,
   className,
@@ -78,8 +78,9 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
           alt=""
           width={icon}
           height={icon}
-          className="h-[1em] w-[1em] shrink-0"
+          className={`h-[1em] w-[1em] shrink-0${tech.invertOnDark ? " dark:invert" : ""}`}
           unoptimized
+          loading="eager"
         />
       ) : (
         <span
@@ -105,7 +106,14 @@ export function TechIcon({ techKey, size = 28 }: { techKey: TechKey; size?: numb
   if (!tech) return null;
   const src = resolveIconSrc(tech);
   return src ? (
-    <Image src={src} alt={tech.name} width={size} height={size} className="shrink-0" unoptimized />
+    <Image
+      src={src}
+      alt={tech.name}
+      width={size}
+      height={size}
+      className={`shrink-0${tech.invertOnDark ? " dark:invert" : ""}`}
+      unoptimized
+    />
   ) : (
     <span
       className="grid place-items-center rounded font-bold text-white"

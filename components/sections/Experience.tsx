@@ -1,17 +1,13 @@
-import { ArrowUpRight, Award, Briefcase, Users } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight, Briefcase, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { AwardBadge } from "@/components/ui/AwardBadge";
+import { LogoMark } from "@/components/ui/LogoMark";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { TechIcon } from "@/components/ui/TechBadge";
-import {
-  COMPANIES,
-  type CompanySlug,
-  OFFSHORE_ENGAGEMENTS,
-  PROJECTS,
-  TECHS,
-} from "@/data/portfolio";
-import { getFaviconUrl } from "@/lib/favicon";
+import { TechList } from "@/components/ui/TechList";
+import { COMPANIES, type CompanySlug, OFFSHORE_ENGAGEMENTS, PROJECTS } from "@/data/portfolio";
+import { getProjectIcon } from "@/lib/project-icon";
+import { ACCENT_GRADIENT, STAGGER } from "@/lib/theme";
 import type { ProjectSpec } from "@/types/project";
 
 export function Experience() {
@@ -36,12 +32,12 @@ export function Experience() {
             const slug = company.slug as CompanySlug;
             const items = PROJECTS.filter((p) => p.company === slug);
             return (
-              <Reveal as="li" key={slug} delay={idx * 0.05} className="relative pl-6 md:pl-14">
+              <Reveal as="li" key={slug} delay={idx * STAGGER} className="relative pl-6 md:pl-14">
                 <span
                   aria-hidden
                   className="absolute top-1.5 left-0 h-3 w-3 rounded-full md:top-1.5 md:left-2 md:h-5 md:w-5"
                   style={{
-                    background: "linear-gradient(135deg, var(--accent), var(--accent-3))",
+                    background: ACCENT_GRADIENT,
                     boxShadow: "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
                   }}
                 />
@@ -62,6 +58,7 @@ export function Experience() {
                       key={project.slug}
                       project={project}
                       roleLabel={t(`roles.${project.role}`)}
+                      awardLabel={t("award")}
                       name={tProjects(`items.${project.slug}.name`)}
                       summary={tProjects(`items.${project.slug}.summary`)}
                     />
@@ -80,22 +77,9 @@ export function Experience() {
                       </span>
                       <ul className="flex flex-wrap gap-1.5">
                         {OFFSHORE_ENGAGEMENTS[slug]?.map((e) => {
-                          // Prefer the supplied logo over a remote favicon, mirroring
-                          // the project cards so each mark reads clearly.
-                          const logo = e.image ?? (e.url ? getFaviconUrl(e.url) : null);
+                          const logo = getProjectIcon(e.url, e.image);
                           const mark = logo ? (
-                            <span
-                              className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded p-0.5 ${e.logoLightBg ? "bg-white" : ""}`}
-                            >
-                              <Image
-                                src={logo}
-                                alt=""
-                                width={20}
-                                height={20}
-                                className="h-full w-full object-contain"
-                                unoptimized
-                              />
-                            </span>
+                            <LogoMark src={logo} lightBg={e.logoLightBg} />
                           ) : null;
                           return (
                             <li key={e.name}>
@@ -135,32 +119,20 @@ export function Experience() {
 interface CardProps {
   project: ProjectSpec;
   roleLabel: string;
+  awardLabel: string;
   name: string;
   summary: string;
 }
 
-function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
-  const favicon = project.url ? getFaviconUrl(project.url) : null;
-  // Prefer the supplied logo over a remote favicon for the title icon slot.
-  const icon = project.image ?? favicon;
+function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProps) {
+  const icon = getProjectIcon(project.url, project.image);
   return (
     <li className="glass group relative block overflow-hidden rounded-2xl p-5 transition-all focus-within:border-(--accent)/60 hover:-translate-y-0.5 hover:border-(--accent)/40">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h4 className="font-display flex items-center gap-2 text-base font-bold">
             {icon ? (
-              <span
-                className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded p-0.5 ${project.logoLightBg ? "bg-white" : ""}`}
-              >
-                <Image
-                  src={icon}
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="h-full w-full object-contain"
-                  unoptimized
-                />
-              </span>
+              <LogoMark src={icon} lightBg={project.logoLightBg} />
             ) : (
               <Briefcase className="h-4 w-4 text-(--accent)" aria-hidden />
             )}
@@ -187,22 +159,7 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
           <p className="mt-1 text-xs text-(--muted)">{project.period}</p>
         </div>
         {project.awards?.length ? (
-          <span
-            title={project.awards.join(" · ")}
-            className="inline-flex items-center gap-1.5 rounded-full border border-(--accent-3)/40 bg-(--accent-3)/10 px-2 py-1 text-[10px] font-semibold tracking-wider text-(--accent-3) uppercase"
-          >
-            <Award className="h-3 w-3" aria-hidden />
-            {project.awards.length > 1 ? (
-              <>
-                award
-                <span className="rounded-full bg-(--accent-3)/25 px-1.5 py-px text-[9px] leading-none font-bold">
-                  ×{project.awards.length}
-                </span>
-              </>
-            ) : (
-              "award"
-            )}
-          </span>
+          <AwardBadge awards={project.awards} label={awardLabel} variant="outline" />
         ) : null}
       </div>
       <p className="mt-3 text-sm text-(--muted)">{summary}</p>
@@ -216,32 +173,7 @@ function ProjectCard({ project, roleLabel, name, summary }: CardProps) {
       </div>
       {/* Tech list above the card-link overlay (z-10) so each chip click
           targets the tech's official site, not the project URL. */}
-      <ul className="relative z-10 mt-4 flex flex-wrap items-center gap-2">
-        {project.techs.slice(0, 8).map((k) => {
-          const tech = TECHS[k];
-          const icon = <TechIcon techKey={k} size={20} />;
-          return (
-            <li key={k} title={k}>
-              {tech?.url ? (
-                <a
-                  href={tech.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${tech.name} — official site`}
-                  className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
-                >
-                  {icon}
-                </a>
-              ) : (
-                icon
-              )}
-            </li>
-          );
-        })}
-        {project.techs.length > 8 ? (
-          <li className="text-xs text-(--muted)">+{project.techs.length - 8}</li>
-        ) : null}
-      </ul>
+      <TechList techs={project.techs} max={8} className="relative z-10 mt-4" />
     </li>
   );
 }

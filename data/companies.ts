@@ -27,4 +27,4 @@ export const COMPANIES: readonly CompanySpec[] = [
     period: "Apr 2019 — Present",
     ongoing: true,
   },
-] as const;
+];

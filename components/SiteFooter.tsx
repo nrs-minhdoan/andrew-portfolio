@@ -10,7 +10,7 @@ export function SiteFooter() {
     <footer className="relative border-t border-(--border) py-3 text-xs leading-tight text-(--muted) sm:text-sm sm:leading-none">
       <div className="container-page flex flex-col items-center justify-between gap-2 text-center sm:h-6 sm:flex-row sm:gap-6 sm:text-left">
         <p className="truncate">
-          © {year} Andrew · {t("rights")}
+          © {year} {CONTACT.handle} · {t("rights")}
         </p>
         <p className="hidden truncate text-center md:block">{t("built")}</p>
         <div className="flex shrink-0 items-center gap-3">

@@ -1,5 +1,6 @@
 import { Brain, Gauge, Rocket, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { IconBox } from "@/components/ui/IconBox";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -8,7 +9,7 @@ const HIGHLIGHTS = [
   { key: "performance", icon: Gauge },
   { key: "leadership", icon: Users },
   { key: "delivery", icon: Rocket },
-] as const;
+];
 
 export function About() {
   const t = useTranslations("About");
@@ -22,7 +23,7 @@ export function About() {
 
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-5 text-base leading-relaxed text-(--muted) sm:text-lg">
-            {(["p1", "p2", "p3", "p4"] as const).map((k, i) => (
+            {["p1", "p2", "p3", "p4"].map((k, i) => (
               <Reveal key={k} delay={i * 0.06} as="div">
                 <p
                   dangerouslySetInnerHTML={{
@@ -44,14 +45,9 @@ export function About() {
               {HIGHLIGHTS.map(({ key, icon: Icon }, i) => (
                 <Reveal key={key} as="li" delay={0.05 * i}>
                   <div className="glass group relative flex items-start gap-4 rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-(--accent)/40">
-                    <span
-                      className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white"
-                      style={{
-                        background: "linear-gradient(135deg, var(--accent), var(--accent-3))",
-                      }}
-                    >
+                    <IconBox size="sm">
                       <Icon className="h-5 w-5" aria-hidden />
-                    </span>
+                    </IconBox>
                     <div>
                       <div className="font-display font-semibold">
                         {t(`highlights.${key}.title`)}

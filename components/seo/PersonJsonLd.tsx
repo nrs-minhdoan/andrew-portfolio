@@ -1,37 +1,36 @@
-import { CONTACT, MAIN_STACKS, TECHS } from "@/data/portfolio";
-
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://minhdoan.dev";
+import { CONTACT, EDUCATION, TECH_LIST } from "@/data/portfolio";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Schema.org Person JSON-LD. Rendered server-side so crawlers and LLMs see
  * structured data immediately, no client JS required.
  */
 export function PersonJsonLd({ locale }: { locale: string }) {
-  const knowsAbout = MAIN_STACKS.map((k) => TECHS[k]?.name).filter(Boolean);
+  const knowsAbout = TECH_LIST.filter((t) => t.type === "main").map((t) => t.name);
 
   const data = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Minh Truong Doan",
-    alternateName: locale === "vi" ? "Đoàn Trương Minh" : "Minh Truong Doan",
-    jobTitle: "Front-end Developer & Team Leader",
+    name: CONTACT.fullName,
+    alternateName: locale === "vi" ? CONTACT.altName : CONTACT.fullName,
+    jobTitle: CONTACT.jobTitle,
     email: `mailto:${CONTACT.email}`,
     telephone: CONTACT.phone,
-    url: SITE,
-    image: `${SITE}/og.png`,
+    url: SITE_URL,
+    image: `${SITE_URL}/og.png`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Ha Noi",
-      addressCountry: "VN",
+      addressLocality: CONTACT.addressLocality,
+      addressCountry: CONTACT.addressCountry,
     },
     sameAs: [CONTACT.links.linkedin, CONTACT.links.github, CONTACT.links.facebook],
     knowsAbout,
-    knowsLanguage: ["English", "Vietnamese"],
+    knowsLanguage: CONTACT.languages,
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "Hanoi University of Industry",
+      name: EDUCATION.school,
     },
-  } as const;
+  };
 
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />

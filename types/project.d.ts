@@ -16,8 +16,14 @@ export interface ProjectSpec {
   featured?: boolean;
   /** Public production URL — used for favicon fetching + click-through. */
   url?: string;
-  /** Preview image path under /public (e.g. "/projects/bitcastle.png"). */
+  /** Logo path under /public — convention: `/projects/<slug>/logo.<ext>`. Other assets (preview*.png) live in the same folder. */
   image?: string;
+  /** Card preview screenshot — convention: `/projects/<slug>/preview.<ext>`. */
+  preview?: string;
+  /** CSS object/background-position for the preview crop (e.g. "center 22%" to focus on App Store screenshots row). */
+  previewFocus?: string;
+  /** CSS background-size for mobile preview zoom (e.g. "200%" to zoom past App Store header). Defaults to "180%". */
+  previewZoom?: string;
   /** Force a light backdrop behind the logo (for dark-on-transparent assets). */
   logoLightBg?: boolean;
 }

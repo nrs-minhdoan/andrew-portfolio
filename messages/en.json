@@ -69,6 +69,7 @@
     "present": "Present",
     "teamSize": "Team size",
     "role": "Role",
+    "award": "award",
     "viewProject": "View project",
     "offshoreLabel": "ODC engagements",
     "companies": {
@@ -105,21 +106,14 @@
     "title": "Selected Work",
     "subtitle": "A curated slice of the products I have shipped.",
     "viewAll": "See all projects",
+    "award": "award",
     "team": "Team",
     "members": "members",
     "member": "member",
     "items": {
-      "bcefx": {
-        "name": "BCEFX",
-        "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI."
-      },
       "bitcastle-fx": {
         "name": "Bitcastle FX",
-        "summary": "Forex trading platform for the Japanese market on MetaQuotes 5."
-      },
-      "bitcastle-fx-partner": {
-        "name": "Bitcastle FX Partner",
-        "summary": "Forex Partner Program portal for affiliates and IBs."
+        "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI."
       },
       "bitcastle": {
         "name": "Bitcastle",
@@ -186,10 +180,6 @@
       "shining-star-2019": {
         "title": "VMO's Shining Star 2019",
         "desc": "Recognized for outstanding contribution and leadership."
-      },
-      "project-2022": {
-        "title": "VMO Project of the Year 2022",
-        "desc": "Awarded for the Dentity platform."
       },
       "project-2018": {
         "title": "VMO Project of the Year 2018",

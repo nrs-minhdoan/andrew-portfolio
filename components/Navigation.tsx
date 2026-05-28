@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { NavController } from "@/components/nav/NavController";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { CONTACT } from "@/data/portfolio";
 
 const SECTIONS = [
   { id: "about", key: "about" },
@@ -12,7 +13,7 @@ const SECTIONS = [
   { id: "experience", key: "experience" },
   { id: "achievements", key: "achievements" },
   { id: "contact", key: "contact" },
-] as const;
+];
 
 /**
  * Server component. Renders the full nav markup so crawlers receive every
@@ -34,7 +35,7 @@ export function Navigation() {
         <div className="container-page flex h-16 min-w-0 items-center justify-between gap-2 sm:gap-4">
           <a
             href="#hero"
-            aria-label="Andrew — home"
+            aria-label={`${CONTACT.handle} — home`}
             className="group font-display inline-flex min-w-0 items-center gap-6 text-base font-bold"
           >
             <Image
@@ -47,7 +48,7 @@ export function Navigation() {
               unoptimized
               className="h-9 w-auto transition-transform group-hover:scale-110"
             />
-            <span className="font-pixel">Andrew</span>
+            <span className="font-pixel">{CONTACT.handle}</span>
           </a>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">

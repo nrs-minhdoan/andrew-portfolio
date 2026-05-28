@@ -3,8 +3,10 @@ import { useTranslations } from "next-intl";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FacebookIcon, GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { CopyButton } from "@/components/ui/CopyButton";
+import { IconBox } from "@/components/ui/IconBox";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SocialIconButton } from "@/components/ui/SocialIconButton";
 import { CONTACT } from "@/data/portfolio";
 
 export function Contact() {
@@ -46,33 +48,15 @@ export function Contact() {
                 </div>
               </div>
               <div className="flex shrink-0 items-center gap-2">
-                <a
-                  aria-label="LinkedIn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={CONTACT.links.linkedin}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-(--border) hover:border-(--accent)/60 hover:text-(--accent) sm:h-9 sm:w-9"
-                >
+                <SocialIconButton href={CONTACT.links.linkedin} label="LinkedIn">
                   <LinkedinIcon size={14} />
-                </a>
-                <a
-                  aria-label="GitHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={CONTACT.links.github}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-(--border) hover:border-(--accent)/60 hover:text-(--accent) sm:h-9 sm:w-9"
-                >
+                </SocialIconButton>
+                <SocialIconButton href={CONTACT.links.github} label="GitHub">
                   <GithubIcon size={14} />
-                </a>
-                <a
-                  aria-label="Facebook"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={CONTACT.links.facebook}
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-(--border) hover:border-(--accent)/60 hover:text-(--accent) sm:h-9 sm:w-9"
-                >
+                </SocialIconButton>
+                <SocialIconButton href={CONTACT.links.facebook} label="Facebook">
                   <FacebookIcon size={14} />
-                </a>
+                </SocialIconButton>
               </div>
             </div>
           </div>
@@ -96,12 +80,7 @@ function ContactRow({
 }) {
   return (
     <div className="glass group flex min-w-0 items-center gap-3 rounded-2xl p-3 transition-all hover:-translate-y-0.5 hover:border-(--accent)/40 sm:gap-4 sm:p-5">
-      <span
-        className="grid h-9 w-9 shrink-0 place-items-center rounded-xl text-white sm:h-11 sm:w-11"
-        style={{ background: "linear-gradient(135deg, var(--accent), var(--accent-3))" }}
-      >
-        {icon}
-      </span>
+      <IconBox size="sm">{icon}</IconBox>
       <div className="min-w-0 flex-1">
         <div className="text-[10px] tracking-widest text-(--muted) uppercase sm:text-xs">
           {label}

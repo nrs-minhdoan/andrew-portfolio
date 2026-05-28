@@ -2,7 +2,11 @@ import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TechBadge, TechIcon } from "@/components/ui/TechBadge";
-import { INTEGRATION_STACKS, MAIN_STACKS, TECHS } from "@/data/portfolio";
+import { TECH_LIST } from "@/data/portfolio";
+
+const MAIN_STACKS = TECH_LIST.filter((t) => t.type === "main");
+const INTEGRATION_STACKS_BIG = TECH_LIST.filter((t) => t.type === "big_integration");
+const INTEGRATION_STACKS_SMALL = TECH_LIST.filter((t) => t.type === "small_integration");
 
 export function Skills() {
   const t = useTranslations("Skills");
@@ -31,12 +35,11 @@ export function Skills() {
 
         <Reveal>
           <ul className="grid w-full grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-5">
-            {MAIN_STACKS.map((key) => {
-              const tech = TECHS[key];
+            {MAIN_STACKS.map((tech) => {
               const cardBody = (
                 <>
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-(--bg)/40 transition-transform group-hover:scale-110 sm:h-14 sm:w-14">
-                    <TechIcon techKey={key} size={28} />
+                    <TechIcon techKey={tech.key} size={28} />
                   </span>
                   <span className="line-clamp-1 text-xs font-semibold break-all sm:text-sm">
                     {tech.name}
@@ -53,7 +56,7 @@ export function Skills() {
               const cardClass =
                 "glass group relative flex h-full min-w-0 flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl p-3 text-center transition-all hover:-translate-y-1 hover:border-(--accent)/40 sm:gap-3 sm:p-5";
               return (
-                <li key={key}>
+                <li key={tech.key}>
                   {tech.url ? (
                     <a
                       href={tech.url}
@@ -83,8 +86,8 @@ export function Skills() {
         <Reveal>
           <div className="marquee py-2" style={{ ["--marquee-duration" as string]: "35s" }}>
             <div className="marquee-track">
-              {[...INTEGRATION_STACKS, ...INTEGRATION_STACKS].map((key, idx) => (
-                <TechBadge key={`${key}-${idx}`} techKey={key} size="md" />
+              {[...INTEGRATION_STACKS_BIG, ...INTEGRATION_STACKS_BIG].map((tech, idx) => (
+                <TechBadge key={`${tech.key}-${idx}`} techKey={tech.key} size="md" />
               ))}
             </div>
           </div>
@@ -94,12 +97,9 @@ export function Skills() {
             style={{ ["--marquee-duration" as string]: "45s" }}
           >
             <div className="marquee-track">
-              {[...INTEGRATION_STACKS]
-                .reverse()
-                .concat([...INTEGRATION_STACKS].reverse())
-                .map((key, idx) => (
-                  <TechBadge key={`${key}-r-${idx}`} techKey={key} size="md" />
-                ))}
+              {[...INTEGRATION_STACKS_SMALL, ...INTEGRATION_STACKS_SMALL].map((tech, idx) => (
+                <TechBadge key={`${tech.key}-r-${idx}`} techKey={tech.key} size="md" />
+              ))}
             </div>
           </div>
         </Reveal>

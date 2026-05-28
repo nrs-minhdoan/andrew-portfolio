@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface RevealProps {
   children: ReactNode;
@@ -12,37 +11,70 @@ interface RevealProps {
   as?: "div" | "section" | "li" | "article" | "header";
 }
 
-const buildVariants = (y: number): Variants => ({
-  hidden: { opacity: 0, y },
-  visible: { opacity: 1, y: 0 },
-});
+type RevealState = "idle" | "hidden" | "visible";
 
+/**
+ * SSR-safe scroll reveal. Content renders visible on first paint (no opacity:0
+ * baked into HTML), so a slow mobile hydrate never leaves the page blank.
+ * After mount an IntersectionObserver hides offscreen elements and animates
+ * them in on entry. Above-fold elements stay visible with no animation.
+ */
 export function Reveal({
   children,
   delay = 0,
   y = 24,
   className,
   once = true,
-  as = "div",
+  as: Tag = "div",
 }: RevealProps) {
-  const reduced = useReducedMotion();
-  const MotionTag = motion[as];
+  const ref = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState<RevealState>("idle");
 
-  if (reduced) {
-    const Tag = as;
-    return <Tag className={className}>{children}</Tag>;
-  }
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let first = true;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setState("visible");
+            if (once) io.disconnect();
+          } else if (first) {
+            setState("hidden");
+          } else if (!once) {
+            setState("hidden");
+          }
+        }
+        first = false;
+      },
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [once]);
+
+  const style: React.CSSProperties | undefined =
+    state === "hidden"
+      ? {
+          opacity: 0,
+          transform: `translateY(${y}px)`,
+          transition: "none",
+          willChange: "opacity, transform",
+        }
+      : state === "visible"
+        ? {
+            opacity: 1,
+            transform: "translateY(0)",
+            transition: `opacity 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}s`,
+          }
+        : undefined;
 
   return (
-    <MotionTag
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      variants={buildVariants(y)}
-    >
+    <Tag ref={ref as never} className={className} style={style}>
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

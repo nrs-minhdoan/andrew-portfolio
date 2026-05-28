@@ -7,7 +7,9 @@ import type { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Providers } from "@/components/Providers";
 import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
+import { CONTACT } from "@/data/portfolio";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const silkscreen = Silkscreen({
@@ -23,8 +25,6 @@ const firaCode = Fira_Code({
   display: "swap",
 });
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://minhdoan.dev";
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -36,13 +36,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta" });
-  const canonical = locale === routing.defaultLocale ? `${SITE}/` : `${SITE}/${locale}`;
+  const canonical =
+    locale === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, l === routing.defaultLocale ? `${SITE}/` : `${SITE}/${l}`]),
+    routing.locales.map((l) => [
+      l,
+      l === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${l}`,
+    ]),
   );
 
   return {
-    metadataBase: new URL(SITE),
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
     alternates: { canonical, languages },
@@ -52,7 +56,7 @@ export async function generateMetadata({
       type: "profile",
       locale: locale === "vi" ? "vi_VN" : "en_US",
       url: canonical,
-      siteName: "Minh Truong Doan",
+      siteName: CONTACT.fullName,
     },
     twitter: {
       card: "summary_large_image",
