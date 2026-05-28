@@ -47,6 +47,7 @@ export function Navigation() {
               priority
               unoptimized
               className="h-9 w-auto transition-transform group-hover:scale-110"
+              style={{ width: "auto" }}
             />
             <span className="font-pixel">{CONTACT.handle}</span>
           </a>

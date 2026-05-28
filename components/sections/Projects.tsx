@@ -95,7 +95,7 @@ export function Projects() {
                     ) : null}
                   </div>
                   <div className="space-y-3 p-5">
-                    <header className="flex items-start justify-between gap-3">
+                    <header className="flex items-start justify-between gap-2">
                       <h3 className="font-display flex items-center gap-2 text-lg leading-tight font-bold">
                         {icon ? <LogoMark src={icon} lightBg={project.logoLightBg} /> : null}
                         {project.url ? (

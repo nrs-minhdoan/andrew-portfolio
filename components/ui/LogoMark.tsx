@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface Props {
   src: string;
   alt?: string;
@@ -19,13 +17,14 @@ export function LogoMark({ src, alt = "", size = 20, lightBg, className }: Props
       className={`inline-flex shrink-0 items-center justify-center rounded p-0.5 ${lightBg ? "bg-white" : ""} ${className ?? ""}`}
       style={{ width: size, height: size }}
     >
-      <Image
+      <img
         src={src}
         alt={alt}
         width={size}
         height={size}
         className="h-full w-full object-contain"
-        unoptimized
+        loading="lazy"
+        decoding="async"
       />
     </span>
   );

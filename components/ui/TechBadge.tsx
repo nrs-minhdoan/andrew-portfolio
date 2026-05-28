@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { TECHS, type TechKey } from "@/data/portfolio";
 
@@ -73,14 +72,14 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
       style={{ ["--tech-color" as string]: tech.color }}
     >
       {src ? (
-        <Image
+        <img
           src={src}
           alt=""
           width={icon}
           height={icon}
-          className={`h-[1em] w-[1em] shrink-0${tech.invertOnDark ? " dark:invert" : ""}`}
-          unoptimized
+          className={`h-[1em] w-[1em] shrink-0 object-contain${tech.invertOnDark ? " dark:invert" : ""}`}
           loading="eager"
+          decoding="async"
         />
       ) : (
         <span
@@ -106,13 +105,15 @@ export function TechIcon({ techKey, size = 28 }: { techKey: TechKey; size?: numb
   if (!tech) return null;
   const src = resolveIconSrc(tech);
   return src ? (
-    <Image
+    <img
       src={src}
       alt={tech.name}
       width={size}
       height={size}
-      className={`shrink-0${tech.invertOnDark ? " dark:invert" : ""}`}
-      unoptimized
+      className={`shrink-0 object-contain${tech.invertOnDark ? " dark:invert" : ""}`}
+      style={{ width: size, height: size }}
+      loading="lazy"
+      decoding="async"
     />
   ) : (
     <span

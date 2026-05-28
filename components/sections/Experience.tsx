@@ -162,7 +162,7 @@ function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProp
           <AwardBadge awards={project.awards} label={awardLabel} variant="outline" />
         ) : null}
       </div>
-      <p className="mt-3 text-sm text-(--muted)">{summary}</p>
+      <p className="mt-3 line-clamp-2 min-h-[2.5rem] text-sm text-(--muted)">{summary}</p>
       <div className="mt-3 flex items-center gap-3 text-xs text-(--muted)">
         <span className="inline-flex items-center gap-1">
           <Users className="h-3.5 w-3.5" aria-hidden /> {project.teamSize}
