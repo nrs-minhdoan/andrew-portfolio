@@ -7,6 +7,12 @@ const THEME_COLORS: Record<"light" | "dark", string> = {
   light: "#ffffff",
   dark: "#0d0506",
 };
+// Off-by-one shades used purely to force iOS Safari to register a value
+// change before settling on the real theme color.
+const FLASH_COLORS: Record<"light" | "dark", string> = {
+  light: "#fefefe",
+  dark: "#0c0405",
+};
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
@@ -18,26 +24,29 @@ export function Providers({ children }: { children: ReactNode }) {
 }
 
 /**
- * Sync iOS Safari status-bar tint with the active theme.
+ * iOS Safari refuses to refresh the status-bar tint mid-scroll even when
+ * `meta[name=theme-color]` is mutated — it caches whatever value it read
+ * when the URL bar last painted. To force a re-read we layer three tricks:
  *
- * iOS Safari reads `meta[name=theme-color]` once when the URL bar paints. Mid-
- * scroll `.content` mutations are ignored — the bar stays the stale color
- * until the user fully collapses + re-expands it. To force a re-read we
- * detach the tag from `<head>` and re-append it on the next animation frame:
- * Safari treats the re-inserted node as a fresh declaration and re-evaluates.
+ *   1. Flash the meta `content` to an off-by-one shade, then settle on the
+ *      real color on the next frame. Safari treats this as two distinct
+ *      value transitions and re-evaluates the second one.
+ *   2. Detach + re-append our `data-runtime` tag. Safari rescans the head
+ *      and treats the re-inserted node as a fresh declaration.
+ *   3. Update `html.style.background` + `colorScheme` so the chrome
+ *      inherits the right tint from the root element (Safari falls back to
+ *      root paint color when no meta is conclusive).
  *
- * Owns its own `data-runtime` meta tag — never touches the media-query metas
- * rendered by `viewport.themeColor` (those belong to React; stripping them
- * triggers `removeChild` reconciliation errors).
- *
- * Renders nothing → zero hydration cost.
+ * Renders nothing → zero hydration cost. Touches only our own
+ * `data-runtime` tag, never the media-query metas React owns.
  */
 function MetaThemeSync() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (!resolvedTheme) return;
-    const color = resolvedTheme === "dark" ? THEME_COLORS.dark : THEME_COLORS.light;
+    if (resolvedTheme !== "dark" && resolvedTheme !== "light") return;
+    const color = THEME_COLORS[resolvedTheme];
+    const flash = FLASH_COLORS[resolvedTheme];
 
     let tag = document.querySelector<HTMLMetaElement>('meta[name="theme-color"][data-runtime]');
     if (!tag) {
@@ -46,18 +55,29 @@ function MetaThemeSync() {
       tag.setAttribute("data-runtime", "");
       document.head.appendChild(tag);
     }
-    tag.content = color;
-
-    // Force iOS Safari to re-read theme-color: detach + re-append on rAF.
-    const head = document.head;
     const node = tag;
-    node.remove();
-    const raf = requestAnimationFrame(() => head.appendChild(node));
 
-    // Align native UI (scrollbars, form controls, OS tint) with active theme.
-    document.documentElement.style.colorScheme = resolvedTheme;
+    // Root paint + native UI alignment (rubber-band, scrollbars, form UI).
+    const root = document.documentElement;
+    root.style.colorScheme = resolvedTheme;
+    root.style.backgroundColor = color;
 
-    return () => cancelAnimationFrame(raf);
+    // Step 1: off-by-one flash so Safari sees a value change.
+    node.content = flash;
+
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      node.content = color;
+      // Step 2: detach + reattach forces a fresh head scan on Safari.
+      const head = document.head;
+      node.remove();
+      raf2 = requestAnimationFrame(() => head.appendChild(node));
+    });
+
+    return () => {
+      cancelAnimationFrame(raf1);
+      if (raf2) cancelAnimationFrame(raf2);
+    };
   }, [resolvedTheme]);
 
   return null;
