@@ -53,7 +53,5 @@ export function TypewriterRoles({ roles }: Props) {
     }
   }, [text, phase, index, roles]);
 
-  return (
-    <span className="caret mono block min-h-[2lh] text-(--accent) lg:min-h-[1lh]">{text}</span>
-  );
+  return <span className="caret mono block min-h-[2lh] text-(--accent) lg:min-h-lh">{text}</span>;
 }

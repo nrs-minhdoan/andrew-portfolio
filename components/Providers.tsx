@@ -18,24 +18,26 @@ export function Providers({ children }: { children: ReactNode }) {
 }
 
 /**
- * Keeps the iOS Safari address-bar / status-bar tint in sync with the active
- * theme. Static `viewport.themeColor` only follows the OS scheme, so a
- * user-toggled theme would otherwise leave the chrome mismatched.
+ * Keeps the iOS Safari status-bar tint in sync with the user-toggled theme.
+ * Maintains its OWN <meta name="theme-color" data-runtime>; never touches the
+ * media-query metas emitted by `viewport.themeColor` — those are React-managed
+ * and stripping them triggers `removeChild` reconciliation errors.
  */
 function MetaThemeSync() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
+    if (!resolvedTheme) return;
     const color = resolvedTheme === "dark" ? THEME_COLORS.dark : THEME_COLORS.light;
-    let tag = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]:not([media])');
+
+    let tag = document.querySelector<HTMLMetaElement>('meta[name="theme-color"][data-runtime]');
     if (!tag) {
       tag = document.createElement("meta");
       tag.name = "theme-color";
+      tag.setAttribute("data-runtime", "");
       document.head.appendChild(tag);
     }
     tag.content = color;
-    document.documentElement.style.backgroundColor = color;
-    document.body.style.backgroundColor = color;
   }, [resolvedTheme]);
 
   return null;

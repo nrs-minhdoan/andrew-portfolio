@@ -16,7 +16,8 @@ export function HeroBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 2);
     let width = 0;
     let height = 0;
     let raf = 0;
@@ -29,8 +30,8 @@ export function HeroBackground() {
     }
 
     const nodes: Node[] = [];
-    const NODE_COUNT = 56;
-    const LINK_DIST = 140;
+    const NODE_COUNT = isMobile ? 28 : 56;
+    const LINK_DIST = isMobile ? 110 : 140;
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
@@ -107,7 +108,28 @@ export function HeroBackground() {
 
     resize();
     init();
-    tick();
+
+    let running = false;
+    const start = () => {
+      if (running) return;
+      running = true;
+      tick();
+    };
+    const stop = () => {
+      running = false;
+      window.cancelAnimationFrame(raf);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) start();
+          else stop();
+        }
+      },
+      { threshold: 0 },
+    );
+    io.observe(canvas);
 
     const onResize = () => {
       resize();
@@ -116,7 +138,8 @@ export function HeroBackground() {
     window.addEventListener("resize", onResize);
 
     return () => {
-      window.cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
       window.removeEventListener("resize", onResize);
       themeObs.disconnect();
     };

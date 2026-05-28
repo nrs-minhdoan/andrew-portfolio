@@ -45,7 +45,7 @@ export function LanguageSwitcher() {
     >
       <summary
         aria-label={t("label")}
-        className="inline-flex h-9 w-9 cursor-pointer items-center justify-center gap-0 rounded-md border border-(--border) px-0 text-(--fg) transition-colors outline-none hover:border-(--border-strong) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent) sm:w-[120px] sm:gap-2.5 sm:rounded-lg sm:px-3.5 [&::-webkit-details-marker]:hidden"
+        className="inline-flex h-9 w-9 cursor-pointer items-center justify-center gap-0 rounded-md border border-(--border) px-0 text-(--fg) transition-colors outline-none hover:border-(--border-strong) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent) sm:w-30 sm:gap-2.5 sm:rounded-lg sm:px-3.5 [&::-webkit-details-marker]:hidden"
       >
         <Languages size={16} aria-hidden />
         <span className="hidden text-[13px] font-semibold sm:inline">{locale.toUpperCase()}</span>

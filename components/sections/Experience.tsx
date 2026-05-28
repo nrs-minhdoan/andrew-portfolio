@@ -35,10 +35,13 @@ export function Experience() {
               <Reveal as="li" key={slug} delay={idx * STAGGER} className="relative pl-6 md:pl-14">
                 <span
                   aria-hidden
-                  className="absolute top-1.5 left-0 h-3 w-3 rounded-full md:top-1.5 md:left-2 md:h-5 md:w-5"
+                  className="absolute top-1.5 left-1.5 block aspect-square w-3 -translate-x-1/2 rounded-full md:left-4 md:w-5"
                   style={{
-                    background: ACCENT_GRADIENT,
-                    boxShadow: "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
+                    flex: "none",
+                    background: company.ongoing ? "#22c55e" : ACCENT_GRADIENT,
+                    boxShadow: company.ongoing
+                      ? "0 0 0 3px var(--bg), 0 0 0 4px #22c55e, 0 0 10px 1px rgba(34,197,94,0.55)"
+                      : "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
                   }}
                 />
                 <header className="mb-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -48,8 +51,16 @@ export function Experience() {
                   </h3>
                   <span className="text-xs tracking-widest text-(--muted) uppercase">
                     {company.period}
-                    {company.ongoing ? ` · ${t("present")}` : ""}
                   </span>
+                  {company.ongoing ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-green-500/40 bg-green-500/10 px-2 py-0.5 text-[10px] font-semibold tracking-[0.14em] text-green-500 uppercase dark:text-green-400">
+                      <span
+                        aria-hidden
+                        className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 dark:bg-green-400"
+                      />
+                      {t("present")}
+                    </span>
+                  ) : null}
                 </header>
 
                 <ul className="grid gap-3 md:grid-cols-2">
@@ -162,7 +173,7 @@ function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProp
           <AwardBadge awards={project.awards} label={awardLabel} variant="outline" />
         ) : null}
       </div>
-      <p className="mt-3 line-clamp-2 min-h-[2.5rem] text-sm text-(--muted)">{summary}</p>
+      <p className="mt-3 line-clamp-2 min-h-10 text-sm text-(--muted)">{summary}</p>
       <div className="mt-3 flex items-center gap-3 text-xs text-(--muted)">
         <span className="inline-flex items-center gap-1">
           <Users className="h-3.5 w-3.5" aria-hidden /> {project.teamSize}
@@ -173,7 +184,7 @@ function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProp
       </div>
       {/* Tech list above the card-link overlay (z-10) so each chip click
           targets the tech's official site, not the project URL. */}
-      <TechList techs={project.techs} max={8} className="relative z-10 mt-4" />
+      <TechList techs={project.techs} className="relative z-10 mt-4" />
     </li>
   );
 }

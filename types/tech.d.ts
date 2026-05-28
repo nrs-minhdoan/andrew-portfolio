@@ -34,6 +34,8 @@ export type TechKey =
   | "reactrouter"
   | "reactnavigation"
   | "tanstackrouter"
+  | "reactspring"
+  | "zaloMiniApp"
   | "mui"
   | "antdesign"
   | "chakraui"

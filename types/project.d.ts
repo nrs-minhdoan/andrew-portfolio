@@ -26,4 +26,7 @@ export interface ProjectSpec {
   previewZoom?: string;
   /** Force a light backdrop behind the logo (for dark-on-transparent assets). */
   logoLightBg?: boolean;
+  /** Render preview using the mobile-screenshot crop (CSS background) even
+   *  when `role` isn't `"mobile"`. Use for hybrid mobile/web projects. */
+  previewMobile?: boolean;
 }

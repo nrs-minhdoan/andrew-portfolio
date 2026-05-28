@@ -140,9 +140,16 @@ body {
   content: "";
   position: absolute;
   border-radius: 9999px;
-  filter: blur(120px);
+  filter: blur(60px);
   opacity: 0.55;
   animation: aurora 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@media (min-width: 768px) {
+  .aurora::before,
+  .aurora::after {
+    filter: blur(120px);
+  }
 }
 .aurora::before {
   width: 60vw;
@@ -189,12 +196,19 @@ body {
   }
 }
 
-/* Glass card */
+/* Glass card. Backdrop blur is expensive on mobile — drop to a cheaper
+   value below md and let desktops keep the full effect. */
 .glass {
   background: var(--card);
   border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+@media (min-width: 768px) {
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 /* Animated border via conic gradient */

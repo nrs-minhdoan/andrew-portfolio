@@ -38,7 +38,7 @@ export function Projects() {
           {featured.map((project, i) => {
             const icon = getProjectIcon(project.url, project.image);
             const projectName = t(`items.${project.slug}.name`);
-            const isMobile = project.role === "mobile";
+            const isMobile = project.previewMobile ?? project.role === "mobile";
             const previewSrc = project.preview ?? PLACEHOLDER;
             const objectPosition = project.previewFocus ?? "center top";
             const mobileBgPosition = project.previewFocus ?? "center 25%";
@@ -75,13 +75,14 @@ export function Projects() {
                       <span
                         className={`absolute right-3 bottom-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-(--border) p-1.5 shadow-lg backdrop-blur ${project.logoLightBg ? "bg-white" : "bg-(--bg)/85"}`}
                       >
-                        <Image
+                        <img
                           src={icon}
                           alt=""
                           width={36}
                           height={36}
                           className="h-full w-full object-contain"
-                          unoptimized
+                          loading="lazy"
+                          decoding="async"
                         />
                       </span>
                     ) : null}
@@ -114,7 +115,7 @@ export function Projects() {
                       </h3>
                       <ArrowUpRight className="h-5 w-5 shrink-0 text-(--muted) transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-(--accent)" />
                     </header>
-                    <p className="line-clamp-2 min-h-[2.5rem] text-sm text-(--muted)">
+                    <p className="line-clamp-2 min-h-10 text-sm text-(--muted)">
                       {t(`items.${project.slug}.summary`)}
                     </p>
                     <div className="flex items-center gap-3 text-xs text-(--muted)">
@@ -126,7 +127,7 @@ export function Projects() {
                     {/* Tech list sits above the card-link overlay via z-10 so
                         each chip intercepts its own click before the project
                         anchor fires. */}
-                    <TechList techs={project.techs} max={6} className="relative z-10 pt-1" />
+                    <TechList techs={project.techs} className="relative z-10 pt-1" />
                   </div>
                 </SpotlightCard>
               </Reveal>
