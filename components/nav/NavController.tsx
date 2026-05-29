@@ -93,6 +93,28 @@ export function NavController() {
     };
     contactLinks.forEach((el) => el.addEventListener("click", onContactClick));
 
+    // Intercept other section links so the scroll target lands at
+    // section.top - header.height every time, regardless of scroll-snap or
+    // scroll-padding interactions. Native anchor + snap leaks the previous
+    // section's tail on desktop; explicit JS scroll wins.
+    const sectionLinkHandlers = new Map<HTMLElement, (e: Event) => void>();
+    for (const [id, els] of links) {
+      if (id === "contact") continue;
+      const target = document.getElementById(id);
+      if (!target) continue;
+      const handler = (e: Event) => {
+        e.preventDefault();
+        const headerH = header.getBoundingClientRect().height;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+        window.scrollTo({ top, behavior: "smooth" });
+        if (history.replaceState) history.replaceState(null, "", `#${id}`);
+      };
+      for (const el of els) {
+        el.addEventListener("click", handler);
+        sectionLinkHandlers.set(el, handler);
+      }
+    }
+
     // Mobile menu uses <details>. Close it after a link click so the dropdown
     // collapses on navigation. Scoped to links inside <details> only — desktop
     // nav lives outside any <details>, so its listeners are untouched.
@@ -114,6 +136,9 @@ export function NavController() {
       window.removeEventListener("resize", onScroll);
       contactLinks.forEach((el) => el.removeEventListener("click", onContactClick));
       mobileLinks.forEach((el) => el.removeEventListener("click", onMobileLinkClick));
+      for (const [el, handler] of sectionLinkHandlers) {
+        el.removeEventListener("click", handler);
+      }
     };
   }, []);
 

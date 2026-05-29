@@ -445,18 +445,13 @@ a[data-nav-link]:focus-visible::after {
   }
 }
 
-/* Anchor offset under fixed nav. Works with scroll-padding-top above. */
+/* Anchor offset handled solely by `scroll-padding-top: 4rem` on <html>.
+   Section-level `scroll-margin-top` stacks with that padding under
+   scroll-snap and pushes the snap target 8rem below the viewport, leaking
+   the previous section's tail. Keep margins at 0 so the nav offset only
+   applies once. */
 section[id] {
-  scroll-margin-top: 4rem;
-}
-
-/* Mobile: drop scroll-margin so it doesn't stack with html's scroll-padding-top.
-   Desktop snap re-aligns the section to snap-start so the double offset is invisible
-   there; mobile has no snap, so the duplicate 4rem leaks the previous section's tail. */
-@media (max-width: 767px) {
-  section[id] {
-    scroll-margin-top: 0;
-  }
+  scroll-margin-top: 0;
 }
 
 /* Hero already centers itself via its own flex; skip min-height bump
