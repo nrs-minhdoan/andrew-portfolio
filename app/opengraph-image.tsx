@@ -1,5 +1,8 @@
 import { ImageResponse } from "next/og";
 import { CONTACT, STATS } from "@/data/portfolio";
+import { SITE_URL } from "@/lib/site";
+
+const SITE_HOST = new URL(SITE_URL).host;
 
 export const runtime = "edge";
 export const alt = `${CONTACT.fullName} — ${CONTACT.jobTitle}`;
@@ -16,10 +19,8 @@ export default function OpengraphImage() {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "72px",
-        background:
-          "radial-gradient(ellipse at top left, #1a0608 0%, #0d0506 55%, #050203 100%)",
+        background: "radial-gradient(ellipse at top left, #1a0608 0%, #0d0506 55%, #050203 100%)",
         color: "#f4e8e8",
-        fontFamily: "monospace",
       }}
     >
       <div
@@ -93,7 +94,7 @@ export default function OpengraphImage() {
         }}
       >
         <span>{CONTACT.location}</span>
-        <span>minhdoan.dev</span>
+        <span>{SITE_HOST}</span>
       </div>
     </div>,
     { ...size },
