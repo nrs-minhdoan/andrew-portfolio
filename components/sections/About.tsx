@@ -1,8 +1,10 @@
 import { Brain, Gauge, Rocket, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+import type { ReactNode } from "react";
 import { IconBox } from "@/components/ui/IconBox";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { STATS } from "@/data/portfolio";
 
 const HIGHLIGHTS = [
   { key: "architecture", icon: Brain },
@@ -10,6 +12,17 @@ const HIGHLIGHTS = [
   { key: "leadership", icon: Users },
   { key: "delivery", icon: Rocket },
 ];
+
+const STAT_VALUES = {
+  years: STATS.yearsExperience,
+  leadingYears: STATS.yearsLeading,
+  teamMin: STATS.teamMin,
+  teamMax: STATS.teamMax,
+};
+
+const richTags = {
+  b: (chunks: ReactNode) => <strong className="font-semibold text-(--fg)">{chunks}</strong>,
+};
 
 export function About() {
   const t = useTranslations("About");
@@ -25,14 +38,7 @@ export function About() {
           <div className="space-y-5 text-base leading-relaxed text-(--muted) sm:text-lg">
             {["p1", "p2", "p3", "p4"].map((k, i) => (
               <Reveal key={k} delay={i * 0.06} as="div">
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: t
-                      .raw(k)
-                      .replaceAll("<b>", '<strong class="text-(--fg) font-semibold">')
-                      .replaceAll("</b>", "</strong>"),
-                  }}
-                />
+                <p>{t.rich(k, { ...richTags, ...STAT_VALUES })}</p>
               </Reveal>
             ))}
           </div>
@@ -52,7 +58,9 @@ export function About() {
                       <div className="font-display font-semibold">
                         {t(`highlights.${key}.title`)}
                       </div>
-                      <p className="mt-1 text-sm text-(--muted)">{t(`highlights.${key}.desc`)}</p>
+                      <p className="mt-1 text-sm text-(--muted)">
+                        {t(`highlights.${key}.desc`, STAT_VALUES)}
+                      </p>
                     </div>
                   </div>
                 </Reveal>

@@ -1,11 +1,18 @@
 import { ArrowUpRight, Briefcase, Users } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { spellNumber } from "@/lib/spell-number";
 import { AwardBadge } from "@/components/ui/AwardBadge";
 import { LogoMark } from "@/components/ui/LogoMark";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TechList } from "@/components/ui/TechList";
-import { COMPANIES, type CompanySlug, OFFSHORE_ENGAGEMENTS, PROJECTS } from "@/data/portfolio";
+import {
+  COMPANIES,
+  type CompanySlug,
+  OFFSHORE_ENGAGEMENTS,
+  PROJECTS,
+  STATS,
+} from "@/data/portfolio";
 import { getProjectIcon } from "@/lib/project-icon";
 import { ACCENT_GRADIENT, STAGGER } from "@/lib/theme";
 import type { ProjectSpec } from "@/types/project";
@@ -13,6 +20,7 @@ import type { ProjectSpec } from "@/types/project";
 export function Experience() {
   const t = useTranslations("Experience");
   const tProjects = useTranslations("Projects");
+  const locale = useLocale();
 
   return (
     <section id="experience" data-section="experience" className="relative">
@@ -20,7 +28,10 @@ export function Experience() {
         <SectionHeader
           label={t("label")}
           title={<span className="gradient-text">{t("title")}</span>}
-          subtitle={t("subtitle")}
+          subtitle={t("subtitle", {
+            years: spellNumber(STATS.yearsExperience, locale),
+            leadingYears: spellNumber(STATS.yearsLeading, locale),
+          })}
         />
 
         <ol className="relative space-y-10 md:space-y-12">
@@ -35,12 +46,12 @@ export function Experience() {
               <Reveal as="li" key={slug} delay={idx * STAGGER} className="relative pl-6 md:pl-14">
                 <span
                   aria-hidden
-                  className="absolute top-1.5 left-1.5 block aspect-square w-3 -translate-x-1/2 rounded-full md:left-4 md:w-5"
+                  className={`absolute top-1.5 left-1.5 block aspect-square w-3 -translate-x-1/2 rounded-full md:left-4 md:w-5${company.ongoing ? " present-dot" : ""}`}
                   style={{
                     flex: "none",
                     background: company.ongoing ? "#22c55e" : ACCENT_GRADIENT,
                     boxShadow: company.ongoing
-                      ? "0 0 0 3px var(--bg), 0 0 0 4px #22c55e, 0 0 10px 1px rgba(34,197,94,0.55)"
+                      ? "0 0 0 3px var(--bg), 0 0 0 4px #22c55e, 0 0 12px 1px rgba(34,197,94,0.55)"
                       : "0 0 0 3px var(--bg), 0 0 0 4px var(--border-strong)",
                   }}
                 />

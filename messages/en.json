@@ -1,7 +1,7 @@
 {
   "Meta": {
     "title": "Minh Truong Doan — Front-end Developer",
-    "description": "Front-end Developer with 7+ years of experience leading teams and building scalable web & mobile applications with React, Next.js, Vue.js, Angular, and React Native."
+    "description": "Front-end Developer with {years}+ years of experience leading teams and building scalable web & mobile applications with React, Next.js, Vue.js, Angular, and React Native."
   },
   "Nav": {
     "home": "Home",
@@ -31,7 +31,7 @@
   "About": {
     "label": "About me",
     "title": "Crafting Front-end Systems that scale.",
-    "p1": "I am a Front-end Developer with <b>7+ years</b> of professional experience in <b>Web and Mobile Application Development</b>, including <b>5+ years</b> of leading and mentoring teams of <b>4–8 engineers</b>. I design scalable front-end architectures, drive technical decisions, and deliver high-quality products from concept to production.",
+    "p1": "I am a Front-end Developer with <b>{years}+ years</b> of professional experience in <b>Web and Mobile Application Development</b>, including <b>{leadingYears}+ years</b> of leading and mentoring teams of <b>{teamMin}–{teamMax} engineers</b>. I design scalable front-end architectures, drive technical decisions, and deliver high-quality products from concept to production.",
     "p2": "Highly proficient in modern front-end technologies and frameworks such as <b>React</b>, <b>Angular</b> and <b>Vue.js</b>, with extensive mobile development experience using <b>React Native</b> for both iOS and Android platforms. I focus on building performant, maintainable, and scalable applications with excellent user experience.",
     "p3": "I have led and contributed to complex products including <b>e-commerce platforms</b>, <b>financial applications</b>, <b>financial trading platforms</b>, and <b>real-time systems</b>. My responsibilities include system architecture design, performance optimization, real-time data handling, code quality enforcement, and cross-functional collaboration with Back-end, product, and design teams.",
     "p4": "I am passionate about improving engineering standards, mentoring developers, and driving continuous improvement in development processes and product quality.",
@@ -47,7 +47,7 @@
       },
       "leadership": {
         "title": "Team Leadership",
-        "desc": "Led teams of 4-8 engineers, set coding standards, mentored juniors into seniors."
+        "desc": "Led teams of {teamMin}–{teamMax} engineers, set coding standards, mentored juniors into seniors."
       },
       "delivery": {
         "title": "End-to-end Delivery",
@@ -65,7 +65,7 @@
   "Experience": {
     "label": "Experience",
     "title": "Career Timeline",
-    "subtitle": "Seven years building products. Five years leading teams.",
+    "subtitle": "{years} years building products. {leadingYears} years leading teams.",
     "present": "Present",
     "teamSize": "Team size",
     "role": "Role",
@@ -140,7 +140,7 @@
         "summary": "Front-end work for the world's largest publicly traded P&C insurer."
       },
       "my-coach": {
-        "name": "MyCoach.work",
+        "name": "My Coach",
         "summary": "Personal trainer search platform for the Japanese market."
       },
       "viecnha-24h": {
@@ -217,7 +217,7 @@
   },
   "Footer": {
     "rights": "All rights reserved.",
-    "built": "Built with Next.js, TypeScript, Tailwind & Framer Motion."
+    "built": "Built with Next.js, TypeScript, Tailwind & Framer Motion by Claude Code."
   },
   "Theme": {
     "toggle": "Toggle theme",

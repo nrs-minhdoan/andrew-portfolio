@@ -1,7 +1,7 @@
 {
   "Meta": {
     "title": "Đoàn Trương Minh — Lập trình viên Front-end",
-    "description": "Lập trình viên Front-end với hơn 7 năm kinh nghiệm dẫn dắt đội ngũ và xây dựng các ứng dụng web & mobile mở rộng cùng React, Next.js, Vue.js, Angular và React Native."
+    "description": "Lập trình viên Front-end với hơn {years} năm kinh nghiệm dẫn dắt đội ngũ và xây dựng các ứng dụng web & mobile mở rộng cùng React, Next.js, Vue.js, Angular và React Native."
   },
   "Nav": {
     "home": "Trang chủ",
@@ -35,7 +35,7 @@
   "About": {
     "label": "Về tôi",
     "title": "Kiến tạo hệ thống front-end có khả năng mở rộng.",
-    "p1": "Tôi là Lập trình viên Front-end với <b>hơn 7 năm</b> kinh nghiệm chuyên môn trong <b>phát triển ứng dụng Web và Mobile</b>, trong đó có <b>hơn 5 năm</b> dẫn dắt và đào tạo đội ngũ <b>4–8 kỹ sư</b>. Tôi thiết kế kiến trúc front-end mở rộng, đưa ra quyết định kỹ thuật và triển khai sản phẩm chất lượng cao từ ý tưởng đến production.",
+    "p1": "Tôi là Lập trình viên Front-end với <b>hơn {years} năm</b> kinh nghiệm chuyên môn trong <b>phát triển ứng dụng Web và Mobile</b>, trong đó có <b>hơn {leadingYears} năm</b> dẫn dắt và đào tạo đội ngũ <b>{teamMin}–{teamMax} kỹ sư</b>. Tôi thiết kế kiến trúc front-end mở rộng, đưa ra quyết định kỹ thuật và triển khai sản phẩm chất lượng cao từ ý tưởng đến production.",
     "p2": "Thành thạo các công nghệ và framework front-end hiện đại như <b>React</b>, <b>Angular</b> và <b>Vue.js</b>, đồng thời có kinh nghiệm phát triển mobile sâu rộng với <b>React Native</b> trên cả iOS và Android. Tôi tập trung xây dựng các ứng dụng hiệu năng cao, dễ bảo trì và có trải nghiệm người dùng xuất sắc.",
     "p3": "Tôi đã dẫn dắt và đóng góp vào các sản phẩm phức tạp như <b>nền tảng thương mại điện tử</b>, <b>ứng dụng tài chính</b>, <b>nền tảng giao dịch tài chính</b> và <b>hệ thống thời gian thực</b>. Trách nhiệm bao gồm thiết kế kiến trúc hệ thống, tối ưu hiệu năng, xử lý dữ liệu thời gian thực, đảm bảo chất lượng code và phối hợp liên phòng ban với Back-end, sản phẩm và thiết kế.",
     "p4": "Tôi đam mê nâng cao chuẩn mực kỹ thuật, đào tạo lập trình viên và liên tục cải tiến quy trình phát triển cũng như chất lượng sản phẩm.",
@@ -51,7 +51,7 @@
       },
       "leadership": {
         "title": "Dẫn dắt đội ngũ",
-        "desc": "Dẫn dắt 4–8 kỹ sư, thiết lập tiêu chuẩn code, đào tạo junior thành senior."
+        "desc": "Dẫn dắt {teamMin}–{teamMax} kỹ sư, thiết lập tiêu chuẩn code, đào tạo junior thành senior."
       },
       "delivery": {
         "title": "Giao hàng trọn vòng",
@@ -69,7 +69,7 @@
   "Experience": {
     "label": "Kinh nghiệm",
     "title": "Hành trình sự nghiệp",
-    "subtitle": "Bảy năm xây dựng sản phẩm. Năm năm dẫn dắt đội ngũ.",
+    "subtitle": "{years} năm xây dựng sản phẩm. {leadingYears} năm dẫn dắt đội ngũ.",
     "present": "Hiện tại",
     "teamSize": "Quy mô đội",
     "role": "Vai trò",
@@ -144,7 +144,7 @@
         "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới."
       },
       "my-coach": {
-        "name": "MyCoach.work",
+        "name": "My Coach",
         "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản."
       },
       "viecnha-24h": {
@@ -221,7 +221,7 @@
   },
   "Footer": {
     "rights": "Bảo lưu mọi quyền.",
-    "built": "Xây dựng bằng Next.js, TypeScript, Tailwind & Framer Motion."
+    "built": "Xây dựng bằng Next.js, TypeScript, Tailwind & Framer Motion bởi Claude Code."
   },
   "Theme": {
     "toggle": "Đổi giao diện",

@@ -27,15 +27,16 @@ export const CONTACT = {
   addressLocality: "Ha Noi",
   addressCountry: "VN",
   links: {
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
-    facebook: "https://www.facebook.com/",
+    linkedin: "https://www.linkedin.com/in/doantruongminh",
+    github: "https://github.com/nrs-minhdoan",
+    facebook: "https://www.facebook.com/nerossspro",
   },
 };
 
 export const STATS = {
-  yearsExperience: 7,
-  yearsLeading: 5,
-  teamSize: "4–8",
+  yearsExperience: 8,
+  yearsLeading: 6,
+  teamMin: 4,
+  teamMax: 8,
   projects: PROJECTS.length,
 };

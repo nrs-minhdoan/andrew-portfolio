@@ -56,7 +56,7 @@ export function TechList({ techs, size = 20, className }: Props) {
   return (
     <ul
       ref={ref}
-      className={`flex flex-nowrap items-center gap-2 overflow-hidden ${className ?? ""}`}
+      className={`flex flex-nowrap items-center gap-2 ${className ?? ""}`}
     >
       {visible.map((k) => {
         const tech = TECHS[k];

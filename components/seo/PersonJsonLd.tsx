@@ -2,17 +2,21 @@ import { CONTACT, EDUCATION, TECH_LIST } from "@/data/portfolio";
 import { SITE_URL } from "@/lib/site";
 
 /**
- * Schema.org Person JSON-LD. Rendered server-side so crawlers and LLMs see
- * structured data immediately, no client JS required.
+ * Schema.org Person JSON-LD. `type="application/ld+json"` makes this a
+ * non-executable data block, so React 19 does NOT emit its "script inside
+ * React component" warning (see isScriptDataBlock in react-dom).
+ *
+ * Locale-independent: a single canonical English document avoids re-rendering
+ * the script on locale switch and keeps the JSON-LD identical for crawlers.
  */
-export function PersonJsonLd({ locale }: { locale: string }) {
+export function PersonJsonLd() {
   const knowsAbout = TECH_LIST.filter((t) => t.type === "main").map((t) => t.name);
 
   const data = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: CONTACT.fullName,
-    alternateName: locale === "vi" ? CONTACT.altName : CONTACT.fullName,
+    alternateName: [CONTACT.fullName, CONTACT.altName].filter(Boolean),
     jobTitle: CONTACT.jobTitle,
     email: `mailto:${CONTACT.email}`,
     telephone: CONTACT.phone,
@@ -33,6 +37,9 @@ export function PersonJsonLd({ locale }: { locale: string }) {
   };
 
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }

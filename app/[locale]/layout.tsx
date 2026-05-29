@@ -7,7 +7,8 @@ import type { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Providers } from "@/components/Providers";
 import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
-import { CONTACT } from "@/data/portfolio";
+import { ThemeScript } from "@/components/theme/ThemeScript";
+import { CONTACT, STATS } from "@/data/portfolio";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 import "../globals.css";
@@ -36,23 +37,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta" });
-  const canonical =
-    locale === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
+  const canonical = `${SITE_URL}/${locale}`;
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [
-      l,
-      l === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${l}`,
-    ]),
+    routing.locales.map((l) => [l, `${SITE_URL}/${l}`]),
   );
+  const description = t("description", { years: STATS.yearsExperience });
 
   return {
     metadataBase: new URL(SITE_URL),
     title: t("title"),
-    description: t("description"),
+    description,
     alternates: { canonical, languages },
     openGraph: {
       title: t("title"),
-      description: t("description"),
+      description,
       type: "profile",
       locale: locale === "vi" ? "vi_VN" : "en_US",
       url: canonical,
@@ -61,7 +59,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: t("title"),
-      description: t("description"),
+      description,
     },
     robots: {
       index: true,
@@ -90,8 +88,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${silkscreen.variable} ${firaCode.variable}`}
     >
+      <head>
+        <ThemeScript />
+        <PersonJsonLd />
+      </head>
       <body className="min-h-screen font-sans antialiased" suppressHydrationWarning>
-        <PersonJsonLd locale={locale} />
         <NextIntlClientProvider>
           <Providers>
             <Navigation />

@@ -76,7 +76,10 @@ export function Hero() {
         <Reveal delay={0.4} className="grid grid-cols-2 gap-3 sm:gap-4">
           <StatCard value={`${STATS.yearsExperience}+`} label={t("stats.yearsExperience")} />
           <StatCard value={`${STATS.yearsLeading}+`} label={t("stats.yearsLeading")} />
-          <StatCard value={STATS.teamSize} label={t("stats.teamSize")} />
+          <StatCard
+            value={`${STATS.teamMin}–${STATS.teamMax}`}
+            label={t("stats.teamSize")}
+          />
           <StatCard value={`${STATS.projects}+`} label={t("stats.projects")} />
         </Reveal>
       </div>

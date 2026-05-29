@@ -493,6 +493,38 @@ section[data-section="contact"] > .container-page {
   }
 }
 
+/* Ongoing-timeline-step pulse. The dot itself keeps a static double-ring
+   via inline box-shadow; two stacked pseudo-elements scale outward and
+   fade to convey a live, breathing signal without touching the dot's
+   own shadow stack. */
+.present-dot::before,
+.present-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: #22c55e;
+  pointer-events: none;
+  animation: present-pulse 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
+}
+.present-dot::after {
+  animation-delay: 0.5s;
+}
+@keyframes present-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
 /* Float */
 @keyframes float {
   0%,

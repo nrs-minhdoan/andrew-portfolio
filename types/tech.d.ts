@@ -53,7 +53,11 @@ export type TechKey =
   | "ngbootstrap"
   | "onesignal"
   | "appcenter"
-  | "sentry";
+  | "sentry"
+  | "jest"
+  | "playwright"
+  | "lessjs"
+  | "docker";
 
 export type TechCategory = "main" | "small_integration" | "big_integration";
 

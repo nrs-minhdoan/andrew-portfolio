@@ -5,17 +5,12 @@ import { SITE_URL } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return routing.locales.map((locale) => ({
-    url: locale === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${locale}`,
+    url: `${SITE_URL}/${locale}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: locale === routing.defaultLocale ? 1 : 0.8,
     alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [
-          l,
-          l === routing.defaultLocale ? `${SITE_URL}/` : `${SITE_URL}/${l}`,
-        ]),
-      ),
+      languages: Object.fromEntries(routing.locales.map((l) => [l, `${SITE_URL}/${l}`])),
     },
   }));
 }
