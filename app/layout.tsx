@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: CONTACT.fullName, template: `%s · ${CONTACT.fullName}` },
-  description: `Front-end Developer & Team Leader with ${STATS.yearsExperience}+ years of experience.`,
+  description: `Front-end Developer & Lead with ${STATS.yearsExperience}+ years of experience.`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -19,7 +19,7 @@ export const CONTACT = {
   fullName: "Minh Truong Doan",
   altName: "Đoàn Trương Minh",
   handle: "Andrew",
-  jobTitle: "Front-end Developer & Team Leader",
+  jobTitle: "Front-end Developer & Lead",
   languages: ["English", "Vietnamese"],
   email: "minh.doan.nrs@gmail.com",
   phone: "+84982766986",

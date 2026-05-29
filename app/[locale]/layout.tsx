@@ -38,9 +38,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Meta" });
   const canonical = `${SITE_URL}/${locale}`;
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE_URL}/${l}`]),
-  );
+  const languages = Object.fromEntries(routing.locales.map((l) => [l, `${SITE_URL}/${l}`]));
   const description = t("description", { years: STATS.yearsExperience });
   const title = t("title");
   const ogLocale = locale === "vi" ? "vi_VN" : "en_US";
@@ -66,7 +64,7 @@ export async function generateMetadata({
     category: "technology",
     keywords: [
       "Front-end Developer",
-      "Team Leader",
+      "Front-end Lead",
       "React",
       "Next.js",
       "Vue.js",
