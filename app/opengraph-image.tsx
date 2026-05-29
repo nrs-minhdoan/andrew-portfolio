@@ -19,7 +19,7 @@ export default function OpengraphImage() {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "72px",
-        background: "radial-gradient(ellipse at top left, #1a0608 0%, #0d0506 55%, #050203 100%)",
+        background: "linear-gradient(135deg, #1a0608 0%, #0d0506 55%, #050203 100%)",
         color: "#f4e8e8",
       }}
     >
@@ -27,54 +27,56 @@ export default function OpengraphImage() {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "16px",
           color: "#ef4444",
-          fontSize: "22px",
-          letterSpacing: "0.32em",
+          fontSize: 22,
+          letterSpacing: 6,
           textTransform: "uppercase",
         }}
       >
-        <span
-          style={{
-            width: "12px",
-            height: "12px",
-            borderRadius: "9999px",
-            background: "#ef4444",
-            boxShadow: "0 0 24px #ef4444",
-          }}
-        />
-        <span>Portfolio · {CONTACT.handle}</span>
-      </div>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         <div
           style={{
-            fontSize: "92px",
+            display: "flex",
+            width: 12,
+            height: 12,
+            borderRadius: 9999,
+            background: "#ef4444",
+            marginRight: 16,
+          }}
+        />
+        <div style={{ display: "flex" }}>PORTFOLIO · {CONTACT.handle.toUpperCase()}</div>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            display: "flex",
+            fontSize: 92,
             fontWeight: 700,
             lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            backgroundImage: "linear-gradient(90deg, #ef4444 0%, #f59e0b 60%, #f97316 100%)",
-            backgroundClip: "text",
-            color: "transparent",
+            letterSpacing: -2,
+            color: "#ef4444",
+            marginBottom: 24,
           }}
         >
           {CONTACT.fullName}
         </div>
         <div
           style={{
-            fontSize: "40px",
+            display: "flex",
+            fontSize: 40,
             fontWeight: 500,
             color: "#f4e8e8",
-            opacity: 0.92,
+            marginBottom: 24,
           }}
         >
           {CONTACT.jobTitle}
         </div>
         <div
           style={{
-            fontSize: "26px",
+            display: "flex",
+            fontSize: 26,
             color: "#b89898",
-            maxWidth: "920px",
+            maxWidth: 920,
           }}
         >
           {STATS.yearsExperience}+ years building scalable web & mobile products with React,
@@ -88,13 +90,13 @@ export default function OpengraphImage() {
           justifyContent: "space-between",
           alignItems: "center",
           borderTop: "1px solid rgba(255,255,255,0.12)",
-          paddingTop: "28px",
-          fontSize: "22px",
+          paddingTop: 28,
+          fontSize: 22,
           color: "#b89898",
         }}
       >
-        <span>{CONTACT.location}</span>
-        <span>{SITE_HOST}</span>
+        <div style={{ display: "flex" }}>{CONTACT.location}</div>
+        <div style={{ display: "flex" }}>{SITE_HOST}</div>
       </div>
     </div>,
     { ...size },
