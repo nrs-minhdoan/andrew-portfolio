@@ -21,7 +21,7 @@ export function PersonJsonLd() {
     email: `mailto:${CONTACT.email}`,
     telephone: CONTACT.phone,
     url: SITE_URL,
-    image: `${SITE_URL}/og.png`,
+    image: `${SITE_URL}/logo.svg`,
     address: {
       "@type": "PostalAddress",
       addressLocality: CONTACT.addressLocality,

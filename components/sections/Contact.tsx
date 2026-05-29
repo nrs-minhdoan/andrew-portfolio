@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <section id="contact" data-section="contact" className="relative">
       <div className="aurora opacity-50" aria-hidden />
-      <div className="container-page relative flex flex-1 flex-col justify-center">
+      <div className="container-page relative flex flex-1 flex-col justify-center pb-16 sm:pb-24">
         <SectionHeader
           align="center"
           label={t("label")}

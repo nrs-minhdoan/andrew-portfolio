@@ -42,29 +42,103 @@ export async function generateMetadata({
     routing.locales.map((l) => [l, `${SITE_URL}/${l}`]),
   );
   const description = t("description", { years: STATS.yearsExperience });
+  const title = t("title");
+  const ogLocale = locale === "vi" ? "vi_VN" : "en_US";
+  const alternateLocale = locale === "vi" ? "en_US" : "vi_VN";
+  const ogImage = {
+    url: `${SITE_URL}/opengraph-image`,
+    secureUrl: `${SITE_URL}/opengraph-image`,
+    width: 1200,
+    height: 630,
+    alt: `${CONTACT.fullName} — ${CONTACT.jobTitle}`,
+    type: "image/png",
+  };
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: t("title"),
+    title,
     description,
+    applicationName: CONTACT.fullName,
+    authors: [{ name: CONTACT.fullName, url: SITE_URL }],
+    creator: CONTACT.fullName,
+    publisher: CONTACT.fullName,
+    category: "technology",
+    keywords: [
+      "Front-end Developer",
+      "Team Leader",
+      "React",
+      "Next.js",
+      "Vue.js",
+      "Angular",
+      "React Native",
+      "TypeScript",
+      "Portfolio",
+      CONTACT.fullName,
+      CONTACT.altName,
+      CONTACT.handle,
+    ],
     alternates: { canonical, languages },
     openGraph: {
-      title: t("title"),
+      title,
       description,
       type: "profile",
-      locale: locale === "vi" ? "vi_VN" : "en_US",
+      locale: ogLocale,
+      alternateLocale: [alternateLocale],
       url: canonical,
       siteName: CONTACT.fullName,
+      images: [ogImage],
+      firstName: CONTACT.fullName.split(" ").slice(-1)[0],
+      lastName: CONTACT.fullName.split(" ").slice(0, -1).join(" "),
+      username: CONTACT.handle,
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
+      title,
       description,
+      images: [
+        {
+          url: ogImage.url,
+          alt: ogImage.alt,
+          width: ogImage.width,
+          height: ogImage.height,
+        },
+      ],
+      creator: `@${CONTACT.handle}`,
     },
     robots: {
       index: true,
       follow: true,
-      googleBot: { index: true, follow: true, "max-image-preview": "large" },
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    icons: {
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/logo.svg", type: "image/svg+xml" },
+      ],
+      apple: "/logo.svg",
+      shortcut: "/icon.svg",
+    },
+    appleWebApp: {
+      capable: true,
+      title: CONTACT.fullName,
+      statusBarStyle: "black-translucent",
+    },
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    other: {
+      "og:image:width": String(ogImage.width),
+      "og:image:height": String(ogImage.height),
+      "og:image:alt": ogImage.alt,
+      "og:image:type": ogImage.type,
     },
   };
 }
