@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import cx from "classnames";
 import type { Metadata } from "next";
 import { Fira_Code, Silkscreen } from "next/font/google";
@@ -7,6 +8,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Providers } from "@/components/Providers";
+import { SectionDwellTracker } from "@/components/analytics/SectionDwellTracker";
 import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
 import { ThemeScript } from "@/components/theme/ThemeScript";
 import { CONTACT, STATS } from "@/data/portfolio";
@@ -173,6 +175,8 @@ export default async function LocaleLayout({
             {children}
           </Providers>
         </NextIntlClientProvider>
+        <Analytics />
+        <SectionDwellTracker />
       </body>
     </html>
   );
