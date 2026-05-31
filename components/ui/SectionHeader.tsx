@@ -1,3 +1,4 @@
+import cx from "classnames";
 import type { ReactNode } from "react";
 import { Reveal } from "./Reveal";
 
@@ -13,9 +14,10 @@ export function SectionHeader({ label, title, subtitle, align = "left" }: Props)
   return (
     <Reveal
       as="header"
-      className={`mb-10 flex max-w-full min-w-0 flex-col gap-4 sm:mb-12 ${
-        isCenter ? "items-center text-center" : "items-start"
-      }`}
+      className={cx(
+        "mb-10 flex max-w-full min-w-0 flex-col gap-4 sm:mb-12",
+        isCenter ? "items-center text-center" : "items-start",
+      )}
     >
       {/* Inline-flex on the badge means it sizes to content; the parent
           previously stretched it to full container width on mobile. */}
@@ -25,9 +27,10 @@ export function SectionHeader({ label, title, subtitle, align = "left" }: Props)
       </h2>
       {subtitle ? (
         <p
-          className={`description max-w-full min-w-0 text-sm wrap-break-word text-(--muted) sm:max-w-2xl sm:text-base ${
-            isCenter ? "mx-auto" : ""
-          }`}
+          className={cx(
+            "description max-w-full min-w-0 text-sm wrap-break-word text-(--muted) sm:max-w-2xl sm:text-base",
+            { "mx-auto": isCenter },
+          )}
         >
           {subtitle}
         </p>

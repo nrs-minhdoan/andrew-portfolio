@@ -48,6 +48,7 @@ export const TECHS: Record<TechKey, TechMeta> = {
     icon: "nextjs/nextjs-original.svg",
     color: "#FFFFFF",
     url: "https://nextjs.org",
+    invertOnLight: true,
   },
   vuejs: {
     key: "vuejs",
@@ -89,6 +90,7 @@ export const TECHS: Record<TechKey, TechMeta> = {
     fallback: "Nx",
     color: "#FFFFFF",
     url: "https://nx.dev",
+    invertOnLight: true,
   },
   vite: {
     key: "vite",
@@ -321,6 +323,7 @@ export const TECHS: Record<TechKey, TechMeta> = {
     fallback: "PP",
     color: "#00457C",
     url: "https://www.paypal.com",
+    invertOnDark: true,
   },
   googlemaps: {
     key: "googlemaps",
@@ -421,6 +424,7 @@ export const TECHS: Record<TechKey, TechMeta> = {
     fallback: "Ap",
     color: "#311C87",
     url: "https://www.apollographql.com/docs/react",
+    invertOnDark: true,
   },
   bootstrap: {
     key: "bootstrap",
@@ -475,6 +479,7 @@ export const TECHS: Record<TechKey, TechMeta> = {
     fallback: "Se",
     color: "#362D59",
     url: "https://sentry.io",
+    invertOnDark: true,
   },
   jest: {
     key: "jest",

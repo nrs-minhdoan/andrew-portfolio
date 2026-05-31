@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { Award } from "lucide-react";
 
 interface Props {
@@ -23,7 +24,7 @@ export function AwardBadge({ awards, label, variant = "solid", className }: Prop
       ? "rounded-full bg-white/25 px-1.5 py-px text-[9px] leading-none font-bold"
       : "rounded-full bg-(--accent-3)/25 px-1.5 py-px text-[9px] leading-none font-bold";
   return (
-    <span title={awards.join(" · ")} className={`${base} ${skin} ${className ?? ""}`}>
+    <span title={awards.join(" · ")} className={cx(base, skin, className)}>
       <Award className="h-3 w-3" aria-hidden />
       {label}
       {awards.length > 1 ? <span className={countSkin}>×{awards.length}</span> : null}

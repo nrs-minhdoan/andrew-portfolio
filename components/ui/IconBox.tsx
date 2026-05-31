@@ -1,3 +1,4 @@
+import cx from "classnames";
 import type { CSSProperties, ReactNode } from "react";
 import { ACCENT_GRADIENT } from "@/lib/theme";
 
@@ -28,7 +29,12 @@ export function IconBox({ children, size = "md", variant = "gradient", className
     variant === "gradient" ? { background: ACCENT_GRADIENT, ...style } : { ...style };
   return (
     <span
-      className={`grid shrink-0 place-items-center text-white ${SIZE_CLASS[size]} ${variant === "muted" ? "bg-(--bg)/40" : ""} ${className ?? ""}`}
+      className={cx(
+        "grid shrink-0 place-items-center text-white",
+        SIZE_CLASS[size],
+        { "bg-(--bg)/40": variant === "muted" },
+        className,
+      )}
       style={skin}
     >
       {children}

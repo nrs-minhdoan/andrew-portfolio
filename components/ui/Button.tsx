@@ -1,5 +1,6 @@
 "use client";
 
+import cx from "classnames";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Intent = "primary" | "ghost" | "outline";
@@ -36,7 +37,7 @@ export function Button({
   return (
     <button
       type={type}
-      className={`${baseClass} ${intentClass[intent]} ${className ?? ""}`.trim()}
+      className={cx(baseClass, intentClass[intent], className)}
       onClick={(e) => {
         onClick?.(e);
         onPress?.();

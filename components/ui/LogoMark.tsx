@@ -1,3 +1,5 @@
+import cx from "classnames";
+
 interface Props {
   src: string;
   alt?: string;
@@ -14,7 +16,11 @@ interface Props {
 export function LogoMark({ src, alt = "", size = 20, lightBg, className }: Props) {
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center rounded p-0.5 ${lightBg ? "bg-white" : ""} ${className ?? ""}`}
+      className={cx(
+        "inline-flex shrink-0 items-center justify-center rounded p-0.5",
+        { "bg-white": lightBg },
+        className,
+      )}
       style={{ width: size, height: size }}
     >
       <img

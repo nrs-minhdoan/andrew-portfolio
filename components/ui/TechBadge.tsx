@@ -1,3 +1,4 @@
+import cx from "classnames";
 import type { ReactNode } from "react";
 import { TECHS, type TechKey } from "@/data/portfolio";
 
@@ -19,6 +20,13 @@ function resolveIconSrc(tech: (typeof TECHS)[TechKey]): string | null {
   if (tech.iconUrl) return tech.iconUrl;
   if (tech.icon) return `${DEVICON_BASE}/${tech.icon}`;
   return null;
+}
+
+function themeInvertClass(tech: (typeof TECHS)[TechKey]): string {
+  return cx({
+    "dark:invert": tech.invertOnDark,
+    "invert-on-light": tech.invertOnLight,
+  });
 }
 
 /**
@@ -45,7 +53,7 @@ export function LinkOrSpan({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${name} — official site`}
-        className={`${className ?? ""} cursor-pointer`}
+        className={cx(className, "cursor-pointer")}
         style={style}
       >
         {children}
@@ -68,7 +76,10 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
     <LinkOrSpan
       url={tech.url}
       name={tech.name}
-      className={`inline-flex items-center rounded-full border border-(--border) bg-(--card) backdrop-blur-sm transition-all hover:border-(--accent)/40 hover:bg-(--accent)/5 ${badge}`}
+      className={cx(
+        "inline-flex items-center rounded-full border border-(--border) bg-(--card) backdrop-blur-sm transition-all hover:border-(--accent)/40 hover:bg-(--accent)/5",
+        badge,
+      )}
       style={{ ["--tech-color" as string]: tech.color }}
     >
       {src ? (
@@ -77,7 +88,7 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
           alt=""
           width={icon}
           height={icon}
-          className={`h-[1em] w-[1em] shrink-0 object-contain${tech.invertOnDark ? " dark:invert" : ""}`}
+          className={cx("h-[1em] w-[1em] shrink-0 object-contain", themeInvertClass(tech))}
           loading="eager"
           decoding="async"
         />
@@ -110,7 +121,7 @@ export function TechIcon({ techKey, size = 28 }: { techKey: TechKey; size?: numb
       alt={tech.name}
       width={size}
       height={size}
-      className={`shrink-0 object-contain${tech.invertOnDark ? " dark:invert" : ""}`}
+      className={cx("shrink-0 object-contain", themeInvertClass(tech))}
       style={{ width: size, height: size }}
       loading="lazy"
       decoding="async"

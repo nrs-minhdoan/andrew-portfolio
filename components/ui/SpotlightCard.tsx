@@ -1,5 +1,6 @@
 "use client";
 
+import cx from "classnames";
 import { type CSSProperties, type ReactNode, useRef } from "react";
 
 interface Props {
@@ -22,7 +23,7 @@ export function SpotlightCard({ children, className }: Props) {
     <div
       ref={ref}
       onMouseMove={onMove}
-      className={`spotlight ${className ?? ""}`}
+      className={cx("spotlight", className)}
       style={
         {
           ["--mx" as keyof CSSProperties]: "50%",

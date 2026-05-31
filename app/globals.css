@@ -2,6 +2,17 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Tech-icon contrast helpers: some upstream logos ship in a single fixed
+   tone (pure white or pure black) so they vanish on the opposite theme.
+   `invert-on-light` flips white logos to dark on light theme; the dark
+   class on <html> turns the filter off so they stay white on dark theme. */
+.invert-on-light {
+  filter: invert(1) hue-rotate(180deg);
+}
+.dark .invert-on-light {
+  filter: none;
+}
+
 @theme {
   --color-bg: #ffffff;
   --color-fg: #0a0a0a;

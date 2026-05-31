@@ -1,3 +1,4 @@
+import cx from "classnames";
 import type { ReactNode } from "react";
 
 interface Props {
@@ -24,7 +25,11 @@ export function SocialIconButton({ href, label, children, size = "md", className
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full border border-(--border) transition-colors hover:border-(--accent)/60 hover:text-(--accent) ${SIZE_CLASS[size]} ${className ?? ""}`}
+      className={cx(
+        "inline-flex items-center justify-center rounded-full border border-(--border) transition-colors hover:border-(--accent)/60 hover:text-(--accent)",
+        SIZE_CLASS[size],
+        className,
+      )}
     >
       {children}
     </a>

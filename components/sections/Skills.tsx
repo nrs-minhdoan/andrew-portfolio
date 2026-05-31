@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -63,7 +64,10 @@ export function Skills() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${tech.name} — official site`}
-                      className={`${cardClass} cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)`}
+                      className={cx(
+                        cardClass,
+                        "cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)",
+                      )}
                     >
                       {cardBody}
                     </a>

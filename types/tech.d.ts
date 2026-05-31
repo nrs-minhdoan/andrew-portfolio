@@ -76,4 +76,6 @@ export interface TechMeta {
   url?: string;
   /** apply CSS invert filter in dark theme (for black-only logos) */
   invertOnDark?: boolean;
+  /** apply CSS invert filter in light theme (for white-only logos) */
+  invertOnLight?: boolean;
 }

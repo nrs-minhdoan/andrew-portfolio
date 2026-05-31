@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { ArrowUpRight, Briefcase, Users } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { spellNumber } from "@/lib/spell-number";
@@ -46,7 +47,10 @@ export function Experience() {
               <Reveal as="li" key={slug} delay={idx * STAGGER} className="relative pl-6 md:pl-14">
                 <span
                   aria-hidden
-                  className={`absolute top-1.5 left-1.5 block aspect-square w-3 -translate-x-1/2 rounded-full md:left-4 md:w-5${company.ongoing ? " present-dot" : ""}`}
+                  className={cx(
+                    "absolute top-1.5 left-1.5 block aspect-square w-3 -translate-x-1/2 rounded-full md:left-4 md:w-5",
+                    { "present-dot": company.ongoing },
+                  )}
                   style={{
                     flex: "none",
                     background: company.ongoing ? "#22c55e" : ACCENT_GRADIENT,

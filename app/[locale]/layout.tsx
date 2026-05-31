@@ -1,3 +1,4 @@
+import cx from "classnames";
 import type { Metadata } from "next";
 import { Fira_Code, Silkscreen } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -159,7 +160,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${silkscreen.variable} ${firaCode.variable}`}
+      className={cx(silkscreen.variable, firaCode.variable)}
     >
       <head>
         <ThemeScript />
