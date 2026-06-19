@@ -115,82 +115,82 @@
       "bitcastle-fx": {
         "name": "Bitcastle FX",
         "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI.",
-        "responsibilities": "Set up the project foundation — a scalable micro-frontend architecture with Nx (Module Federation + monorepo) — and established technical standards. Owned the account-side of the platform: authentication (login/registration), KYC and identity verification, account management, and deposit/withdrawal flows with PayPal — strong emphasis on security and reliability. Stack: Vite + Next.js, Redux/Redux-saga, MQTT, Axios, MUI + Tailwind, Formik, Firebase, Sentry, Playwright."
+        "responsibilities": "Set up the project foundation — a scalable micro-frontend architecture with Nx (Module Federation + monorepo) — and established technical standards. Owned the account-side of the platform: authentication (login/registration), KYC and identity verification, account management, and deposit/withdrawal flows with PayPal — strong emphasis on security and reliability."
       },
       "bitcastle": {
         "name": "Bitcastle",
         "summary": "Full-featured cryptocurrency exchange with real-time order book.",
-        "responsibilities": "Bootstrapped the project, establishing the Nuxt.js architecture, Vuex state-management patterns, and coding conventions. Owned the most performance-sensitive features: the real-time order book and price tickers powered by MQTT, the spot-trading interface (order placement, trade history, balances), and the market/charting views — keeping the UI responsive under heavy real-time load. Stack: Nuxt.js, Vuex, MQTT, Axios, Handlebars, Tailwind, Firebase, Sentry."
+        "responsibilities": "Bootstrapped the project, establishing the Nuxt.js architecture, Vuex state-management patterns, and coding conventions. Owned the most performance-sensitive features: the real-time order book and price tickers powered by MQTT, the spot-trading interface (order placement, trade history, balances), and the market/charting views — keeping the UI responsive under heavy real-time load."
       },
       "dentity-kyc": {
         "name": "Dentity",
         "summary": "Identity authentication platform handling verifications and payments.",
-        "responsibilities": "Based the project on Next.js with a Redux/Redux-saga architecture and defined the structure and standards. Built the core of the platform: identity verification and authentication flows, secure user onboarding, and Stripe-based subscription/payment integration — ensuring the flows were secure and reliable. Stack: Next.js, Redux/Redux-saga, Stripe, Axios, Reactstrap, SASS, Formik."
+        "responsibilities": "Based the project on Next.js with a Redux/Redux-saga architecture and defined the structure and standards. Built the core of the platform: identity verification and authentication flows, secure user onboarding, and Stripe-based subscription/payment integration — ensuring the flows were secure and reliable."
       },
       "yellow": {
         "name": "Yellow",
         "summary": "E-commerce platform to wholesale all kinds of items in the Thai market.",
-        "responsibilities": "Based the project on Next.js with a Redux/Redux-saga architecture. Implemented the platform's most important features: the wholesale product catalog and search, the cart and checkout flow, real-time order/notification updates via Socket.io, and Google Maps integration for store and delivery locations across the Thai market. Stack: Next.js, Redux/Redux-saga, Socket.io, Google Maps, Twig, MUI + JSS + Bootstrap, Formik & React Hook Form, OneSignal, Firebase, Sentry."
+        "responsibilities": "Based the project on Next.js with a Redux/Redux-saga architecture. Implemented the platform's most important features: the wholesale product catalog and search, the cart and checkout flow, real-time order/notification updates via Socket.io, and Google Maps integration for store and delivery locations across the Thai market."
       },
       "reddiz": {
         "name": "ReddiZ",
         "summary": "Mobile app for a Vietnamese telecommunications social network.",
-        "responsibilities": "Developed key features of this React Native telecom social-network app. Focused on real-time messaging/chat over Socket.io, the social feed, and the related state management with Redux-saga and MobX — ensuring smooth real-time interactions on both iOS and Android. Stack: React Native, Redux/Redux-saga, MobX, Socket.io, Axios, React Navigation, Styled Components, Formik, App Center."
+        "responsibilities": "Developed key features of this React Native telecom social-network app. Focused on real-time messaging/chat over Socket.io, the social feed, and the related state management with Redux-saga and MobX — ensuring smooth real-time interactions on both iOS and Android."
       },
       "appi-team": {
         "name": "APPI Team",
         "summary": "Internal governance & work management — a French Jira-style suite.",
-        "responsibilities": "Set up the Angular project and the RxJS-based reactive architecture. Built the core work-management features — the task/issue boards, project and workflow management, and the reactive data layer — establishing the patterns the rest of the team followed for this Jira-style internal governance tool. Stack: Angular, RxJS, NG-ZORRO, SASS, Tailwind."
+        "responsibilities": "Set up the Angular project and the RxJS-based reactive architecture. Built the core work-management features — the task/issue boards, project and workflow management, and the reactive data layer — establishing the patterns the rest of the team followed for this Jira-style internal governance tool."
       },
       "chubb": {
         "name": "Chubb",
         "summary": "Front-end work for the world's largest publicly traded P&C insurer.",
-        "responsibilities": "Built important customer-facing features for this large property & casualty insurance platform using Angular and RxJS. Implemented complex insurance forms and policy/quote flows, focusing on reliable data handling and a smooth user experience. Stack: Angular, RxJS, NG-ZORRO, NG-Bootstrap, Less."
+        "responsibilities": "Built important customer-facing features for this large property & casualty insurance platform using Angular and RxJS. Implemented complex insurance forms and policy/quote flows, focusing on reliable data handling and a smooth user experience."
       },
       "my-coach": {
         "name": "My Coach",
         "summary": "Personal trainer search platform for the Japanese market.",
-        "responsibilities": "Developed key features of this personal-trainer search platform for the Japanese market, built with Next.js. Implemented the trainer search and matching, profile pages, and the related UI — integrating with the back-end via Axios. Stack: Next.js, Axios, Styled Components, Reactstrap, SASS."
+        "responsibilities": "Developed key features of this personal-trainer search platform for the Japanese market, built with Next.js. Implemented the trainer search and matching, profile pages, and the related UI — integrating with the back-end via Axios."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
         "summary": "On-demand household chores delivery & pickup mobile app.",
-        "responsibilities": "Built core features of this React Native app for posting and accepting household chores. Focused on real-time job tracking and updates via Socket.io, Google Maps integration for location and routing, and the chore posting/matching flows on iOS and Android. Stack: React Native, Redux/Redux-saga, Socket.io, Google Maps, Axios, React Navigation, Styled Components."
+        "responsibilities": "Built core features of this React Native app for posting and accepting household chores. Focused on real-time job tracking and updates via Socket.io, Google Maps integration for location and routing, and the chore posting/matching flows on iOS and Android."
       },
       "photobook-ai": {
         "name": "Photobook AI",
         "summary": "Upload images and generate a printed photobook in a single click.",
-        "responsibilities": "Developed important features of this Next.js app that turns uploaded images into a photobook in one click. Worked on the image upload and processing flow, the photobook generation/preview experience, and efficient data fetching/caching. Stack: Next.js, Redux/Redux-saga, MQTT, Axios, SASS, Styled Components, Formik."
+        "responsibilities": "Developed important features of this Next.js app that turns uploaded images into a photobook in one click. Worked on the image upload and processing flow, the photobook generation/preview experience, and efficient data fetching/caching."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "E-commerce platform to wholesale bicycle items in the US market.",
-        "responsibilities": "Built important e-commerce features for this US bicycle wholesale platform on Next.js. Implemented the product catalog and listing pages, the cart and checkout flow, and payment integrations with Stripe and PayPal — contributing to the project that won VMO Project of the Year 2018–2019. Stack: Next.js, Redux/Redux-saga, Socket.io, Stripe, PayPal, Twig, MUI, Reactstrap, SASS, Formik, Firebase, Sentry."
+        "responsibilities": "Built important e-commerce features for this US bicycle wholesale platform on Next.js. Implemented the product catalog and listing pages, the cart and checkout flow, and payment integrations with Stripe and PayPal — contributing to the project that won VMO Project of the Year 2018–2019."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
         "summary": "A powerful mobile tool to report hate crimes with ease and efficiency.",
-        "responsibilities": "Built this hate-crime reporting app end-to-end with React Native. Implemented the full reporting flow — incident submission with location capture via Google Maps, media attachments, and report tracking — handling data with React Query and Axios, shipping for both iOS and Android. Stack: React Native, React Query, Axios, Google Maps, React Navigation, Formik, App Center."
+        "responsibilities": "Built this hate-crime reporting app end-to-end with React Native. Implemented the full reporting flow — incident submission with location capture via Google Maps, media attachments, and report tracking — handling data with React Query and Axios, shipping for both iOS and Android."
       },
       "vity": {
         "name": "Vity",
         "summary": "Binary options trading platform with real-time analytics and secure execution.",
-        "responsibilities": "Built important features of this binary options trading platform with Next.js and React. Focused on real-time market analytics and price updates over Socket.io, the trade execution flow with secure order handling, and the live charts/data views — integrating data via React Query and Axios. Stack: Next.js, React Query, Socket.io, Axios, Chakra UI, React Hook Form."
+        "responsibilities": "Built important features of this binary options trading platform with Next.js and React. Focused on real-time market analytics and price updates over Socket.io, the trade execution flow with secure order handling, and the live charts/data views — integrating data via React Query and Axios."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
         "summary": "Zalo Mini App for a Vietnamese clay-pot rice restaurant — menu, ordering & loyalty.",
-        "responsibilities": "Built this Zalo Mini App for a Vietnamese clay-pot rice restaurant using the Zalo Mini App SDK and React. Implemented the digital menu, the ordering flow, and the customer loyalty program — managing state with Recoil and data fetching with React Query. Stack: Zalo Mini App SDK, React, React Query, Recoil, Axios, React Router, React Spring."
+        "responsibilities": "Built this Zalo Mini App for a Vietnamese clay-pot rice restaurant using the Zalo Mini App SDK and React. Implemented the digital menu, the ordering flow, and the customer loyalty program — managing state with Recoil and data fetching with React Query."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
         "summary": "Mobile app for Soc Trang police to manage administrative & criminal violations.",
-        "responsibilities": "Built core features of this React Native app for the Soc Trang provincial police to manage administrative and criminal violations. Implemented the violation record management and the case lookup and data-entry forms designed for field use. Stack: React Native, Axios, React Navigation, Styled Components, Formik."
+        "responsibilities": "Built core features of this React Native app for the Soc Trang provincial police to manage administrative and criminal violations. Implemented the violation record management and the case lookup and data-entry forms designed for field use."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
         "summary": "Marketplace website & mobile app for the auto repair industry.",
-        "responsibilities": "Built important features of this auto-repair marketplace using React and MobX. Implemented the marketplace listings and search for repair shops, the request/quote flow, and the related state management for a smooth browsing experience. Stack: React, MobX, Pug.js, Axios, React Router, MUI."
+        "responsibilities": "Built important features of this auto-repair marketplace using React and MobX. Implemented the marketplace listings and search for repair shops, the request/quote flow, and the related state management for a smooth browsing experience."
       }
     }
   },
