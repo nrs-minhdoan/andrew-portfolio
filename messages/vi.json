@@ -75,6 +75,7 @@
     "role": "Vai trò",
     "award": "giải thưởng",
     "viewProject": "Xem dự án",
+    "responsibilities": "Trách nhiệm",
     "offshoreLabel": "Tham gia ODC",
     "companies": {
       "blitz": {
@@ -117,67 +118,83 @@
     "items": {
       "bitcastle-fx": {
         "name": "Bitcastle FX",
-        "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI."
+        "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI.",
+        "responsibilities": "Thiết lập nền móng dự án — kiến trúc micro-frontend mở rộng với Nx (Module Federation + monorepo) — và xác lập chuẩn kỹ thuật. Phụ trách phía tài khoản của nền tảng: luồng đăng nhập/đăng ký, KYC & xác minh danh tính, quản lý tài khoản, luồng nạp/rút với PayPal — chú trọng bảo mật và độ tin cậy. Stack: Vite + Next.js, Redux/Redux-saga, MQTT, Axios, MUI + Tailwind, Formik, Firebase, Sentry, Playwright."
       },
       "bitcastle": {
         "name": "Bitcastle",
-        "summary": "Sàn giao dịch tiền mã hóa đầy đủ tính năng với order book thời gian thực."
+        "summary": "Sàn giao dịch tiền mã hóa đầy đủ tính năng với order book thời gian thực.",
+        "responsibilities": "Khởi tạo dự án, xác lập kiến trúc Nuxt.js, mô hình state Vuex và quy ước code. Phụ trách các tính năng nặng hiệu năng nhất: order book và price ticker thời gian thực qua MQTT, giao diện spot-trading (đặt lệnh, lịch sử giao dịch, số dư) và các view thị trường/biểu đồ — giữ UI mượt dưới tải real-time lớn. Stack: Nuxt.js, Vuex, MQTT, Axios, Handlebars, Tailwind, Firebase, Sentry."
       },
       "dentity-kyc": {
         "name": "Dentity",
-        "summary": "Nền tảng xác thực danh tính, xử lý KYC và thanh toán."
+        "summary": "Nền tảng xác thực danh tính, xử lý KYC và thanh toán.",
+        "responsibilities": "Xây dựng dự án trên Next.js với kiến trúc Redux/Redux-saga và định hình chuẩn cấu trúc. Xây dựng phần lõi của nền tảng: luồng xác minh danh tính & xác thực, onboarding bảo mật và tích hợp thanh toán & subscription qua Stripe — đảm bảo luồng an toàn và tin cậy. Stack: Next.js, Redux/Redux-saga, Stripe, Axios, Reactstrap, SASS, Formik."
       },
       "yellow": {
         "name": "Yellow",
-        "summary": "Nền tảng TMĐT bán sỉ đa dạng sản phẩm tại thị trường Thái Lan."
+        "summary": "Nền tảng TMĐT bán sỉ đa dạng sản phẩm tại thị trường Thái Lan.",
+        "responsibilities": "Xây dựng dự án trên Next.js với kiến trúc Redux/Redux-saga. Triển khai các tính năng quan trọng nhất của nền tảng: catalog sản phẩm bán sỉ & tìm kiếm, giỏ hàng & checkout, cập nhật đơn/thông báo real-time qua Socket.io và tích hợp Google Maps cho cửa hàng & giao hàng tại thị trường Thái Lan. Stack: Next.js, Redux/Redux-saga, Socket.io, Google Maps, Twig, MUI + JSS + Bootstrap, Formik & React Hook Form, OneSignal, Firebase, Sentry."
       },
       "reddiz": {
         "name": "ReddiZ",
-        "summary": "Ứng dụng mobile mạng xã hội viễn thông Việt Nam."
+        "summary": "Ứng dụng mobile mạng xã hội viễn thông Việt Nam.",
+        "responsibilities": "Phát triển các tính năng chính của ứng dụng mạng xã hội viễn thông React Native. Tập trung vào nhắn tin/chat real-time qua Socket.io, social feed và quản lý state với Redux-saga + MobX — đảm bảo tương tác real-time mượt mà trên cả iOS và Android. Stack: React Native, Redux/Redux-saga, MobX, Socket.io, Axios, React Navigation, Styled Components, Formik, App Center."
       },
       "appi-team": {
         "name": "APPI Team",
-        "summary": "Hệ thống quản trị nội bộ & công việc theo phong cách Jira của Pháp."
+        "summary": "Hệ thống quản trị nội bộ & công việc theo phong cách Jira của Pháp.",
+        "responsibilities": "Khởi tạo dự án Angular và kiến trúc reactive dựa trên RxJS. Xây dựng các tính năng quản lý công việc lõi — bảng task/issue, quản lý dự án & workflow, tầng dữ liệu reactive — định hình pattern cho cả đội theo cho công cụ quản trị nội bộ kiểu Jira. Stack: Angular, RxJS, NG-ZORRO, SASS, Tailwind."
       },
       "chubb": {
         "name": "Chubb",
-        "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới."
+        "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới.",
+        "responsibilities": "Xây dựng các tính năng customer-facing quan trọng cho nền tảng bảo hiểm tài sản & thiệt hại lớn này bằng Angular và RxJS. Triển khai biểu mẫu bảo hiểm phức tạp và luồng policy/quote, chú trọng xử lý dữ liệu tin cậy và trải nghiệm người dùng mượt. Stack: Angular, RxJS, NG-ZORRO, NG-Bootstrap, Less."
       },
       "my-coach": {
         "name": "My Coach",
-        "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản."
+        "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản.",
+        "responsibilities": "Phát triển các tính năng chính của nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản, xây dựng bằng Next.js. Triển khai tìm kiếm & ghép huấn luyện viên, trang hồ sơ và UI liên quan — tích hợp với back-end qua Axios. Stack: Next.js, Axios, Styled Components, Reactstrap, SASS."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
-        "summary": "Ứng dụng mobile nhận và giao việc nhà theo yêu cầu."
+        "summary": "Ứng dụng mobile nhận và giao việc nhà theo yêu cầu.",
+        "responsibilities": "Xây dựng các tính năng lõi của ứng dụng React Native nhận & giao việc nhà. Tập trung theo dõi & cập nhật công việc real-time qua Socket.io, tích hợp Google Maps cho vị trí & định tuyến và các luồng đăng/ghép việc trên iOS và Android. Stack: React Native, Redux/Redux-saga, Socket.io, Google Maps, Axios, React Navigation, Styled Components."
       },
       "photobook-ai": {
         "name": "Photobook AI",
-        "summary": "Upload ảnh và tạo photobook in ấn chỉ với một cú click."
+        "summary": "Upload ảnh và tạo photobook in ấn chỉ với một cú click.",
+        "responsibilities": "Phát triển các tính năng quan trọng của ứng dụng Next.js biến ảnh upload thành photobook chỉ với một click. Triển khai luồng upload & xử lý ảnh, trải nghiệm tạo/preview photobook và fetch/cache dữ liệu hiệu quả. Stack: Next.js, Redux/Redux-saga, MQTT, Axios, SASS, Styled Components, Formik."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
-        "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ."
+        "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ.",
+        "responsibilities": "Xây dựng các tính năng TMĐT quan trọng cho nền tảng bán sỉ xe đạp tại Mỹ trên Next.js. Triển khai catalog & trang danh sách sản phẩm, luồng giỏ hàng & checkout và tích hợp thanh toán Stripe và PayPal — đóng góp vào dự án đoạt VMO Project of the Year 2018–2019. Stack: Next.js, Redux/Redux-saga, Socket.io, Stripe, PayPal, Twig, MUI, Reactstrap, SASS, Formik, Firebase, Sentry."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
-        "summary": "Công cụ mobile mạnh mẽ để báo cáo tội phạm thù ghét nhanh chóng."
+        "summary": "Công cụ mobile mạnh mẽ để báo cáo tội phạm thù ghét nhanh chóng.",
+        "responsibilities": "Xây dựng ứng dụng báo cáo tội phạm thù ghét end-to-end với React Native. Triển khai toàn bộ luồng báo cáo — submit sự việc kèm vị trí qua Google Maps, đính kèm media và theo dõi báo cáo — xử lý dữ liệu với React Query và Axios, phát hành cho cả iOS và Android. Stack: React Native, React Query, Axios, Google Maps, React Navigation, Formik, App Center."
       },
       "vity": {
         "name": "Vity",
-        "summary": "Nền tảng giao dịch quyền chọn nhị phân với phân tích real-time và bảo mật cao."
+        "summary": "Nền tảng giao dịch quyền chọn nhị phân với phân tích real-time và bảo mật cao.",
+        "responsibilities": "Xây dựng các tính năng quan trọng của nền tảng giao dịch quyền chọn nhị phân này với Next.js và React. Tập trung vào phân tích thị trường & cập nhật giá real-time qua Socket.io, luồng đặt lệnh với xử lý lệnh bảo mật và các view biểu đồ/dữ liệu trực tiếp — tích hợp dữ liệu qua React Query và Axios. Stack: Next.js, React Query, Socket.io, Axios, Chakra UI, React Hook Form."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
-        "summary": "Zalo Mini App cho nhà hàng cơm niêu — menu, đặt món & tích điểm khách hàng."
+        "summary": "Zalo Mini App cho nhà hàng cơm niêu — menu, đặt món & tích điểm khách hàng.",
+        "responsibilities": "Xây dựng Zalo Mini App này cho nhà hàng cơm niêu Việt bằng Zalo Mini App SDK và React. Triển khai menu số, luồng đặt món và chương trình tích điểm khách hàng — quản state với Recoil và fetch dữ liệu với React Query. Stack: Zalo Mini App SDK, React, React Query, Recoil, Axios, React Router, React Spring."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
-        "summary": "Ứng dụng mobile cho công an Sóc Trăng quản lý vi phạm hành chính & hình sự."
+        "summary": "Ứng dụng mobile cho công an Sóc Trăng quản lý vi phạm hành chính & hình sự.",
+        "responsibilities": "Xây dựng các tính năng lõi của ứng dụng React Native này cho công an tỉnh Sóc Trăng quản lý vi phạm hành chính và hình sự. Triển khai quản lý hồ sơ vi phạm và biểu mẫu tra cứu & nhập liệu vụ việc thiết kế cho công tác hiện trường. Stack: React Native, Axios, React Navigation, Styled Components, Formik."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
-        "summary": "Website & mobile marketplace cho ngành sửa chữa ô tô."
+        "summary": "Website & mobile marketplace cho ngành sửa chữa ô tô.",
+        "responsibilities": "Xây dựng các tính năng quan trọng của marketplace sửa chữa ô tô này bằng React và MobX. Triển khai listing & tìm kiếm cửa hàng sửa chữa, luồng request/quote và quản lý state liên quan cho trải nghiệm duyệt mượt mà. Stack: React, MobX, Pug.js, Axios, React Router, MUI."
       }
     }
   },

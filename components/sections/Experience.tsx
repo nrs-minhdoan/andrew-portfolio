@@ -85,8 +85,10 @@ export function Experience() {
                       project={project}
                       roleLabel={t(`roles.${project.role}`)}
                       awardLabel={t("award")}
+                      responsibilitiesLabel={t("responsibilities")}
                       name={tProjects(`items.${project.slug}.name`)}
                       summary={tProjects(`items.${project.slug}.summary`)}
+                      responsibilities={tProjects(`items.${project.slug}.responsibilities`)}
                     />
                   ))}
                 </ul>
@@ -146,11 +148,21 @@ interface CardProps {
   project: ProjectSpec;
   roleLabel: string;
   awardLabel: string;
+  responsibilitiesLabel: string;
   name: string;
   summary: string;
+  responsibilities: string;
 }
 
-function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProps) {
+function ProjectCard({
+  project,
+  roleLabel,
+  awardLabel,
+  responsibilitiesLabel,
+  name,
+  summary,
+  responsibilities,
+}: CardProps) {
   const icon = getProjectIcon(project.url, project.image);
   return (
     <li className="glass group relative block overflow-hidden rounded-2xl p-5 transition-all focus-within:border-(--accent)/60 hover:-translate-y-0.5 hover:border-(--accent)/40">
@@ -197,6 +209,14 @@ function ProjectCard({ project, roleLabel, awardLabel, name, summary }: CardProp
           {roleLabel}
         </span>
       </div>
+      {responsibilities ? (
+        <div className="mt-3 border-t border-(--border)/60 pt-3">
+          <p className="mb-1.5 text-[10px] font-semibold tracking-[0.14em] text-(--muted)/80 uppercase">
+            {responsibilitiesLabel}
+          </p>
+          <p className="text-xs leading-relaxed text-(--muted)">{responsibilities}</p>
+        </div>
+      ) : null}
       {/* Tech list above the card-link overlay (z-10) so each chip click
           targets the tech's official site, not the project URL. */}
       <TechList techs={project.techs} className="relative z-10 mt-4" />
