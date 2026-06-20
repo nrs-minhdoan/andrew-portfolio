@@ -52,7 +52,7 @@ export function Navigation() {
             <span className="font-pixel">{CONTACT.handle}</span>
           </a>
 
-          <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
             {SECTIONS.map((s) => (
               <a
                 key={s.id}
@@ -77,7 +77,7 @@ export function Navigation() {
           <div className="flex shrink-0 flex-nowrap items-center gap-1.5 sm:gap-2">
             <LanguageSwitcher />
             <ThemeToggle />
-            <details className="group/menu relative md:hidden">
+            <details className="group/menu relative lg:hidden">
               <summary
                 aria-label="Open menu"
                 className="inline-flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-md border border-(--border) text-(--fg) hover:border-(--border-strong) [&::-webkit-details-marker]:hidden"
