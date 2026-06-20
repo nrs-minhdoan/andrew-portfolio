@@ -22,7 +22,7 @@ export const CONTACT = {
   jobTitle: "Front-end Developer & Lead",
   languages: ["English", "Vietnamese"],
   email: "minh.doan.nrs@gmail.com",
-  phone: "+84982766986",
+  phone: "+84 982766986",
   location: "Ha Noi, Viet Nam",
   addressLocality: "Ha Noi",
   addressCountry: "VN",

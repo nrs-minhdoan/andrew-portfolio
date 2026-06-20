@@ -119,82 +119,82 @@
       "bitcastle-fx": {
         "name": "Bitcastle FX",
         "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI.",
-        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nx theo kiến trúc monorepo + micro front-end trên nền Next.js / React + Vite. Áp dụng pipeline testing với Jest cho unit test và Playwright cho E2E. Áp dụng workflow coding / testing / review hỗ trợ bởi các công cụ AI như GitHub Copilot, Claude... Phụ trách KYC và luồng deposit / withdraw."
+        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nx theo kiến trúc monorepo + micro front-end trên nền Next.js / React + Vite. Áp dụng pipeline testing với Jest cho unit test và Playwright cho E2E. Áp dụng workflow coding / testing / review hỗ trợ bởi các công cụ AI như GitHub Copilot, Claude... Phụ trách KYC, luồng deposit / withdraw và một số chức năng khác."
       },
       "bitcastle": {
         "name": "Bitcastle",
         "summary": "Sàn giao dịch tiền mã hóa đầy đủ tính năng với order book thời gian thực.",
-        "responsibilities": "Quản lý team 6 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nuxt.js, base lớp socket xử lý dữ liệu real-time và tích hợp TradingView cho biểu đồ. Phụ trách giao dịch spot, copy trading và quản lý ví (deposit / withdraw, transaction history)."
+        "responsibilities": "Quản lý team 6 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nuxt.js, base lớp socket xử lý dữ liệu real-time và tích hợp TradingView cho biểu đồ. Phụ trách giao dịch spot, copy trading, quản lý ví (deposit / withdraw, transaction history) và một số chức năng khác."
       },
       "dentity-kyc": {
         "name": "Dentity",
         "summary": "Nền tảng xác thực danh tính, xử lý KYC và thanh toán.",
-        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base 2 dự án bằng Next.js (trang chính) và React (admin). Trang chính: phụ trách KYC bằng SDK custom riêng và thanh toán Apple Pay / PayPal / Stripe. Admin: phụ trách quản lý thông tin KYC."
+        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base 2 dự án bằng Next.js (trang chính) và React (admin). Trang chính: phụ trách KYC bằng KYC SDK của khách hàng, thanh toán Apple Pay / PayPal / Stripe và một số chức năng khác. Admin: phụ trách quản lý thông tin KYC và một số chức năng khác."
       },
       "yellow": {
         "name": "Yellow",
         "summary": "Nền tảng TMĐT bán sỉ đa dạng sản phẩm tại thị trường Thái Lan.",
-        "responsibilities": "Quản lý team 8 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base 3 dự án: sàn TMĐT bằng Next.js, trang quản lý cho seller bằng React và trang admin vận hành bằng React. Trên sàn TMĐT, phụ trách onboarding seller / buyer và luồng checkout. Trên seller console, phụ trách quản lý hàng hóa và thống kê doanh thu. Trên admin vận hành, phụ trách trang chủ và quản lý khuyến mãi."
+        "responsibilities": "Quản lý team 8 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base 3 dự án: sàn TMĐT bằng Next.js, trang quản lý cho seller bằng React và trang admin vận hành bằng React. Trên sàn TMĐT, phụ trách onboarding seller / buyer, luồng checkout và một số chức năng khác. Trên seller console, phụ trách quản lý hàng hóa, thống kê doanh thu và một số chức năng khác. Trên admin vận hành, phụ trách trang chủ, quản lý khuyến mãi và một số chức năng khác."
       },
       "reddiz": {
         "name": "ReddiZ",
         "summary": "Ứng dụng mobile mạng xã hội viễn thông Việt Nam.",
-        "responsibilities": "Trên nền React Native, xây dựng custom layout cho app, social feed (đăng và sửa bài viết) và chức năng quản lý data viễn thông."
+        "responsibilities": "Trên nền React Native, xây dựng custom layout cho app, social feed (đăng và sửa bài viết), chức năng quản lý data viễn thông và một số chức năng khác."
       },
       "appi-team": {
         "name": "APPI Team",
         "summary": "Hệ thống quản trị nội bộ & công việc theo phong cách Jira của Pháp.",
-        "responsibilities": "Quản lý team 4 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Angular 11. Phụ trách quản lý công việc và quản lý timeline cho công cụ quản trị nội bộ kiểu Jira."
+        "responsibilities": "Quản lý team 4 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Angular 11. Phụ trách quản lý công việc, quản lý timeline và một số chức năng khác cho công cụ quản trị nội bộ kiểu Jira."
       },
       "chubb": {
         "name": "Chubb",
         "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới.",
-        "responsibilities": "Trên nền Angular + RxJS, xây dựng admin của nền tảng với quản lý khách hàng và quản lý các loại bảo hiểm."
+        "responsibilities": "Trên nền Angular + RxJS, xây dựng admin của nền tảng với quản lý khách hàng, quản lý các loại bảo hiểm và một số chức năng khác."
       },
       "my-coach": {
         "name": "My Coach",
         "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản.",
-        "responsibilities": "Trên nền Next.js, xây dựng landing page và luồng đăng nhập / đăng ký cho nền tảng tìm huấn luyện viên cá nhân tại thị trường Nhật."
+        "responsibilities": "Trên nền Next.js, xây dựng landing page, luồng đăng nhập / đăng ký và một số chức năng khác cho nền tảng tìm huấn luyện viên cá nhân tại thị trường Nhật."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
         "summary": "Ứng dụng mobile nhận và giao việc nhà theo yêu cầu.",
-        "responsibilities": "Base dự án bằng React Native và phát triển ứng dụng dành cho helper, phụ trách luồng tìm công việc gần đây và quản lý lương thưởng."
+        "responsibilities": "Base dự án bằng React Native và phát triển ứng dụng dành cho helper, phụ trách luồng tìm công việc gần đây, quản lý lương thưởng và một số chức năng khác."
       },
       "photobook-ai": {
         "name": "Photobook AI",
         "summary": "Upload ảnh và tạo photobook in ấn chỉ với một cú click.",
-        "responsibilities": "Trên nền Next.js + Redux / Redux-saga, xây dựng trình chỉnh sửa khung ảnh và luồng đăng nhập / đăng ký cho trải nghiệm tạo photobook một-click."
+        "responsibilities": "Trên nền Next.js + Redux / Redux-saga, xây dựng trình chỉnh sửa khung ảnh, luồng đăng nhập / đăng ký và một số chức năng khác cho trải nghiệm tạo photobook một-click."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ.",
-        "responsibilities": "Trên nền Next.js, phụ trách quản lý tài khoản đa vai trò (personal, wholesaler, seller, company) và thanh toán PayPal / Stripe. Tích hợp Socket.io và phát triển chức năng nhắn tin giữa người mua và người bán. Tham gia phát triển trang admin (quản lý đơn hàng, inventory)."
+        "responsibilities": "Trên nền Next.js, phụ trách quản lý tài khoản đa vai trò (personal, wholesaler, seller, company) và thanh toán PayPal / Stripe. Tích hợp Socket.io và phát triển chức năng nhắn tin giữa người mua và người bán. Tham gia phát triển trang admin (quản lý đơn hàng, inventory) và một số chức năng khác."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
         "summary": "Công cụ mobile mạnh mẽ để báo cáo tội phạm thù ghét nhanh chóng.",
-        "responsibilities": "Quản lý team và chịu trách nhiệm tiến độ phát triển. Base dự án bằng React Native và xây dựng toàn bộ client mobile (React Query + Axios cho data, Formik cho form, App Center cho phân phối) - phụ trách báo cáo tội phạm kèm export báo cáo, tìm kiếm bệnh viện và đồn cảnh sát gần nhất qua Google Maps và gửi cảnh báo cho người thân. Đồng thời xây dựng trang admin React + Vite với TanStack Router để duyệt báo cáo."
+        "responsibilities": "Quản lý team và chịu trách nhiệm tiến độ phát triển. Base dự án bằng React Native và xây dựng toàn bộ client mobile (React Query + Axios cho data, Formik cho form, App Center cho phân phối) - phụ trách báo cáo tội phạm kèm export báo cáo, tìm kiếm bệnh viện và đồn cảnh sát gần nhất qua Google Maps, gửi cảnh báo cho người thân và một số chức năng khác. Đồng thời xây dựng trang admin React + Vite với TanStack Router để duyệt báo cáo."
       },
       "vity": {
         "name": "Vity",
         "summary": "Nền tảng giao dịch quyền chọn nhị phân với phân tích real-time và bảo mật cao.",
-        "responsibilities": "Phụ trách luồng deposit / withdraw với nhiều phương thức khác nhau, làm lại landing page và tích hợp KLine chart với indicator và đặt lệnh được tối ưu. Tham gia trang admin bằng Next.js với restrict theo user / nationality và quản lý phương thức thanh toán."
+        "responsibilities": "Phụ trách luồng deposit / withdraw với nhiều phương thức khác nhau, làm lại landing page, tích hợp KLine chart với indicator và đặt lệnh được tối ưu. Tham gia trang admin bằng Next.js với restrict theo user / nationality, quản lý phương thức thanh toán và một số chức năng khác."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
         "summary": "Zalo Mini App cho nhà hàng cơm niêu - menu, đặt món & tích điểm khách hàng.",
-        "responsibilities": "Trên nền Zalo Mini App SDK + React, xây dựng luồng đặt hàng và thanh toán qua chuyển khoản - data bằng React Query, state dùng chung bằng Recoil."
+        "responsibilities": "Trên nền Zalo Mini App SDK + React, xây dựng luồng đặt hàng, thanh toán qua chuyển khoản và một số chức năng khác - data bằng React Query, state dùng chung bằng Recoil."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
         "summary": "Ứng dụng mobile cho công an Sóc Trăng quản lý vi phạm hành chính & hình sự.",
-        "responsibilities": "Tự xây dựng toàn bộ dự án bằng React Native, phụ trách quản lý nhiều loại vi phạm khác nhau, thống kê vi phạm và tra cứu vi phạm theo hồ sơ cá nhân."
+        "responsibilities": "Tự xây dựng toàn bộ dự án bằng React Native, phụ trách quản lý nhiều loại vi phạm khác nhau, thống kê vi phạm, tra cứu vi phạm theo hồ sơ cá nhân và một số chức năng khác."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
         "summary": "Website & mobile marketplace cho ngành sửa chữa ô tô.",
-        "responsibilities": "Xây dựng trang chủ bằng Pug.js + Node.js cho SSR, phụ trách trọn vẹn trang admin (quản lý đơn hàng, tài khoản khách hàng, hàng hóa / dịch vụ) bằng React + MobX cho state."
+        "responsibilities": "Xây dựng trang chủ bằng Pug.js + Node.js cho SSR, phụ trách trọn vẹn trang admin (quản lý đơn hàng, tài khoản khách hàng, hàng hóa / dịch vụ và một số chức năng khác) bằng React + MobX cho state."
       }
     }
   },
