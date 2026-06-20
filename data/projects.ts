@@ -246,6 +246,8 @@ export const PROJECTS: readonly ProjectSpec[] = [
       "typescript",
       "reactnative",
       "react",
+      "vite",
+      "tanstackrouter",
       "reactquery",
       "axios",
       "googlemaps",
