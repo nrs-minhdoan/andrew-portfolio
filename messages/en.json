@@ -135,7 +135,7 @@
       "reddiz": {
         "name": "ReddiZ",
         "summary": "Mobile app for a Vietnamese telecommunications social network.",
-        "responsibilities": "Within a 4-engineer team on React Native, I contributed to custom layout primitives for the app, the personal profile, post creation and editing, login, registration, telecom data management, and other features for this telecom social network."
+        "responsibilities": "On React Native, I contributed to custom layout primitives for the app, the personal profile, post creation and editing, login, registration, telecom data management, and other features for this telecom social network."
       },
       "appi-team": {
         "name": "APPI Team",
@@ -145,27 +145,27 @@
       "chubb": {
         "name": "Chubb",
         "summary": "Front-end work for the world's largest publicly traded P&C insurer.",
-        "responsibilities": "Within a 4-engineer team on Angular + RxJS, I built the admin side of the platform — customer management, multi-product insurance management, and other back-office features."
+        "responsibilities": "On Angular + RxJS, I built the admin side of the platform — customer management, multi-product insurance management, and other back-office features."
       },
       "my-coach": {
         "name": "My Coach",
         "summary": "Personal trainer search platform for the Japanese market.",
-        "responsibilities": "In a 2-person team on Next.js, I built the project landing page along with login, registration, and other features for this Japanese personal-trainer search platform."
+        "responsibilities": "On Next.js, I built the project landing page along with login, registration, and other features for this Japanese personal-trainer search platform."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
         "summary": "On-demand household chores delivery & pickup mobile app.",
-        "responsibilities": "I base the project with React Native and the necessary libraries and built the helper-side mobile app within a 4-engineer team. Features included nearby job discovery, job management, salary/bonus tracking, profile management, authentication (login/register), and other features."
+        "responsibilities": "I base the project with React Native and the necessary libraries and built the helper-side mobile app. Features included nearby job discovery, job management, salary/bonus tracking, profile management, authentication (login/register), and other features."
       },
       "photobook-ai": {
         "name": "Photobook AI",
         "summary": "Upload images and generate a printed photobook in a single click.",
-        "responsibilities": "Within a 5-engineer team on Next.js + Redux/Redux-saga, I built the authentication (login/register), the photo frame editor, and other features supporting the one-click photobook flow."
+        "responsibilities": "On Next.js + Redux/Redux-saga, I built the authentication (login/register), the photo frame editor, and other features supporting the one-click photobook flow."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "E-commerce platform to wholesale bicycle items in the US market.",
-        "responsibilities": "Within a 10-engineer team on Next.js, I contributed to user account management across personal, wholesaler, seller, and company profiles; PayPal/Stripe checkout; product search and listings; authentication; add-to-cart; order placement and management. I also built admin features for order management, inventory, and user-account administration."
+        "responsibilities": "On Next.js, I contributed to user account management across personal, wholesaler, seller, and company profiles; PayPal/Stripe checkout; product search and listings; authentication; add-to-cart; order placement and management. I also built admin features for order management, inventory, and user-account administration."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
@@ -175,22 +175,22 @@
       "vity": {
         "name": "Vity",
         "summary": "Binary options trading platform with real-time analytics and secure execution.",
-        "responsibilities": "I joined a 4-engineer team and delivered the deposit/withdraw flows across multiple payment methods, rebuilt the landing page, integrated a KLine chart with optimized indicators and trade execution, and tuned the order display. I also contributed to the Next.js admin: user/nationality-based restrictions, order management, user management, payment-method management, and other features."
+        "responsibilities": "I delivered the deposit/withdraw flows across multiple payment methods, rebuilt the landing page, integrated a KLine chart with optimized indicators and trade execution, and tuned the order display. I also contributed to the Next.js admin: user/nationality-based restrictions, order management, user management, payment-method management, and other features."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
         "summary": "Zalo Mini App for a Vietnamese clay-pot rice restaurant — menu, ordering & loyalty.",
-        "responsibilities": "In a 2-person team on the Zalo Mini App SDK + React stack, I built the ordering flow, customer account management, product listings, and bank-transfer payment handling — fetching data with React Query and managing shared state with Recoil."
+        "responsibilities": "On the Zalo Mini App SDK + React stack, I built the ordering flow, customer account management, product listings, and bank-transfer payment handling — fetching data with React Query and managing shared state with Recoil."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
         "summary": "Mobile app for Soc Trang police to manage administrative & criminal violations.",
-        "responsibilities": "I bootstrapped the project base with React Native and the supporting library set and delivered every feature end-to-end with a 2-person team: authentication, multi-category violation management, violation statistics, lookup by personal record, and other supporting workflows."
+        "responsibilities": "I bootstrapped the project base with React Native and the supporting library set and delivered every feature end-to-end: authentication, multi-category violation management, violation statistics, lookup by personal record, and other supporting workflows."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
         "summary": "Marketplace website & mobile app for the auto repair industry.",
-        "responsibilities": "Within a 3-engineer team, I built the landing/home pages with Pug.js paired with Node.js for server-side rendering, then owned the admin dashboard end-to-end — order management, customer account management, goods/services catalog, and other supporting features — using React and MobX for state."
+        "responsibilities": "I built the landing/home pages with Pug.js paired with Node.js for server-side rendering, then owned the admin dashboard end-to-end — order management, customer account management, goods/services catalog, and other supporting features — using React and MobX for state."
       }
     }
   },

@@ -139,7 +139,7 @@
       "reddiz": {
         "name": "ReddiZ",
         "summary": "Ứng dụng mobile mạng xã hội viễn thông Việt Nam.",
-        "responsibilities": "Trong đội 4 kỹ sư trên nền React Native, tôi tham gia phát triển các chức năng: custom layout cho app, trang cá nhân, đăng bài viết, sửa bài viết, đăng nhập, đăng ký, quản lý data viễn thông và một số chức năng khác cho mạng xã hội viễn thông."
+        "responsibilities": "Trên nền React Native, tôi tham gia phát triển các chức năng: custom layout cho app, trang cá nhân, đăng bài viết, sửa bài viết, đăng nhập, đăng ký, quản lý data viễn thông và một số chức năng khác cho mạng xã hội viễn thông."
       },
       "appi-team": {
         "name": "APPI Team",
@@ -149,27 +149,27 @@
       "chubb": {
         "name": "Chubb",
         "summary": "Phát triển front-end cho hãng bảo hiểm P&C niêm yết lớn nhất thế giới.",
-        "responsibilities": "Trong đội 4 kỹ sư trên nền Angular + RxJS, tôi tham gia phát triển admin của dự án — quản lý khách hàng, quản lý các loại bảo hiểm và một số chức năng khác."
+        "responsibilities": "Trên nền Angular + RxJS, tôi tham gia phát triển admin của dự án — quản lý khách hàng, quản lý các loại bảo hiểm và một số chức năng khác."
       },
       "my-coach": {
         "name": "My Coach",
         "summary": "Nền tảng tìm huấn luyện viên cá nhân cho thị trường Nhật Bản.",
-        "responsibilities": "Trong đội 2 người trên nền Next.js, tôi tham gia phát triển landing page của dự án cùng chức năng đăng nhập, đăng ký và một số chức năng khác cho nền tảng tìm huấn luyện viên cá nhân tại thị trường Nhật."
+        "responsibilities": "Trên nền Next.js, tôi tham gia phát triển landing page của dự án cùng chức năng đăng nhập, đăng ký và một số chức năng khác cho nền tảng tìm huấn luyện viên cá nhân tại thị trường Nhật."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
         "summary": "Ứng dụng mobile nhận và giao việc nhà theo yêu cầu.",
-        "responsibilities": "Tôi base dự án bằng React Native cùng các thư viện cần thiết và phát triển ứng dụng dành cho helper trong đội 4 kỹ sư. Các chức năng gồm: tìm công việc gần đây, quản lý công việc, quản lý lương thưởng, quản lý profile, đăng nhập, đăng ký và một số chức năng khác."
+        "responsibilities": "Tôi base dự án bằng React Native cùng các thư viện cần thiết và phát triển ứng dụng dành cho helper. Các chức năng gồm: tìm công việc gần đây, quản lý công việc, quản lý lương thưởng, quản lý profile, đăng nhập, đăng ký và một số chức năng khác."
       },
       "photobook-ai": {
         "name": "Photobook AI",
         "summary": "Upload ảnh và tạo photobook in ấn chỉ với một cú click.",
-        "responsibilities": "Trong đội 5 kỹ sư trên nền Next.js + Redux/Redux-saga, tôi tham gia phát triển chức năng đăng nhập/đăng ký, chỉnh sửa khung ảnh và một số chức năng khác phục vụ luồng tạo photobook một-click."
+        "responsibilities": "Trên nền Next.js + Redux/Redux-saga, tôi tham gia phát triển chức năng đăng nhập/đăng ký, chỉnh sửa khung ảnh và một số chức năng khác phục vụ luồng tạo photobook một-click."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ.",
-        "responsibilities": "Trong đội 10 kỹ sư trên nền Next.js, tôi tham gia phát triển quản lý tài khoản user gồm cả personal, wholesaler, seller, company; thanh toán bằng PayPal/Stripe; tìm kiếm sản phẩm, danh sách sản phẩm, đăng nhập, đăng ký, add to cart, đặt hàng, quản lý đơn hàng. Đồng thời phát triển trang admin quản lý đơn hàng, inventory, quản lý tài khoản người dùng và một số chức năng khác."
+        "responsibilities": "Trên nền Next.js, tôi tham gia phát triển quản lý tài khoản user gồm cả personal, wholesaler, seller, company; thanh toán bằng PayPal/Stripe; tìm kiếm sản phẩm, danh sách sản phẩm, đăng nhập, đăng ký, add to cart, đặt hàng, quản lý đơn hàng. Đồng thời phát triển trang admin quản lý đơn hàng, inventory, quản lý tài khoản người dùng và một số chức năng khác."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
@@ -179,22 +179,22 @@
       "vity": {
         "name": "Vity",
         "summary": "Nền tảng giao dịch quyền chọn nhị phân với phân tích real-time và bảo mật cao.",
-        "responsibilities": "Tôi tham gia đội 4 kỹ sư với nhiệm vụ: làm phần deposit/withdraw với nhiều phương thức khác nhau, làm lại landing page, tích hợp KLine chart và tối ưu chart (gồm các indicator và đặt lệnh), tối ưu lại phần hiển thị order và một số chức năng khác. Tôi cũng tham gia các chức năng trong trang admin bằng Next.js: restrict theo user/nationality, quản lý order, quản lý user, quản lý phương thức thanh toán và một số chức năng khác."
+        "responsibilities": "Tôi tham gia phát triển: deposit/withdraw với nhiều phương thức khác nhau, làm lại landing page, tích hợp KLine chart và tối ưu chart (gồm các indicator và đặt lệnh), tối ưu lại phần hiển thị order và một số chức năng khác. Tôi cũng tham gia các chức năng trong trang admin bằng Next.js: restrict theo user/nationality, quản lý order, quản lý user, quản lý phương thức thanh toán và một số chức năng khác."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
         "summary": "Zalo Mini App cho nhà hàng cơm niêu — menu, đặt món & tích điểm khách hàng.",
-        "responsibilities": "Trong đội 2 người trên nền Zalo Mini App SDK + React, tôi phát triển luồng đặt hàng, quản lý tài khoản khách hàng, danh sách sản phẩm và thanh toán qua chuyển khoản — fetch dữ liệu bằng React Query và quản state bằng Recoil."
+        "responsibilities": "Trên nền Zalo Mini App SDK + React, tôi phát triển luồng đặt hàng, quản lý tài khoản khách hàng, danh sách sản phẩm và thanh toán qua chuyển khoản — fetch dữ liệu bằng React Query và quản state bằng Recoil."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
         "summary": "Ứng dụng mobile cho công an Sóc Trăng quản lý vi phạm hành chính & hình sự.",
-        "responsibilities": "Tôi tự base dự án bằng React Native cùng các thư viện cần thiết và xây dựng toàn bộ chức năng trong đội 2 người: đăng nhập, quản lý nhiều loại vi phạm khác nhau, thống kê vi phạm, tìm kiếm vi phạm theo hồ sơ cá nhân và một số chức năng khác."
+        "responsibilities": "Tôi tự base dự án bằng React Native cùng các thư viện cần thiết và xây dựng toàn bộ chức năng: đăng nhập, quản lý nhiều loại vi phạm khác nhau, thống kê vi phạm, tìm kiếm vi phạm theo hồ sơ cá nhân và một số chức năng khác."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
         "summary": "Website & mobile marketplace cho ngành sửa chữa ô tô.",
-        "responsibilities": "Trong đội 3 kỹ sư, tôi xây dựng phần trang chủ bằng Pug.js kết hợp Node.js cho SSR, đồng thời phụ trách trọn vẹn trang admin — quản lý đơn hàng, quản lý tài khoản khách hàng, quản lý hàng hóa/dịch vụ và một số chức năng khác — sử dụng React và MobX cho state."
+        "responsibilities": "Tôi xây dựng phần trang chủ bằng Pug.js kết hợp Node.js cho SSR, đồng thời phụ trách trọn vẹn trang admin — quản lý đơn hàng, quản lý tài khoản khách hàng, quản lý hàng hóa/dịch vụ và một số chức năng khác — sử dụng React và MobX cho state."
       }
     }
   },
