@@ -77,7 +77,7 @@
     "viewProject": "Xem dự án",
     "responsibilities": "Trách nhiệm",
     "offshoreLabel": "Tham gia ODC",
-    "offshoreResponsibilities": "Với vai trò Front-end / Mobile Developer trong team ODC, tôi đóng góp các tính năng quan trọng cho nhiều sản phẩm của khách hàng bằng React và React Native. Triển khai các tính năng data-driven dựa trên GraphQL và React Query, cùng các component tái sử dụng dùng chung giữa web và mobile.",
+    "offshoreResponsibilities": "Tham gia team ODC trải dài nhiều sản phẩm của khách hàng trên cả React (web) và React Native (mobile). Phụ trách các tính năng data-driven trên GraphQL bằng Apollo Client và React Query, đồng bộ state qua Redux + Redux-saga và ship các component tái sử dụng dùng chung giữa web và mobile, v.v.",
     "companies": {
       "bitcastle": {
         "title": "Trưởng nhóm Front-end",
