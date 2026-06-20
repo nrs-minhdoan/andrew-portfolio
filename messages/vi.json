@@ -119,7 +119,7 @@
       "bitcastle-fx": {
         "name": "Bitcastle FX",
         "summary": "Nền tảng giao dịch Forex toàn cầu sử dụng MetaQuotes 4/5 và AI.",
-        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nx trên nền Next.js / React + Vite cùng các thư viện cần thiết; tham gia phát triển các chức năng: KYC, đăng nhập, deposit, withdraw, transaction history và một số chức năng khác."
+        "responsibilities": "Quản lý team 5 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nx theo kiến trúc monorepo + micro front-end trên nền Next.js / React + Vite cùng các thư viện cần thiết; áp dụng pipeline testing với Jest cho unit test và Playwright cho E2E. Áp dụng workflow coding / testing / review hỗ trợ bởi các công cụ AI như GitHub Copilot, Claude,... Tham gia phát triển các chức năng: KYC, đăng nhập, deposit, withdraw, transaction history và một số chức năng khác."
       },
       "bitcastle": {
         "name": "Bitcastle",
@@ -174,7 +174,7 @@
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
         "summary": "Công cụ mobile mạnh mẽ để báo cáo tội phạm thù ghét nhanh chóng.",
-        "responsibilities": "Quản lý team và chịu trách nhiệm tiến độ phát triển. Tôi base dự án bằng React Native cùng các thư viện cần thiết và xây dựng toàn bộ client mobile — tìm kiếm bệnh viện và đồn cảnh sát gần nhất qua Google Maps, gửi cảnh báo cho người thân, quản lý thông tin cá nhân, báo cáo tội phạm, export báo cáo và một số chức năng khác — đồng thời phát triển trang admin bằng React + Vite để quản lý toàn bộ báo cáo."
+        "responsibilities": "Quản lý team và chịu trách nhiệm tiến độ phát triển. Tôi base dự án bằng React Native cùng các thư viện cần thiết và xây dựng toàn bộ client mobile — tìm kiếm bệnh viện và đồn cảnh sát gần nhất qua Google Maps, gửi cảnh báo cho người thân, quản lý thông tin cá nhân, báo cáo tội phạm, export báo cáo và một số chức năng khác — fetch dữ liệu bằng React Query và Axios, biểu mẫu bằng Formik, phân phối qua App Center. Đồng thời phát triển trang admin bằng React + Vite với TanStack Router để quản lý toàn bộ báo cáo."
       },
       "vity": {
         "name": "Vity",

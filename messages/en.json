@@ -115,7 +115,7 @@
       "bitcastle-fx": {
         "name": "Bitcastle FX",
         "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI.",
-        "responsibilities": "I led the team of 5 and owned delivery timeline. I base the project with Nx on Next.js / React + Vite shells with the necessary libraries; contributed to KYC, login, deposit, withdraw, transaction history, and other features."
+        "responsibilities": "I led the team of 5 and owned delivery timeline. I base the project with Nx in a monorepo + micro-frontend architecture spanning Next.js and React + Vite shells with the necessary libraries; established the testing pipeline with Jest for unit tests and Playwright for E2E. Adopted an AI-assisted coding / testing / review workflow using GitHub Copilot, Claude, and other AI tools. Contributed to KYC, login, deposit, withdraw, transaction history, and other features."
       },
       "bitcastle": {
         "name": "Bitcastle",
@@ -170,7 +170,7 @@
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
         "summary": "A powerful mobile tool to report hate crimes with ease and efficiency.",
-        "responsibilities": "I led the team and owned delivery timeline. I base the project on React Native with the necessary libraries and built the full mobile client — nearby hospital and police search via Google Maps, emergency alerts to relatives, personal profile management, crime reporting, report export, and other features — plus a separate React + Vite admin console for managing all reports."
+        "responsibilities": "I led the team and owned delivery timeline. I base the project on React Native with the necessary libraries and built the full mobile client — nearby hospital and police search via Google Maps, emergency alerts to relatives, personal profile management, crime reporting, report export, and other features — fetching data with React Query and Axios, forms with Formik, distributed via App Center. Also built a separate React + Vite admin console with TanStack Router for managing all reports."
       },
       "vity": {
         "name": "Vity",
