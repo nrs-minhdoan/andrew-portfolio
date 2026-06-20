@@ -35,7 +35,7 @@
   "About": {
     "label": "Về tôi",
     "title": "Kiến tạo hệ thống front-end có khả năng mở rộng.",
-    "p1": "Tôi là Lập trình viên Front-end với <b>hơn {years} năm</b> kinh nghiệm chuyên môn trong <b>phát triển ứng dụng Web và Mobile</b>, trong đó có <b>hơn {leadingYears} năm</b> dẫn dắt và đào tạo đội ngũ <b>{teamMin}–{teamMax} kỹ sư</b>. Tôi thiết kế kiến trúc front-end mở rộng, đưa ra quyết định kỹ thuật và triển khai sản phẩm chất lượng cao từ ý tưởng đến production.",
+    "p1": "Tôi là Lập trình viên Front-end với <b>hơn {years} năm</b> kinh nghiệm chuyên môn trong <b>phát triển ứng dụng Web và Mobile</b>, trong đó có <b>hơn {leadingYears} năm</b> dẫn dắt và đào tạo đội ngũ <b>{teamMin}-{teamMax} kỹ sư</b>. Tôi thiết kế kiến trúc front-end mở rộng, đưa ra quyết định kỹ thuật và triển khai sản phẩm chất lượng cao từ ý tưởng đến production.",
     "p2": "Thành thạo các công nghệ và framework front-end hiện đại như <b>React</b>, <b>Angular</b> và <b>Vue.js</b>, đồng thời có kinh nghiệm phát triển mobile sâu rộng với <b>React Native</b> trên cả iOS và Android. Tôi tập trung xây dựng các ứng dụng hiệu năng cao, dễ bảo trì và có trải nghiệm người dùng xuất sắc.",
     "p3": "Tôi đã dẫn dắt và đóng góp vào các sản phẩm phức tạp như <b>nền tảng thương mại điện tử</b>, <b>ứng dụng tài chính</b>, <b>nền tảng giao dịch tài chính</b> và <b>hệ thống thời gian thực</b>. Trách nhiệm bao gồm thiết kế kiến trúc hệ thống, tối ưu hiệu năng, xử lý dữ liệu thời gian thực, đảm bảo chất lượng code và phối hợp liên phòng ban với Back-end, sản phẩm và thiết kế.",
     "p4": "Tôi đam mê nâng cao chuẩn mực kỹ thuật, đào tạo lập trình viên và liên tục cải tiến quy trình phát triển cũng như chất lượng sản phẩm.",
@@ -51,7 +51,7 @@
       },
       "leadership": {
         "title": "Dẫn dắt đội ngũ",
-        "desc": "Dẫn dắt {teamMin}–{teamMax} kỹ sư, thiết lập tiêu chuẩn code, đào tạo junior thành senior."
+        "desc": "Dẫn dắt {teamMin}-{teamMax} kỹ sư, thiết lập tiêu chuẩn code, đào tạo junior thành senior."
       },
       "delivery": {
         "title": "Giao hàng trọn vòng",
@@ -78,12 +78,12 @@
     "responsibilities": "Trách nhiệm",
     "offshoreLabel": "Tham gia ODC",
     "companies": {
-      "blitz": {
+      "bitcastle": {
         "title": "Trưởng nhóm Front-end",
-        "org": "bitcastle LLC",
+        "org": "Bitcastle LLC",
         "location": "Hà Nội"
       },
-      "cryptopie": {
+      "blitz": {
         "title": "Trưởng nhóm Front-end",
         "org": "Blitz Labo",
         "location": "Hà Nội"

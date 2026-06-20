@@ -1,4 +1,4 @@
-export type CompanySlug = "blitz" | "cryptopie" | "vmo" | "freelance";
+export type CompanySlug = "bitcastle" | "blitz" | "vmo" | "freelance";
 
 export interface CompanySpec {
   slug: CompanySlug;

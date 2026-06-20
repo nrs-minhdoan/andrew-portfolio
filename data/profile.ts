@@ -30,6 +30,7 @@ export const CONTACT = {
     linkedin: "https://www.linkedin.com/in/doantruongminh",
     github: "https://github.com/nrs-minhdoan",
     facebook: "https://www.facebook.com/nerossspro",
+    resume: "https://drive.google.com/file/d/1aIHtOIewQ7naGf_PcjMwLk3fU4tn0w8f/view",
   },
 };
 

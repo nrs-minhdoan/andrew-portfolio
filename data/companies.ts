@@ -2,14 +2,14 @@ import type { CompanySpec } from "@/types/company";
 
 export const COMPANIES: readonly CompanySpec[] = [
   {
-    slug: "blitz",
-    title: "Front-end Lead, bitcastle LLC",
+    slug: "bitcastle",
+    title: "Front-end Lead, Bitcastle LLC",
     location: "Ha Noi",
     period: "Oct 2024 - Present",
     ongoing: true,
   },
   {
-    slug: "cryptopie",
+    slug: "blitz",
     title: "Front-end Lead, Blitz Labo",
     location: "Ha Noi",
     period: "Aug 2021 - Oct 2024",

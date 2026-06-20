@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { ExternalLink, Menu } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -63,6 +63,15 @@ export function Navigation() {
                 {t(s.key)}
               </a>
             ))}
+            <a
+              href={CONTACT.links.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm text-(--muted) transition-colors outline-none hover:text-(--fg) focus-visible:text-(--fg) focus-visible:ring-2 focus-visible:ring-(--accent)/60"
+            >
+              {t("resume")}
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+            </a>
           </nav>
 
           <div className="flex shrink-0 flex-nowrap items-center gap-1.5 sm:gap-2">
@@ -89,6 +98,15 @@ export function Navigation() {
                     {t(s.key)}
                   </a>
                 ))}
+                <a
+                  href={CONTACT.links.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-between gap-1.5 rounded-xl px-3 py-2.5 text-sm text-(--fg) transition-colors hover:bg-(--accent)/10"
+                >
+                  {t("resume")}
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                </a>
               </nav>
             </details>
           </div>

@@ -31,7 +31,7 @@
   "About": {
     "label": "About me",
     "title": "Crafting Front-end Systems that scale.",
-    "p1": "I am a Front-end Developer with <b>{years}+ years</b> of professional experience in <b>Web and Mobile Application Development</b>, including <b>{leadingYears}+ years</b> of leading and mentoring teams of <b>{teamMin}–{teamMax} engineers</b>. I design scalable front-end architectures, drive technical decisions, and deliver high-quality products from concept to production.",
+    "p1": "I am a Front-end Developer with <b>{years}+ years</b> of professional experience in <b>Web and Mobile Application Development</b>, including <b>{leadingYears}+ years</b> of leading and mentoring teams of <b>{teamMin}-{teamMax} engineers</b>. I design scalable front-end architectures, drive technical decisions, and deliver high-quality products from concept to production.",
     "p2": "Highly proficient in modern front-end technologies and frameworks such as <b>React</b>, <b>Angular</b> and <b>Vue.js</b>, with extensive mobile development experience using <b>React Native</b> for both iOS and Android platforms. I focus on building performant, maintainable, and scalable applications with excellent user experience.",
     "p3": "I have led and contributed to complex products including <b>e-commerce platforms</b>, <b>financial applications</b>, <b>financial trading platforms</b>, and <b>real-time systems</b>. My responsibilities include system architecture design, performance optimization, real-time data handling, code quality enforcement, and cross-functional collaboration with Back-end, product, and design teams.",
     "p4": "I am passionate about improving engineering standards, mentoring developers, and driving continuous improvement in development processes and product quality.",
@@ -47,7 +47,7 @@
       },
       "leadership": {
         "title": "Team Leadership",
-        "desc": "Led teams of {teamMin}–{teamMax} engineers, set coding standards, mentored juniors into seniors."
+        "desc": "Led teams of {teamMin}-{teamMax} engineers, set coding standards, mentored juniors into seniors."
       },
       "delivery": {
         "title": "End-to-end Delivery",
@@ -74,12 +74,12 @@
     "responsibilities": "Responsibilities",
     "offshoreLabel": "ODC engagements",
     "companies": {
-      "blitz": {
+      "bitcastle": {
         "title": "Front-end Lead",
-        "org": "bitcastle LLC",
+        "org": "Bitcastle LLC",
         "location": "Ha Noi"
       },
-      "cryptopie": {
+      "blitz": {
         "title": "Front-end Lead",
         "org": "Blitz Labo",
         "location": "Ha Noi"
