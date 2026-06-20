@@ -124,7 +124,7 @@
       "bitcastle": {
         "name": "Bitcastle",
         "summary": "Sàn giao dịch tiền mã hóa đầy đủ tính năng với order book thời gian thực.",
-        "responsibilities": "Quản lý team 6 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nuxt.js và các thư viện cần thiết; tham gia phát triển các chức năng: đăng nhập, đăng ký, giao dịch spot, copy trading, quản lý order, quản lý ví, deposit/withdraw, transaction history, landing page và một số chức năng khác."
+        "responsibilities": "Quản lý team 6 kỹ sư, chịu trách nhiệm tiến độ phát triển. Base dự án bằng Nuxt.js và các thư viện cần thiết, đồng thời base lớp socket để xử lý dữ liệu real-time và tích hợp TradingView cho biểu đồ. Tham gia phát triển các chức năng: đăng nhập, đăng ký, giao dịch spot, copy trading, quản lý order, quản lý ví, deposit/withdraw, transaction history, landing page và một số chức năng khác."
       },
       "dentity-kyc": {
         "name": "Dentity",
@@ -169,7 +169,7 @@
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "Nền tảng TMĐT bán sỉ phụ kiện xe đạp tại thị trường Mỹ.",
-        "responsibilities": "Trên nền Next.js, tôi tham gia phát triển quản lý tài khoản user gồm cả personal, wholesaler, seller, company; thanh toán bằng PayPal/Stripe; tìm kiếm sản phẩm, danh sách sản phẩm, đăng nhập, đăng ký, add to cart, đặt hàng, quản lý đơn hàng. Đồng thời phát triển trang admin quản lý đơn hàng, inventory, quản lý tài khoản người dùng và một số chức năng khác."
+        "responsibilities": "Trên nền Next.js, tôi tham gia phát triển quản lý tài khoản user gồm cả personal, wholesaler, seller, company; thanh toán bằng PayPal/Stripe; tìm kiếm sản phẩm, danh sách sản phẩm, đăng nhập, đăng ký, add to cart, đặt hàng, quản lý đơn hàng. Tích hợp Socket.io và phát triển chức năng nhắn tin giữa người mua và người bán. Đồng thời phát triển trang admin quản lý đơn hàng, inventory, quản lý tài khoản người dùng và một số chức năng khác."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",

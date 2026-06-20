@@ -120,7 +120,7 @@
       "bitcastle": {
         "name": "Bitcastle",
         "summary": "Full-featured cryptocurrency exchange with real-time order book.",
-        "responsibilities": "I led the team of 6 and owned delivery timeline. I base the project on Nuxt.js with the necessary libraries; contributed to features such as login, registration, spot trading, copy trading, order management, wallet management, deposit/withdraw, transaction history, landing page, and other features."
+        "responsibilities": "I led the team of 6 and owned delivery timeline. I base the project on Nuxt.js with the necessary libraries and built the socket layer for real-time market data. Integrated TradingView for the charting view. Contributed to features such as login, registration, spot trading, copy trading, order management, wallet management, deposit/withdraw, transaction history, landing page, and other features."
       },
       "dentity-kyc": {
         "name": "Dentity",
@@ -165,7 +165,7 @@
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "E-commerce platform to wholesale bicycle items in the US market.",
-        "responsibilities": "On Next.js, I contributed to user account management across personal, wholesaler, seller, and company profiles; PayPal/Stripe checkout; product search and listings; authentication; add-to-cart; order placement and management. I also built admin features for order management, inventory, and user-account administration."
+        "responsibilities": "On Next.js, I contributed to user account management across personal, wholesaler, seller, and company profiles; PayPal/Stripe checkout; product search and listings; authentication; add-to-cart; order placement and management. Integrated Socket.io and built the buyer-seller messaging feature. I also built admin features for order management, inventory, and user-account administration."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
