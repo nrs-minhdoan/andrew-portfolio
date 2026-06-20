@@ -35,7 +35,7 @@ export function Navigation() {
         <div className="container-page flex h-16 min-w-0 items-center justify-between gap-2 sm:gap-4">
           <a
             href="#hero"
-            aria-label={`${CONTACT.handle} — home`}
+            aria-label={`${CONTACT.handle} - home`}
             className="group font-display inline-flex min-w-0 items-center gap-6 text-base font-bold"
           >
             <Image

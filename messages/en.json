@@ -1,6 +1,6 @@
 {
   "Meta": {
-    "title": "Minh Truong Doan — Front-end Developer",
+    "title": "Minh Truong Doan - Front-end Developer",
     "description": "Front-end Developer with {years}+ years of experience leading teams and building scalable web & mobile applications with React, Next.js, Vue.js, Angular, and React Native."
   },
   "Nav": {
@@ -51,7 +51,7 @@
       },
       "delivery": {
         "title": "End-to-end Delivery",
-        "desc": "From discovery to production — design, build, test, ship, observe."
+        "desc": "From discovery to production - design, build, test, ship, observe."
       }
     }
   },
@@ -115,82 +115,82 @@
       "bitcastle-fx": {
         "name": "Bitcastle FX",
         "summary": "Global Forex trading platform powered by MetaQuotes 4/5 and AI.",
-        "responsibilities": "I led the team of 5 and owned delivery timeline. I base the project with Nx in a monorepo + micro-frontend architecture spanning Next.js and React + Vite shells with the necessary libraries; established the testing pipeline with Jest for unit tests and Playwright for E2E. Adopted an AI-assisted coding / testing / review workflow using GitHub Copilot, Claude, and other AI tools. Contributed to KYC, login, deposit, withdraw, transaction history, and other features."
+        "responsibilities": "I led the team of 5 and owned delivery timeline. Base the project with Nx in a monorepo + micro-frontend architecture spanning Next.js and React + Vite shells. Established the testing pipeline with Jest for unit tests and Playwright for E2E. Adopted an AI-assisted coding / testing / review workflow with GitHub Copilot, Claude and other AI tools. Owned KYC and the deposit / withdraw flows."
       },
       "bitcastle": {
         "name": "Bitcastle",
         "summary": "Full-featured cryptocurrency exchange with real-time order book.",
-        "responsibilities": "I led the team of 6 and owned delivery timeline. I base the project on Nuxt.js with the necessary libraries and built the socket layer for real-time market data. Integrated TradingView for the charting view. Contributed to features such as login, registration, spot trading, copy trading, order management, wallet management, deposit/withdraw, transaction history, landing page, and other features."
+        "responsibilities": "I led the team of 6 and owned delivery timeline. Base the project on Nuxt.js, built the socket layer for real-time market data and integrated TradingView for the charting view. Owned spot trading, copy trading and the wallet (deposit / withdraw, transaction history)."
       },
       "dentity-kyc": {
         "name": "Dentity",
         "summary": "Identity authentication platform handling verifications and payments.",
-        "responsibilities": "I led the team of 5 and owned delivery timeline. I base 2 apps on Next.js and React with the necessary libraries. The main site on Next.js — login, registration, KYC via a custom in-house SDK, payment via Apple Pay/PayPal/Stripe, and other features. The admin on React — login, registration, KYC record management, and other features."
+        "responsibilities": "I led the team of 5 and owned delivery timeline. Base 2 apps on Next.js (main site) and React (admin). On the main site, owned KYC via a custom in-house SDK and the Apple Pay / PayPal / Stripe checkout. On the admin, owned KYC record management."
       },
       "yellow": {
         "name": "Yellow",
         "summary": "E-commerce platform to wholesale all kinds of items in the Thai market.",
-        "responsibilities": "I led a team of 8 and owned delivery timeline. I bootstrapped 3 apps and contributed to all of them. The e-commerce storefront on Next.js with the necessary libraries — seller/buyer registration and login, product detail, product listings, checkout, add-to-cart, home page, and other features. The seller console on React with the necessary libraries — inventory management, shop management, revenue analytics, shop address management, and other features. The operator admin on React with the necessary libraries — inventory, shop, home page, promotions, product management, and other features."
+        "responsibilities": "I led the team of 8 and owned delivery timeline. Bootstrapped 3 apps: the Next.js storefront, the React seller console and the React operator admin. On the storefront, owned seller / buyer onboarding and the checkout flow. On the seller console, owned inventory management and revenue analytics. On the operator admin, owned the home page and promotions management."
       },
       "reddiz": {
         "name": "ReddiZ",
         "summary": "Mobile app for a Vietnamese telecommunications social network.",
-        "responsibilities": "On React Native, I contributed to custom layout primitives for the app, the personal profile, post creation and editing, login, registration, telecom data management, and other features for this telecom social network."
+        "responsibilities": "On React Native, built custom layout primitives for the app shell, the social feed (post creation and editing) and the telecom data management feature."
       },
       "appi-team": {
         "name": "APPI Team",
-        "summary": "Internal governance & work management — a French Jira-style suite.",
-        "responsibilities": "I led the team of 4 and owned delivery timeline. I base the project with Angular 11 and the necessary libraries; contributed to core features: task management, team member management, timeline management, project management, and other features for this Jira-style internal governance tool."
+        "summary": "Internal governance & work management - a French Jira-style suite.",
+        "responsibilities": "I led the team of 4 and owned delivery timeline. Base the project with Angular 11. Owned task management and the timeline view for this Jira-style internal governance tool."
       },
       "chubb": {
         "name": "Chubb",
         "summary": "Front-end work for the world's largest publicly traded P&C insurer.",
-        "responsibilities": "On Angular + RxJS, I built the admin side of the platform — customer management, multi-product insurance management, and other back-office features."
+        "responsibilities": "On Angular + RxJS, built the admin side of the platform with customer management and multi-product insurance management."
       },
       "my-coach": {
         "name": "My Coach",
         "summary": "Personal trainer search platform for the Japanese market.",
-        "responsibilities": "On Next.js, I built the project landing page along with login, registration, and other features for this Japanese personal-trainer search platform."
+        "responsibilities": "On Next.js, built the landing page and the authentication flow for this Japanese personal-trainer search platform."
       },
       "viecnha-24h": {
         "name": "ViecNha 24H",
         "summary": "On-demand household chores delivery & pickup mobile app.",
-        "responsibilities": "I base the project with React Native and the necessary libraries and built the helper-side mobile app. Features included nearby job discovery, job management, salary/bonus tracking, profile management, authentication (login/register), and other features."
+        "responsibilities": "Base the project with React Native and built the helper-side mobile app, owning the nearby-job discovery flow and salary / bonus tracking."
       },
       "photobook-ai": {
         "name": "Photobook AI",
         "summary": "Upload images and generate a printed photobook in a single click.",
-        "responsibilities": "On Next.js + Redux/Redux-saga, I built the authentication (login/register), the photo frame editor, and other features supporting the one-click photobook flow."
+        "responsibilities": "On Next.js + Redux / Redux-saga, built the photo frame editor and the authentication flow for the one-click photobook experience."
       },
       "bicycle-blue-book": {
         "name": "Bicycle Blue Book",
         "summary": "E-commerce platform to wholesale bicycle items in the US market.",
-        "responsibilities": "On Next.js, I contributed to user account management across personal, wholesaler, seller, and company profiles; PayPal/Stripe checkout; product search and listings; authentication; add-to-cart; order placement and management. Integrated Socket.io and built the buyer-seller messaging feature. I also built admin features for order management, inventory, and user-account administration."
+        "responsibilities": "On Next.js, owned multi-role user account management (personal, wholesaler, seller, company) and the PayPal / Stripe checkout. Integrated Socket.io and built the buyer-seller messaging feature. Also contributed to the admin (order management, inventory)."
       },
       "hate-crime-report": {
         "name": "Hate Crime - Easy Report",
         "summary": "A powerful mobile tool to report hate crimes with ease and efficiency.",
-        "responsibilities": "I led the team and owned delivery timeline. I base the project on React Native with the necessary libraries and built the full mobile client — nearby hospital and police search via Google Maps, emergency alerts to relatives, personal profile management, crime reporting, report export, and other features — fetching data with React Query and Axios, forms with Formik, distributed via App Center. Also built a separate React + Vite admin console with TanStack Router for managing all reports."
+        "responsibilities": "Led the team and owned delivery timeline. Base the project on React Native and built the full mobile client (React Query + Axios for data, Formik for forms, App Center for distribution) - owned crime reporting with report export, nearby hospital and police search via Google Maps, and emergency alerts to relatives. Also built a separate React + Vite admin console with TanStack Router for report moderation."
       },
       "vity": {
         "name": "Vity",
         "summary": "Binary options trading platform with real-time analytics and secure execution.",
-        "responsibilities": "I delivered the deposit/withdraw flows across multiple payment methods, rebuilt the landing page, integrated a KLine chart with optimized indicators and trade execution, and tuned the order display. I also contributed to the Next.js admin: user/nationality-based restrictions, order management, user management, payment-method management, and other features."
+        "responsibilities": "Delivered the deposit / withdraw flows across multiple payment methods, rebuilt the landing page and integrated a KLine chart with optimized indicators and trade execution. Also contributed to the Next.js admin with user / nationality-based restrictions and payment-method management."
       },
       "com-nieu-viet": {
         "name": "Cơm Niêu Việt",
-        "summary": "Zalo Mini App for a Vietnamese clay-pot rice restaurant — menu, ordering & loyalty.",
-        "responsibilities": "On the Zalo Mini App SDK + React stack, I built the ordering flow, customer account management, product listings, and bank-transfer payment handling — fetching data with React Query and managing shared state with Recoil."
+        "summary": "Zalo Mini App for a Vietnamese clay-pot rice restaurant - menu, ordering & loyalty.",
+        "responsibilities": "On the Zalo Mini App SDK + React stack, built the ordering flow and bank-transfer payment handling - data with React Query, shared state with Recoil."
       },
       "xlvphc": {
         "name": "XLVPHC - Sóc Trăng",
         "summary": "Mobile app for Soc Trang police to manage administrative & criminal violations.",
-        "responsibilities": "I bootstrapped the project base with React Native and the supporting library set and delivered every feature end-to-end: authentication, multi-category violation management, violation statistics, lookup by personal record, and other supporting workflows."
+        "responsibilities": "Solo-built the project on React Native, owning multi-category violation management, violation statistics and lookup by personal record."
       },
       "mechanics-marketplace": {
         "name": "Mechanics Marketplace",
         "summary": "Marketplace website & mobile app for the auto repair industry.",
-        "responsibilities": "I built the landing/home pages with Pug.js paired with Node.js for server-side rendering, then owned the admin dashboard end-to-end — order management, customer account management, goods/services catalog, and other supporting features — using React and MobX for state."
+        "responsibilities": "Built the landing / home pages with Pug.js + Node.js for SSR, then owned the admin dashboard end-to-end (order, customer account, goods / services catalog) with React + MobX for state."
       }
     }
   },
@@ -199,7 +199,7 @@
     "title": "Awards & Milestones",
     "items": {
       "torch-2022": {
-        "title": "CryptoPie Labo — The Torch Award",
+        "title": "CryptoPie Labo - The Torch Award",
         "desc": "Top 10 Influencers 2022."
       },
       "shining-star-2019": {

@@ -116,7 +116,7 @@ export function Experience() {
                                   href={e.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  aria-label={`${e.name} — visit site`}
+                                  aria-label={`${e.name} - visit site`}
                                   className="inline-flex cursor-pointer items-center gap-1.5 rounded-full border border-(--border) py-0.5 pr-2.5 pl-1 text-xs text-(--muted) transition-colors hover:border-(--accent)/60 hover:text-(--fg)"
                                 >
                                   {mark}
@@ -179,7 +179,7 @@ function ProjectCard({
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${name} — visit site`}
+                aria-label={`${name} - visit site`}
                 className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
               >
                 {name}

@@ -52,7 +52,7 @@ export function LinkOrSpan({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`${name} — official site`}
+        aria-label={`${name} - official site`}
         className={cx(className, "cursor-pointer")}
         style={style}
       >
@@ -107,7 +107,7 @@ export function TechBadge({ techKey, size = "md", showLabel = true }: Props) {
 }
 
 /**
- * Bare icon. Does NOT auto-wrap in an anchor — consumers (Skills card,
+ * Bare icon. Does NOT auto-wrap in an anchor - consumers (Skills card,
  * Experience tech chips) decide whether to make the surrounding region
  * clickable. Avoids invalid nested `<a>` when the card itself is a link.
  */

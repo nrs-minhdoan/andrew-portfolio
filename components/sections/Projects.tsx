@@ -106,7 +106,7 @@ export function Projects() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label={`${projectName} — visit site`}
+                            aria-label={`${projectName} - visit site`}
                             className="after:absolute after:inset-0 after:cursor-pointer hover:text-(--accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
                           >
                             {projectName}

@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 const SITE_HOST = new URL(SITE_URL).host;
 
 export const runtime = "edge";
-export const alt = `${CONTACT.fullName} — ${CONTACT.jobTitle}`;
+export const alt = `${CONTACT.fullName} - ${CONTACT.jobTitle}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

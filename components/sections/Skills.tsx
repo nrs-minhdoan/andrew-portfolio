@@ -63,7 +63,7 @@ export function Skills() {
                       href={tech.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`${tech.name} — official site`}
+                      aria-label={`${tech.name} - official site`}
                       className={cx(
                         cardClass,
                         "cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)",

@@ -69,7 +69,7 @@ export function TechList({ techs, size = 20, className }: Props) {
                 href={tech.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${tech.name} — official site`}
+                aria-label={`${tech.name} - official site`}
                 className="inline-flex cursor-pointer rounded transition-transform hover:scale-110 focus-visible:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
               >
                 {icon}

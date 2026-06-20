@@ -46,7 +46,7 @@ export async function generateMetadata({
   const title = t("title");
   const ogLocale = locale === "vi" ? "vi_VN" : "en_US";
   const alternateLocale = locale === "vi" ? "en_US" : "vi_VN";
-  const ogAlt = `${CONTACT.fullName} — ${CONTACT.jobTitle}`;
+  const ogAlt = `${CONTACT.fullName} - ${CONTACT.jobTitle}`;
   const ogImage = {
     url: `${SITE_URL}/opengraph-image`,
     secureUrl: `${SITE_URL}/opengraph-image`,
