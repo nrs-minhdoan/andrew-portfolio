@@ -93,7 +93,7 @@ export function Experience() {
                   ))}
                 </ul>
 
-                {OFFSHORE_ENGAGEMENTS[slug]?.length ? (
+                {OFFSHORE_ENGAGEMENTS[slug]?.engagements.length ? (
                   <div className="glass mt-4 rounded-xl px-4 py-3">
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                       <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.14em] text-(--muted)/80 uppercase">
@@ -104,7 +104,7 @@ export function Experience() {
                         {t("offshoreLabel")}
                       </span>
                       <ul className="flex flex-wrap gap-1.5">
-                        {OFFSHORE_ENGAGEMENTS[slug]?.map((e) => {
+                        {OFFSHORE_ENGAGEMENTS[slug]?.engagements.map((e) => {
                           const logo = getProjectIcon(e.url, e.image);
                           const mark = logo ? (
                             <LogoMark src={logo} lightBg={e.logoLightBg} />
@@ -133,6 +133,20 @@ export function Experience() {
                         })}
                       </ul>
                     </div>
+                    <div className="mt-3 border-t border-(--border)/60 pt-3">
+                      <p className="mb-1.5 text-[10px] font-semibold tracking-[0.14em] text-(--muted)/80 uppercase">
+                        {t("responsibilities")}
+                      </p>
+                      <p className="text-xs leading-relaxed text-(--muted)">
+                        {t("offshoreResponsibilities")}
+                      </p>
+                    </div>
+                    {OFFSHORE_ENGAGEMENTS[slug]?.techs?.length ? (
+                      <TechList
+                        techs={OFFSHORE_ENGAGEMENTS[slug]?.techs ?? []}
+                        className="relative z-10 mt-3"
+                      />
+                    ) : null}
                   </div>
                 ) : null}
               </Reveal>

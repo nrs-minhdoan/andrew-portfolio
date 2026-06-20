@@ -73,6 +73,7 @@
     "viewProject": "View project",
     "responsibilities": "Responsibilities",
     "offshoreLabel": "ODC engagements",
+    "offshoreResponsibilities": "As a Front-end / Mobile Developer in an ODC team, I contributed important features across several client products using React and React Native. I implemented data-driven features backed by GraphQL and React Query, plus reusable components shared between web and mobile.",
     "companies": {
       "bitcastle": {
         "title": "Front-end Lead",
