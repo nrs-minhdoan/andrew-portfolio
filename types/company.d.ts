@@ -6,4 +6,6 @@ export interface CompanySpec {
   location: string;
   period: string;
   ongoing?: boolean;
+  /** Public website URL. When present, the company name renders as a click-through. */
+  url?: string;
 }

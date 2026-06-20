@@ -62,7 +62,19 @@ export function Experience() {
                 <header className="mb-4 flex flex-wrap items-baseline gap-x-4 gap-y-1">
                   <h3 className="font-display text-xl font-bold sm:text-2xl">
                     {t(`companies.${slug}.title`)},{" "}
-                    <span className="text-(--accent)">{t(`companies.${slug}.org`)}</span>
+                    {company.url ? (
+                      <a
+                        href={company.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${t(`companies.${slug}.org`)} - visit site`}
+                        className="text-(--accent) underline decoration-(--accent)/30 underline-offset-4 transition-colors hover:decoration-(--accent) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--accent)"
+                      >
+                        {t(`companies.${slug}.org`)}
+                      </a>
+                    ) : (
+                      <span className="text-(--accent)">{t(`companies.${slug}.org`)}</span>
+                    )}
                   </h3>
                   <span className="text-xs tracking-widest text-(--muted) uppercase">
                     {company.period}
