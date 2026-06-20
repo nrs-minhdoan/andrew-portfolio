@@ -76,12 +76,12 @@
     "companies": {
       "blitz": {
         "title": "Front-end Lead",
-        "org": "Blitz Labo",
+        "org": "bitcastle LLC",
         "location": "Ha Noi"
       },
       "cryptopie": {
         "title": "Front-end Lead",
-        "org": "CryptoPie Labo",
+        "org": "Blitz Labo",
         "location": "Ha Noi"
       },
       "vmo": {
@@ -199,7 +199,7 @@
     "title": "Awards & Milestones",
     "items": {
       "torch-2022": {
-        "title": "CryptoPie Labo - The Torch Award",
+        "title": "Blitz Labo - The Torch Award",
         "desc": "Top 10 Influencers 2022."
       },
       "shining-star-2019": {

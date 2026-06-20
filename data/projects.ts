@@ -3,7 +3,7 @@ import type { ProjectSpec } from "@/types/project";
 export const PROJECTS: readonly ProjectSpec[] = [
   {
     slug: "bitcastle-fx",
-    period: "10/2024 — Present",
+    period: "10/2024 - Present",
     ongoing: true,
     role: "lead",
     teamSize: 5,
@@ -36,7 +36,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "bitcastle",
-    period: "08/2021 — Present",
+    period: "08/2021 - Present",
     ongoing: true,
     role: "lead",
     teamSize: 6,
@@ -60,7 +60,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "dentity-kyc",
-    period: "05/2021 — 08/2021",
+    period: "05/2021 - 08/2021",
     role: "lead",
     teamSize: 5,
     techs: [
@@ -84,7 +84,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "yellow",
-    period: "12/2020 — 08/2021",
+    period: "12/2020 - 08/2021",
     role: "lead",
     teamSize: 8,
     techs: [
@@ -118,7 +118,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "reddiz",
-    period: "09/2020 — 12/2020",
+    period: "09/2020 - 12/2020",
     role: "mobile",
     teamSize: 4,
     techs: [
@@ -140,7 +140,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "appi-team",
-    period: "08/2020 — 11/2020",
+    period: "08/2020 - 11/2020",
     role: "lead",
     teamSize: 4,
     techs: ["typescript", "angular", "rxjs", "ngzorro", "sass", "tailwindcss"],
@@ -149,7 +149,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "chubb",
-    period: "03/2020 — 08/2020",
+    period: "03/2020 - 08/2020",
     role: "fe",
     teamSize: 4,
     techs: ["typescript", "angular", "rxjs", "ngzorro", "ngbootstrap", "lessjs"],
@@ -159,7 +159,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "my-coach",
-    period: "01/2020 — 02/2020",
+    period: "01/2020 - 02/2020",
     role: "fe",
     teamSize: 2,
     techs: ["javascript", "nextjs", "axios", "styledcomponents", "reactstrap", "sass"],
@@ -168,7 +168,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "viecnha-24h",
-    period: "11/2019 — 03/2020",
+    period: "11/2019 - 03/2020",
     role: "mobile",
     teamSize: 4,
     techs: [
@@ -187,7 +187,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "photobook-ai",
-    period: "10/2019 — 01/2020",
+    period: "10/2019 - 01/2020",
     role: "fe",
     teamSize: 5,
     techs: [
@@ -206,7 +206,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "bicycle-blue-book",
-    period: "02/2018 — 02/2020",
+    period: "02/2018 - 02/2020",
     role: "fe",
     teamSize: 10,
     techs: [
@@ -239,7 +239,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "hate-crime-report",
-    period: "06/2023 — 03/2026",
+    period: "06/2023 - 03/2026",
     role: "fe_mobile",
     teamSize: 1,
     techs: [
@@ -266,7 +266,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "vity",
-    period: "09/2024 — 06/2025",
+    period: "09/2024 - 06/2025",
     role: "fe",
     teamSize: 4,
     techs: ["javascript", "nextjs", "reactquery", "axios", "socketio", "chakraui", "reacthookform"],
@@ -276,7 +276,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "com-nieu-viet",
-    period: "03/2024 — 05/2024",
+    period: "03/2024 - 05/2024",
     role: "fe",
     teamSize: 2,
     techs: [
@@ -295,7 +295,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "xlvphc",
-    period: "11/2022 — 01/2023",
+    period: "11/2022 - 01/2023",
     role: "mobile",
     teamSize: 2,
     techs: ["typescript", "reactnative", "axios", "reactnavigation", "styledcomponents", "formik"],
@@ -310,7 +310,7 @@ export const PROJECTS: readonly ProjectSpec[] = [
   },
   {
     slug: "mechanics-marketplace",
-    period: "04/2019 — 08/2019",
+    period: "04/2019 - 08/2019",
     role: "fe",
     teamSize: 3,
     techs: ["javascript", "react", "mobx", "pugjs", "axios", "reactrouter", "mui"],

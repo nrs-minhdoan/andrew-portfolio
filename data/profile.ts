@@ -12,7 +12,7 @@ export const EDUCATION = {
   degree: "engineer",
   school: "Hanoi University of Industry",
   location: "Ha Noi",
-  period: "Sept 2013 — Sept 2017",
+  period: "Sept 2013 - Sept 2017",
 };
 
 export const CONTACT = {

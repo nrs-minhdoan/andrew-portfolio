@@ -80,12 +80,12 @@
     "companies": {
       "blitz": {
         "title": "Trưởng nhóm Front-end",
-        "org": "Blitz Labo",
+        "org": "bitcastle LLC",
         "location": "Hà Nội"
       },
       "cryptopie": {
         "title": "Trưởng nhóm Front-end",
-        "org": "CryptoPie Labo",
+        "org": "Blitz Labo",
         "location": "Hà Nội"
       },
       "vmo": {
@@ -203,7 +203,7 @@
     "title": "Giải thưởng & Cột mốc",
     "items": {
       "torch-2022": {
-        "title": "CryptoPie Labo - The Torch Award",
+        "title": "Blitz Labo - The Torch Award",
         "desc": "Top 10 Influencers 2022."
       },
       "shining-star-2019": {
