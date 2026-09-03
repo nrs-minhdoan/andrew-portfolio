@@ -118,14 +118,6 @@ export async function generateMetadata({
         "max-video-preview": -1,
       },
     },
-    icons: {
-      icon: [
-        { url: "/icon.svg", type: "image/svg+xml" },
-        { url: "/logo.svg", type: "image/svg+xml" },
-      ],
-      apple: "/logo.svg",
-      shortcut: "/icon.svg",
-    },
     appleWebApp: {
       capable: true,
       title: CONTACT.fullName,
