@@ -118,9 +118,7 @@ export function NavController() {
     // Mobile menu uses <details>. Close it after a link click so the dropdown
     // collapses on navigation. Scoped to links inside <details> only — desktop
     // nav lives outside any <details>, so its listeners are untouched.
-    const mobileLinks = Array.from(
-      header.querySelectorAll<HTMLElement>("details [data-nav-link]"),
-    );
+    const mobileLinks = Array.from(header.querySelectorAll<HTMLElement>("details [data-nav-link]"));
     const onMobileLinkClick = (e: Event) => {
       const details = (e.currentTarget as HTMLElement).closest("details");
       if (details?.open) details.removeAttribute("open");

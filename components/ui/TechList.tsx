@@ -55,10 +55,7 @@ export function TechList({ techs, size = 20, className }: Props) {
   const overflow = ordered.length - visible.length;
 
   return (
-    <ul
-      ref={ref}
-      className={cx("flex flex-nowrap items-center gap-2", className)}
-    >
+    <ul ref={ref} className={cx("flex flex-nowrap items-center gap-2", className)}>
       {visible.map((k) => {
         const tech = TECHS[k];
         const icon = <TechIcon techKey={k} size={size} />;
