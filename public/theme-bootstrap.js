@@ -1,6 +1,8 @@
 (function () {
   try {
-    var t = localStorage.getItem("theme") || "system";
+    var t = localStorage.getItem("theme");
+    // Same allowlist as ThemeProvider.
+    if (t !== "light" && t !== "dark" && t !== "system") t = "system";
     var r =
       t === "system"
         ? window.matchMedia("(prefers-color-scheme: dark)").matches

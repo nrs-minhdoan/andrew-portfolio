@@ -33,6 +33,10 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+// Only the prebuilt locales exist. Unknown values (e.g. dotted paths that skip
+// the middleware) 404 at the router instead of rendering on demand.
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {

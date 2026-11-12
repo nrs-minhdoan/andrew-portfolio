@@ -5,12 +5,12 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const isDev = process.env.NODE_ENV === "development";
 
-// Strict CSP. `unsafe-inline` for styles required by Tailwind/Next runtime CSS.
-// `unsafe-eval`/`unsafe-inline` for scripts kept dev-only (HMR + React Refresh).
-// In production we rely on Next's automatic per-request nonce via the
-// experimental.reactCompiler + Strict CSP. Inline scripts emitted by Next are
-// hashed/nonced at the framework level; user-authored inline scripts should
-// not be added.
+// CSP. `unsafe-inline` for styles is required by Tailwind/Next runtime CSS.
+// `unsafe-eval` for scripts is dev-only (HMR + React Refresh).
+// NOTE: production script-src still allows `unsafe-inline` because the pages
+// are statically generated and Next emits inline bootstrap scripts without a
+// nonce. There is no nonce/hash protection, so never add user-controlled
+// content to inline scripts or raw HTML sinks.
 const ContentSecurityPolicy = [
   `default-src 'self'`,
   `base-uri 'self'`,
@@ -55,26 +55,12 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.jsdelivr.net",
-        pathname: "/gh/devicons/devicon/**",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.simpleicons.org",
-      },
-      {
-        protocol: "https",
-        hostname: "www.google.com",
-        pathname: "/s2/favicons",
-      },
-    ],
+    // No remotePatterns: remote icons are plain <img> tags loaded by the
+    // browser, and next/image only optimizes local files. Allowing remote
+    // hosts would let anyone use /_next/image to fetch arbitrary URLs on them.
     formats: ["image/avif", "image/webp"],
     contentDispositionType: "attachment",
     dangerouslyAllowSVG: false,
-    minimumCacheTTL: 60,
   },
   async headers() {
     return [

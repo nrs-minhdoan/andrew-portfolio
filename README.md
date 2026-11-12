@@ -9,14 +9,14 @@ A personal portfolio website built with Next.js (App Router), internationalized 
 | Framework       | [Next.js 16](https://nextjs.org/) (App Router, Turbopack)                                                      |
 | Language        | [TypeScript 5](https://www.typescriptlang.org/) (`strict` mode)                                                |
 | UI runtime      | [React 19](https://react.dev/)                                                                                 |
-| Styling         | [Tailwind CSS 4](https://tailwindcss.com/) + [Tamagui](https://tamagui.dev/) (via `react-native-web`)          |
-| Animation       | [Framer Motion](https://www.framer.com/motion/)                                                                |
+| Styling         | [Tailwind CSS 4](https://tailwindcss.com/)                                                                     |
+| Animation       | CSS transitions + `IntersectionObserver` (`components/ui/Reveal.tsx`)                                          |
 | i18n            | [next-intl](https://next-intl.dev/) (`en`, `vi`)                                                               |
-| Theming         | [next-themes](https://github.com/pacocoursey/next-themes) (light/dark)                                         |
+| Theming         | Custom `ThemeProvider` (light/dark/system, `components/theme/`)                                                |
 | Icons           | [lucide-react](https://lucide.dev/), [Simple Icons](https://simpleicons.org/), [Devicon](https://devicon.dev/) |
-| Fonts           | [Geist](https://vercel.com/font)                                                                               |
+| Fonts           | Silkscreen + Fira Code via `next/font/google`                                                                  |
 | Lint / Format   | [Biome](https://biomejs.dev/)                                                                                  |
-| Package manager | [pnpm](https://pnpm.io/) (enforced via `only-allow`)                                                           |
+| Package manager | [pnpm](https://pnpm.io/) (enforced via a `preinstall` check)                                                   |
 
 ## Requirements
 
@@ -73,16 +73,16 @@ types/                    # shared TypeScript type declarations (.d.ts)
 lib/                      # helpers
 proxy.ts                  # next-intl middleware (locale routing)
 next.config.ts            # Next config + security headers + CSP
-tamagui.config.ts         # Tamagui setup
+scripts/only-pnpm.cjs     # preinstall guard (blocks npm/yarn)
 biome.json                # lint/format config
 ```
 
 ## Architecture Notes
 
 - **Content-driven.** All portfolio content lives in `data/` as typed constants. UI components read from `data/` and render translated copy via `messages/`. Add or edit content in `data/`, not in JSX.
-- **Internationalization.** Locales are `en` (default) and `vi` with `localePrefix: "as-needed"` — the default locale has no URL prefix. Routing config lives in `i18n/routing.ts`; the middleware is `proxy.ts`.
-- **Security.** `next.config.ts` ships a strict Content-Security-Policy plus HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, and cross-origin isolation headers. Remote image hosts are allow-listed in `images.remotePatterns`.
-- **Performance.** Turbopack dev/build, `optimizePackageImports` for `lucide-react` and `framer-motion`, AVIF/WebP image formats, `reactStrictMode`.
+- **Internationalization.** Locales are `en` (default) and `vi` with `localePrefix: "always"` - every URL carries a locale prefix (`/en`, `/vi`). Only these two locales are prebuilt (`dynamicParams = false`). Routing config lives in `i18n/routing.ts`; the middleware is `proxy.ts`.
+- **Security.** `next.config.ts` ships a Content-Security-Policy plus HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, and cross-origin isolation headers. `images.remotePatterns` is intentionally empty: remote icons are plain `<img>` tags, and `next/image` only optimizes local files.
+- **Performance.** Turbopack dev/build, `optimizePackageImports` for `lucide-react`, AVIF/WebP image formats, `reactStrictMode`.
 
 ## Coding Rules & Conventions
 
@@ -120,8 +120,8 @@ biome.json                # lint/format config
 
 ### Security
 
-- Do not add user-authored inline `<script>` tags — the production CSP only permits framework-emitted inline scripts.
-- New external image/font/connect sources must be added to both the CSP and `images.remotePatterns` in `next.config.ts`.
+- Do not add user-authored inline `<script>` tags or raw HTML sinks. Production `script-src` still allows `'unsafe-inline'` (no nonce), so the CSP does not block injected inline scripts.
+- New external image/font/connect sources must be added to the CSP in `next.config.ts`. Only add an `images.remotePatterns` entry if `next/image` must optimize that remote source, and pin its exact `pathname` and `search`.
 
 ### Git
 

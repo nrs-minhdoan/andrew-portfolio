@@ -36,10 +36,9 @@ export function PersonJsonLd() {
     },
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  // Escape "<" so a "</script>" sequence in data can never close the block.
+  // JSON parsers decode < back to "<", so the data is unchanged.
+  const json = JSON.stringify(data).replace(/</g, "\\u003c");
+
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }
