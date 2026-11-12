@@ -50,6 +50,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Stop `next dev` from generating AGENTS.md in the repo root.
+  agentRules: false,
   compress: true,
   experimental: {
     optimizePackageImports: ["lucide-react"],
